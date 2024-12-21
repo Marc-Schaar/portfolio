@@ -1,0 +1,41 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 64px;
+}
+
+.highlight {
+  color: var(--secundary);
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 36px;
+  transition: all 0.125s ease-in-out;
+}
+
+a {
+  position: relative;
+  &:hover {
+    color: var(--primary);
+    transform: scale(1.1) translateY(-2px);
+  }
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--secundary);
+  transition: all 0.125s ease-in-out;
+}
+
+a:hover::after {
+  width: 100%;
+  max-width: 36px;
+}
