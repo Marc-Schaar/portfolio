@@ -1,0 +1,46 @@
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 64px;
+  > div > a {
+    font-size: 16px;
+  }
+
+  > span {
+    font-size: 18px;
+  }
+}
+
+.social-links-container {
+  display: flex;
+  gap: 36px;
+
+  > a:hover {
+    transition: all 0.125s ease-in-out;
+    transform: scale(1.25) translateX(4px) translateY(4px);
+  }
+}
+
+.icon {
+  height: 28px;
+}
+
+.hover-underline {
+  position: relative;
+}
+
+.hover-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--secundary);
+  transition: all 0.125s ease-in-out;
+}
+
+.hover-underline:hover::after {
+  width: 36px;
+}

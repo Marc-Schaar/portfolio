@@ -4,10 +4,6 @@ header {
   padding: 18px 64px;
 }
 
-.highlight {
-  color: var(--secundary);
-}
-
 nav {
   display: flex;
   flex-direction: row;
@@ -36,6 +32,5 @@ a::after {
 }
 
 a:hover::after {
-  width: 100%;
-  max-width: 36px;
+  width: 36px;
 }
