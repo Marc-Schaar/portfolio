@@ -13,11 +13,7 @@ footer {
 }
 
 .social-links-container {
-  display: flex;
-  gap: 36px;
-
   > a:hover {
-    transition: all 0.125s ease-in-out;
     transform: scale(1.25) translateX(4px) translateY(4px);
   }
 }

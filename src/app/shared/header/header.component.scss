@@ -4,12 +4,17 @@ header {
   padding: 18px 64px;
 }
 
+h2 {
+  font-size: 3em;
+}
+
 nav {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 36px;
   transition: all 0.125s ease-in-out;
+  font-size: 1.5em;
 }
 
 a {
@@ -32,5 +37,6 @@ a::after {
 }
 
 a:hover::after {
-  width: 36px;
+  width: 100%;
+  max-width: 54px;
 }
