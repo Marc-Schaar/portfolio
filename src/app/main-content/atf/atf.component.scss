@@ -9,6 +9,7 @@ section {
 }
 
 .img-container {
+  position: relative;
   > img {
     position: relative;
     width: 100%;
@@ -21,19 +22,21 @@ section {
 
 .shadow-container {
   position: absolute;
-  top: 26%;
+  top: 36%;
   left: -4vw;
   display: flex;
+  width: 100%;
 }
 
 .shadow {
-  width: 400px;
+  width: 50%;
+  height: 100%;
 }
 
-#shadow-right {
-  position: absolute;
-  left: 18vw;
-}
+// #shadow-right {
+//   //   position: absolute;
+//   //   left: 18vw;
+// }
 
 .headline-container {
   display: flex;
