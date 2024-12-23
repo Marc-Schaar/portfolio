@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { AtfComponent } from './atf/atf.component';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 @Component({
   selector: 'app-main-content',
   standalone: true,
-  imports: [AtfComponent],
+  imports: [AtfComponent, AboutMeComponent],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss',
 })
