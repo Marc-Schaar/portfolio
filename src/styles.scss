@@ -104,3 +104,14 @@ app-footer {
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--secundary);
 }
+
+.scroll-animation {
+  transform: translateX(99%);
+  filter: blur(20px);
+  transition: transform 0.125s ease-in-out, filter 0.125s ease-in-out;
+}
+
+.scroll-animation.visible {
+  transform: translateX(0);
+  filter: blur(0);
+}
