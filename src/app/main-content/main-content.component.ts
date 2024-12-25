@@ -13,22 +13,24 @@ import { SkillsComponent } from './skills/skills.component';
 export class MainContentComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     const elements = document.querySelectorAll('.scroll-animation');
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          } else {
-            entry.target.classList.remove('visible');
-          }
+          this.toogleVisabilty(entry);
         });
       },
       {
         threshold: 0.001,
       }
     );
-
     elements.forEach((el) => observer.observe(el));
+  }
+
+  toogleVisabilty(entry: any) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible');
+    }
   }
 }
