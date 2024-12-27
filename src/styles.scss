@@ -1,7 +1,12 @@
 :root {
   --bg-color: rgb(20, 29, 47);
   --primary: rgb(152, 71, 255);
+  --filterPrimary: brightness(0) saturate(100%) invert(30%) sepia(78%)
+    saturate(2527%) hue-rotate(250deg) brightness(100%) contrast(102%);
+
   --secundary: rgb(112, 230, 29);
+  --filterSecundary: brightness(0) saturate(100%) invert(85%) sepia(30%)
+    saturate(1227%) hue-rotate(38deg) brightness(92%) contrast(95%);
 }
 
 * {
@@ -28,7 +33,6 @@ html,
 body {
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
   // height: 100%;
 }
 
@@ -69,8 +73,16 @@ app-footer {
   color: var(--secundary);
 }
 
+.secundary-filter {
+  filter: var(--secundary);
+}
+
 .highlight-primary {
   color: var(--primary);
+}
+
+.primary-filter {
+  filter: var(--filterPrimary);
 }
 
 .social-links-container {
@@ -107,8 +119,8 @@ app-footer {
 
 .scroll-animation {
   transform: translateX(99%);
-  filter: blur(40px);
-  transition: transform 1s ease-in-out, filter 0.125s ease-in-out;
+  filter: blur(10px);
+  transition: transform 1s ease-in-out, filter 0.5s ease-in-out;
 }
 
 .scroll-animation.visible {

@@ -1,7 +1,31 @@
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  max-height: 100%;
+}
+
 .skills-text {
+  display: flex;
+  flex-direction: column;
   max-width: 515px;
   width: 50%;
-  text-align: justify;
+}
+
+.discription {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0 100px 0 0;
+  text-align: end;
+}
+
+.headline {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 32px;
 }
 
 h2 {
@@ -9,9 +33,108 @@ h2 {
   text-wrap: nowrap;
 }
 
+.line {
+  width: 68px;
+  height: 4px;
+  background-color: var(--primary);
+}
+
+h3 {
+  font-size: 32px;
+}
+
+button {
+  margin-top: 24px;
+  width: fit-content;
+  align-self: center;
+  background-color: var(--secundary);
+  color: white;
+  font-size: 1.5em;
+  transition: all 0.125s ease-in-out;
+
+  &:hover {
+    scale: 1.15;
+    background-color: var(--primary) !important;
+    transform: translateY(2px);
+  }
+}
+
 .skills-container {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   width: 50%;
+  column-gap: 88px;
+  row-gap: 24px;
   padding-left: 64px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 75px;
+  gap: 12px;
+  z-index: 1;
+}
+
+.skill-icon {
+  width: 60px;
+  aspect-ratio: 1;
+
+  &:hover {
+    animation-name: jumpIcon;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+  }
+}
+
+#spech-bubble {
+  position: absolute;
+  top: -100%;
+  left: -14%;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.125s ease, transform 0.125s ease;
+}
+
+.wrapper {
+  position: relative;
+
+  #spech-bubble {
+    position: absolute;
+    top: -100%;
+    left: -14%;
+    opacity: 0;
+    z-index: 0;
+    transform: translateY(0px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+
+  .learning-icon {
+    &:hover {
+      color: white;
+      filter: brightness(0) saturate(100%) invert(100%) sepia(0%)
+        saturate(6835%) hue-rotate(287deg) brightness(100%) contrast(116%);
+    }
+
+    &:hover ~ #spech-bubble {
+      opacity: 1;
+      transform: translateY(0);
+      z-index: 2;
+    }
+  }
+}
+
+@keyframes jumpIcon {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-16px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

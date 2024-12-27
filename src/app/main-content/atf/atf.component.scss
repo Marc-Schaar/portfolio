@@ -1,15 +1,22 @@
-section {
+.content {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 99px);
+  max-height: 100%;
+  width: 100%;
+}
+
+main {
   display: flex;
   justify-content: space-between;
-  flex: 1;
   width: 100%;
   height: 100%;
-  padding: 0 64px;
   position: relative;
 }
 
 .img-container {
   position: relative;
+  padding-left: 64px;
   > img {
     position: relative;
     width: 100%;
@@ -46,6 +53,7 @@ section {
   justify-content: center;
   gap: 40px;
   z-index: 40;
+  padding-right: 64px;
 
   > button {
     background-color: var(--secundary);
@@ -97,6 +105,6 @@ section {
 .hero-bg {
   position: absolute;
   width: 100%;
-  top: 48vh;
+  top: 50%;
   z-index: 30;
 }

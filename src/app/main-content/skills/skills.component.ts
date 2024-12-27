@@ -1,12 +1,24 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './skills.component.html',
-  styleUrl: './skills.component.scss'
+  styleUrl: './skills.component.scss',
 })
 export class SkillsComponent {
-
+  frontEndSkills: string[] = [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'TypeScript',
+    'Angular',
+    'Firebase',
+    'Git',
+    'Rest Api',
+    'Scrum',
+    'Material Design',
+  ];
 }

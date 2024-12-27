@@ -1,6 +1,32 @@
-<div class="skills-container">
-    <img src="./../../../assets/icons/front_end_stack/Angular.png" alt="">
-</div>
-<div class="skills-text">
-    <h2>My Skills</h2>
-</div>
+<main class="content scroll-animation">
+    <section class="skills-container">
+        <div *ngFor="let skill of frontEndSkills" class="skill">
+            <img class="skill-icon" src="./../../../assets/icons/front_end_stack/{{skill}}.png" alt="{{skill}}">
+            {{skill}}
+        </div>
+
+        <div class="wrapper">
+            <div class="skill highlight-primary learning-icon">
+                <img id="learning-icon" class="primary-filter" src=" ./../../../assets/icons/learning.png" alt="">
+                Continually <br> learning
+            </div>
+            <img id="spech-bubble" src="./../../../assets/Group 18.png" alt="">
+        </div>
+
+    </section>
+
+    <section class="skills-text">
+        <div class="headline">
+            <h2>My Skills</h2>
+            <div class="line"></div>
+        </div>
+
+        <div class="discription">
+            <p>I have gained experience in building projects with different frontend technologies and concepts.</p>
+            <h3>Looking for <span class="highlight-primary">another skill</span>?</h3>
+            <p>Feel free to contact me. I look forward to expanding on my previous knowledge.
+            </p>
+            <button>Get in touch</button>
+        </div>
+    </section>
+</main>
