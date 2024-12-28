@@ -1,9 +1,24 @@
 <main>
-    <section class="references">
-        alles gut
-    </section>
-    <section class="img-container">
-        <img src="./../../../assets/img/me/schaar-hero.png" alt="">
-        <div class="line"></div>
+    <div class="container scroll-animation">
+        <section class="references">
+            <img src="./../../../assets/icons/quotation_mark.png">
+            <span>{{references[currentIndex].text}}</span>
+            <div class="row">
+                <div class="line"></div>
+                <span>{{references[currentIndex].name}} - Team Partner</span>
+            </div>
+        </section>
+        <section class="img-container">
+            <img src="./../../../assets/img/me/schaar-hero.png" alt="{{references[currentIndex].name}} ">
+            <div class="line"></div>
+        </section>
+    </div>
+
+    <section id="index-row" class="index-row">
+        <button (click)="back()"><img src="./../../../assets/icons/navigation/arrow_back.png" alt=""></button>
+        <img *ngFor="let dot of references let i = index" id="dot-{{i}}" [class.active]="i === currentIndex"
+            src="./../../../assets/icons/dot.png">
+        <button (click)="next()"><img src="./../../../assets/icons/navigation/arrow_forward.png" alt=""></button>
     </section>
 </main>
+<img class="bg-object" src="./../../../assets/img/background-objects/31. Green shadow Skills Portfolio.svg" alt="">
