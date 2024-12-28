@@ -1,0 +1,73 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 136px 32px;
+  z-index: 1;
+  position: relative;
+}
+
+h2 {
+  font-size: 90px;
+  text-wrap: nowrap;
+}
+
+h3 {
+  color: var(--primary);
+  font-size: 2em;
+}
+
+section {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 80px;
+
+  > img {
+    width: 620px;
+  }
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sub-title {
+  font-size: 1.2em;
+  color: var(--secundary);
+}
+
+.row {
+  display: flex;
+  gap: 68px;
+}
+
+button {
+  color: white;
+  transition: background-color 0.125s ease-in-out;
+  font-size: 1.5em;
+}
+
+.primary {
+  background-color: var(--primary);
+}
+
+.secundary-border {
+  border: 2px solid var(--secundary);
+}
+
+.hover-secundary:hover {
+  background-color: var(--secundary);
+}
+
+.bg-object {
+  position: absolute;
+  top: 63%;
+  left: -24%;
+}
