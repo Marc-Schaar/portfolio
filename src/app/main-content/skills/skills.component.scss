@@ -4,6 +4,8 @@
   align-items: center;
   height: 100vh;
   max-height: 100%;
+  position: relative;
+  z-index: 10;
 }
 
 .skills-text {
@@ -127,10 +129,15 @@ button {
   }
 }
 
-.bg-object {
+.img-box {
   position: absolute;
-  top: 50%;
-  left: -55%;
+  display: flex;
+  overflow-x: hidden;
+  justify-content: flex-end;
+  align-items: flex-start;
+  top: 40%;
+  left: 0;
+  width: 280px;
 }
 
 @keyframes jumpIcon {

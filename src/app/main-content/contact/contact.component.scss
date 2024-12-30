@@ -1,0 +1,180 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+h2 {
+  font-size: 90px;
+  background-color: var(--bg-color);
+  padding: 0 32px;
+  z-index: 10;
+}
+
+.line {
+  position: absolute;
+  top: 67.5px;
+  left: 0;
+  width: 50%;
+  height: 4px;
+  background-color: var(--primary);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 120px 0;
+  width: 100%;
+  padding: 0 64px;
+  gap: 40px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+span {
+  text-justify: justify;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+input,
+textarea {
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  padding: 16px 24px;
+  color: white;
+  background: unset;
+  outline: none;
+  font-size: 16px;
+  width: 100%;
+
+  &::placeholder {
+    color: white;
+    font-size: 16px;
+  }
+
+  &:valid {
+    border-color: var(--secundary);
+  }
+}
+
+.checkbox {
+  position: relative;
+  display: inline-block;
+}
+
+.checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkbox label {
+  display: inline-block;
+  margin-right: 12px;
+  width: 24px;
+  height: 24px;
+  background-image: url("./../../../assets/icons/unchecked.png");
+  background-size: cover;
+  cursor: pointer;
+}
+
+.checkbox input[type="checkbox"]:checked + label {
+  background-image: url("./../../../assets/icons/checked.png");
+}
+
+textarea {
+  resize: none;
+  height: 200px;
+}
+
+button {
+  color: white;
+  font-size: 1.5em;
+  white-space: nowrap;
+  width: min-content;
+  background-color: var(--primary);
+  align-self: center;
+
+  &:disabled {
+    background-color: lightgray;
+  }
+}
+
+a {
+  color: var(--primary);
+}
+
+.input-row {
+  position: relative;
+}
+
+.form-validation-icon {
+  position: absolute;
+  top: 12px;
+  right: 24px;
+  width: 24px;
+}
+
+.red-border {
+  border-color: var(--warning);
+}
+
+.alert {
+  color: var(--warning);
+  animation: fade-in forwards, opacity forwards;
+  animation-duration: 0.125s;
+}
+.img-box {
+  position: absolute;
+  display: flex;
+  overflow: hidden;
+  bottom: 0vh;
+  left: 0;
+  width: 500px;
+  height: 540px;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  50% {
+    opacity: 0.2;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}

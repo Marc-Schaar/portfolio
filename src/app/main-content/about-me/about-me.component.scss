@@ -1,4 +1,4 @@
-.content {
+main {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,9 +61,13 @@ h2 {
   }
 }
 
-.bg-object {
+.img-box {
   position: absolute;
-  height: 536px;
-  top: -19vh;
-  right: -37vh;
+  display: flex;
+  overflow-x: hidden;
+  justify-content: flex-start;
+  align-items: flex-end;
+  top: -24vh;
+  right: 0;
+  width: 280px;
 }

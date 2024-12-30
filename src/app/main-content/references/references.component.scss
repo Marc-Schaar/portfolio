@@ -6,6 +6,8 @@ main {
   height: 100vh;
   max-height: 100%;
   gap: 32px;
+  position: relative;
+  z-index: 10;
   > div {
     display: inherit;
     gap: 32px;
@@ -48,6 +50,7 @@ main {
   display: flex;
   align-items: center;
   > img {
+    background-color: antiquewhite;
     width: 272px;
     aspect-ratio: 1;
     border-radius: 50%;
@@ -83,9 +86,17 @@ main {
   }
 }
 
-.bg-object {
+.img-box {
   position: absolute;
-  top: -20%;
-  right: -50%;
-  transform: scaleX(-1);
+  display: flex;
+  overflow-x: hidden;
+  justify-content: flex-start;
+  align-items: flex-start;
+  top: -40vh;
+  right: 0;
+  width: 240px;
+
+  > img {
+    transform: scaleX(-1);
+  }
 }

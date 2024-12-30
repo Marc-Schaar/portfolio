@@ -9,37 +9,20 @@
 }
 
 h2 {
-  display: flex;
-  align-items: center;
   font-size: 90px;
   white-space: nowrap;
-  z-index: 2;
   padding: 0 32px;
   background: var(--bg-color);
-
-  // &::before {
-  //   content: "";
-  //   height: 4px;
-  //   width: 100px;
-  //   background-color: var(--primary);
-  // }
-
-  // &::after {
-  //   position: absolute;
-  //   content: "";
-  //   height: 4px;
-  //   width: 200px;
-  //   background-color: var(--primary);
-  // }
+  z-index: 2;
 }
 
 .line {
   position: absolute;
   top: 67.5px;
   right: 0;
+  width: 75%;
   height: 4px;
   background-color: var(--primary);
-  width: 75%;
 }
 
 h3 {
@@ -96,7 +79,19 @@ button {
 }
 
 .bg-object {
+  // position: absolute;
+  // top: 63%;
+  // left: -24%;
+}
+
+.img-box {
   position: absolute;
+  display: flex;
+  overflow-x: hidden;
+  justify-content: flex-end;
+  align-items: flex-start;
   top: 63%;
-  left: -24%;
+  left: 0;
+  width: 540px;
+  height: 100%;
 }
