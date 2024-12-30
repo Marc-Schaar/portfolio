@@ -1,5 +1,4 @@
-.content {
-  display: flex;
+main {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
@@ -9,11 +8,8 @@
 }
 
 h2 {
-  font-size: 90px;
-  white-space: nowrap;
   padding: 0 32px;
   background: var(--bg-color);
-  z-index: 2;
 }
 
 .line {
@@ -27,7 +23,6 @@ h2 {
 
 h3 {
   color: var(--primary);
-  font-size: 2em;
 }
 
 section {
@@ -58,12 +53,6 @@ section {
 .row {
   display: flex;
   gap: 68px;
-}
-
-button {
-  color: white;
-  transition: background-color 0.125s ease-in-out;
-  font-size: 1.5em;
 }
 
 .primary {
