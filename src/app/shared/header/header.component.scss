@@ -1,14 +1,11 @@
 header {
   display: flex;
   justify-content: space-between;
-  padding: 18px 64px;
+  align-items: center;
+  padding: 16px;
   > a {
     cursor: pointer;
   }
-}
-
-h2 {
-  font-size: 3em;
 }
 
 nav {
@@ -40,5 +37,55 @@ nav {
   a:hover::after {
     width: 100%;
     max-width: 54px;
+  }
+}
+
+/* Styling für die Linien */
+.line {
+  stroke: white;
+  stroke-width: 2;
+  stroke-linecap: round;
+  transition: all 0.125s ease-in-out;
+}
+
+/* Transformationen für das Kreuz */
+.menu-icon.open .top {
+  transform: rotate(45deg);
+  transform-origin: 12px 15px;
+}
+
+.menu-icon.open .middle {
+  opacity: 0;
+}
+
+.menu-icon.open .bottom {
+  transform: rotate(-45deg);
+  transform-origin: 13px 15px;
+}
+
+.menu-icon {
+  width: 40px;
+  height: 35px;
+  cursor: pointer;
+  display: none;
+}
+
+.menu {
+  transition: all 0.3s ease;
+  height: 0;
+  overflow: hidden;
+}
+
+.menu.open {
+  height: 200px; /* Beispielhöhe für ein geöffnetes Menü */
+}
+
+@media screen and (max-width: 1023px) {
+  nav {
+    display: none;
+  }
+
+  .menu-icon {
+    display: inline-block;
   }
 }

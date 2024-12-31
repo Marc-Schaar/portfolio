@@ -8,9 +8,16 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
+  isOpen = false;
+
   scrollToTop() {
     window.scrollTo({
       top: 0,
     });
+  }
+
+  toggleMenu() {
+    console.log(this.isOpen);
+    this.isOpen = !this.isOpen;
   }
 }

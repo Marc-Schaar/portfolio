@@ -181,4 +181,13 @@ button {
       left: -40%;
     }
   }
+
+  .img-box {
+    height: 60vh;
+    width: 43vw;
+    top: 67%;
+    > img {
+      width: 200%;
+    }
+  }
 }
