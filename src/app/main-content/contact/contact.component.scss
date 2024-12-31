@@ -176,20 +176,13 @@ a {
   main {
     padding: 0 16px;
     align-items: flex-start;
+    height: unset;
   }
 
   h2 {
-    font-size: 45px;
     padding: 2px;
   }
 
-  h3 {
-    font-size: 1.4em;
-  }
-
-  button {
-    font-size: 1em;
-  }
   .container {
     flex-direction: column;
     padding: 0px;
