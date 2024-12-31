@@ -1,5 +1,8 @@
 main {
+<<<<<<< HEAD
   display: flex;
+=======
+>>>>>>> 0dc523d8531470cf279bf25ea602b06be5768758
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
@@ -66,12 +69,6 @@ section {
 
 .hover-secundary:hover {
   background-color: var(--secundary);
-}
-
-.bg-object {
-  // position: absolute;
-  // top: 63%;
-  // left: -24%;
 }
 
 .img-box {

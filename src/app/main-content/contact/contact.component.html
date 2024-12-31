@@ -15,7 +15,7 @@
         </section>
 
         <section>
-            <form (ngSubmit)="onSubmit(contactForm)" #contactForm='ngForm'>
+            <form (ngSubmit)=" onSubmit(contactForm)" #contactForm='ngForm'>
                 <div class="input-row">
                     <input type="text" name="name" [(ngModel)]="form.name" placeholder="Your name" required
                         minlength="2" #name="ngModel"
