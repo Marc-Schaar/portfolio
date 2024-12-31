@@ -168,6 +168,8 @@ main {
     right: -23px;
     > img {
       width: 200%;
+      position: relative;
+      left: 20px;
     }
   }
 }
