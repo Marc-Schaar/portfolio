@@ -6,8 +6,9 @@ app-contact {
   position: relative;
 }
 
-main {
+.content {
   overflow-x: hidden;
+  flex-direction: column;
 }
 
 .anchor {

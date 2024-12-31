@@ -29,6 +29,16 @@ button {
   background: unset;
   border-radius: 8px;
   padding: 16px 30px;
+  width: min-content;
+
+  font-size: 1.5em;
+  white-space: nowrap;
+  color: white;
+  transition: all 0.125s ease-in-out;
+
+  &:hover {
+    scale: 1.15;
+  }
 }
 
 body {
@@ -48,15 +58,24 @@ app-header {
 app-root {
   display: flex;
   flex-direction: column;
-  // height: 100%;
 }
-
-// app-main-content {
-//   flex: 1;
-// }
 
 app-footer {
   z-index: 1000;
+}
+
+main {
+  display: flex;
+}
+
+h2 {
+  font-size: 90px;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+h3 {
+  font-size: 32px;
 }
 
 .column {

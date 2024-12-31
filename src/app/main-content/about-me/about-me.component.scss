@@ -1,5 +1,4 @@
 main {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100vh;
@@ -14,11 +13,6 @@ main {
   padding-left: 64px;
   width: 50%;
   text-align: justify;
-}
-
-h2 {
-  font-size: 90px;
-  text-wrap: nowrap;
 }
 
 .img-container {

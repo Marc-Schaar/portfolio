@@ -1,5 +1,4 @@
-.content {
-  display: flex;
+main {
   justify-content: space-between;
   align-items: center;
   height: 100vh;
@@ -30,32 +29,18 @@
   gap: 32px;
 }
 
-h2 {
-  font-size: 90px;
-  text-wrap: nowrap;
-}
-
 .line {
   width: 68px;
   height: 4px;
   background-color: var(--primary);
 }
 
-h3 {
-  font-size: 32px;
-}
-
 button {
   margin-top: 24px;
-  width: fit-content;
   align-self: flex-end;
   background-color: var(--secundary);
-  color: white;
-  font-size: 1.5em;
-  transition: all 0.125s ease-in-out;
 
   &:hover {
-    scale: 1.15;
     background-color: var(--primary) !important;
     transform: translateY(6px) translateX(-12px);
   }
