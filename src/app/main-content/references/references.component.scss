@@ -3,7 +3,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   max-height: 100%;
   gap: 32px;
   position: relative;
@@ -92,11 +92,83 @@ main {
   overflow-x: hidden;
   justify-content: flex-start;
   align-items: flex-start;
-  top: -40vh;
+  top: -25vh;
   right: 0;
   width: 240px;
 
   > img {
+    width: 250%;
     transform: scaleX(-1);
+    rotate: -90deg;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .container {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 0 16px;
+  }
+
+  .references {
+    padding: 16px;
+    margin: 0;
+    border-radius: 36px;
+    min-height: 272px;
+    width: 100%;
+
+    > img {
+      width: 68px;
+      left: -12px;
+    }
+    .row {
+      flex-direction: column;
+      align-items: flex-start;
+      width: fit-content;
+      > .line {
+        width: 20%;
+        flex: unset;
+      }
+    }
+  }
+
+  .index-row {
+    > img {
+      width: 8px;
+    }
+    > .active {
+      scale: 1.2;
+    }
+    > button {
+      padding: 0;
+      > img {
+        width: 32px;
+      }
+    }
+  }
+  .img-container {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+
+    > img {
+      width: 144px;
+      z-index: 1;
+    }
+    > .line {
+      position: absolute;
+      right: -16px;
+      width: 50%;
+    }
+  }
+
+  .img-box {
+    height: 60vh;
+    width: 43vw;
+    top: -17px;
+    right: -23px;
+    > img {
+      width: 200%;
+    }
   }
 }

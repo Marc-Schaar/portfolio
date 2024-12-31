@@ -41,3 +41,16 @@ footer {
 .hover-underline:hover::after {
   width: 36px;
 }
+
+@media screen and (max-width: 1024px) {
+  footer {
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    > div:first-child {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+}
