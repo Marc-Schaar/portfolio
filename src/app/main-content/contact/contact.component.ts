@@ -7,7 +7,10 @@ import { FormsModule, NgForm } from '@angular/forms';
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss',
+  styleUrls: [
+    './contact.component.scss',
+    './contact.responsive.component.scss',
+  ],
 })
 export class ContactComponent {
   form: { name: string; email: string; message: string } = {

@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './skills.component.html',
-  styleUrl: './skills.component.scss',
+  styleUrls: ['./skills.component.scss', './skills.responsive.component.scss'],
 })
 export class SkillsComponent {
   frontEndSkills: string[] = [
