@@ -136,11 +136,11 @@ button {
   }
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 768px) {
   main {
     height: unset;
-    padding: 0 0 0 16px;
-    grid-template-columns: 1fr 24px;
+    padding: 0 0 0 48px;
+    grid-template-columns: 1fr 60px;
     gap: 0;
     row-gap: 16px;
   }
@@ -167,7 +167,7 @@ button {
   .line {
     grid-column: 2;
     grid-row: 1;
-    top: -30px;
+    top: -18px;
   }
 
   .skill {
@@ -183,11 +183,22 @@ button {
   }
 
   .img-box {
-    height: 60vh;
-    width: 43vw;
-    top: 67%;
+    width: 30vw;
+    top: 40%;
     > img {
       width: 200%;
+      position: relative;
+      right: 75px;
     }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main {
+    padding: 0 0 0 16px;
+    grid-template-columns: 1fr 24px;
+  }
+  .line {
+    top: -30px;
   }
 }

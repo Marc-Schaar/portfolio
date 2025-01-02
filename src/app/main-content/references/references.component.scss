@@ -102,18 +102,18 @@ main {
   }
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 768px) {
   .container {
     flex-direction: column-reverse;
     align-items: center;
-    padding: 0 16px;
+    padding: 0 48px;
   }
 
   .references {
     padding: 16px;
     margin: 0;
     border-radius: 36px;
-    min-height: 272px;
+    min-height: 200px;
     width: 100%;
 
     > img {
@@ -156,20 +156,37 @@ main {
     }
     > .line {
       position: absolute;
-      right: -16px;
+      right: -48px;
       width: 50%;
     }
   }
 
   .img-box {
-    height: 60vh;
-    width: 43vw;
-    top: -17px;
-    right: -23px;
+    width: 40vw;
+    top: -65vh;
     > img {
-      width: 200%;
+      width: 150%;
       position: relative;
       left: 20px;
     }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .references {
+    min-height: 272px;
+  }
+
+  .img-container > .line {
+    right: -16px;
+  }
+
+  .img-box {
+    top: -17px;
+    right: -23px;
   }
 }

@@ -172,9 +172,9 @@ a {
   }
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 768px) {
   main {
-    padding: 0 16px;
+    padding: 0 48px;
     align-items: flex-start;
     height: unset;
   }
@@ -198,10 +198,21 @@ a {
   }
 
   .img-box {
-    height: 26vh;
-    width: 48vw;
+    height: 48vh;
+    width: 62vw;
     > img {
       width: 200%;
     }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main {
+    padding: 0 16px;
+  }
+
+  .img-box {
+    height: 26vh;
+    width: 48vw;
   }
 }
