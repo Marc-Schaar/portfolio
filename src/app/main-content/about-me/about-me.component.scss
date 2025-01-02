@@ -70,9 +70,13 @@ main {
 @media screen and (max-width: 768px) {
   main {
     padding-top: 88px;
+    flex-direction: column;
   }
   .img-container {
-    display: none;
+    > img,
+    .line {
+      display: none;
+    }
   }
 
   .about-me-text {
@@ -95,27 +99,17 @@ main {
   }
 
   .img-box {
-    width: 38vw;
-    top: -10%;
+    width: 26vw;
+
     > img {
-      width: 165%;
+      width: 250%;
       position: relative;
       left: 40px;
     }
   }
 }
 
-@media screen and (max-width: 768px) and (min-height: 500px) {
-  main {
-    padding-top: 0px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  main {
-    padding-top: 120px;
-  }
-
+@media screen and (max-width: 425px) {
   .about-me-text {
     padding: 0 16px;
   }

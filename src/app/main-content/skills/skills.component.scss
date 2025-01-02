@@ -193,12 +193,16 @@ button {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 425px) {
   main {
     padding: 0 0 0 16px;
     grid-template-columns: 1fr 24px;
   }
   .line {
     top: -30px;
+  }
+
+  .img-box {
+    width: 45vw;
   }
 }

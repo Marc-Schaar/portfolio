@@ -183,6 +183,11 @@ main {
     a:last-child {
       display: none;
     }
+    > a {
+      background: var(--bg-color);
+      position: relative;
+      z-index: 1;
+    }
   }
 
   .hero-bg {
@@ -191,5 +196,69 @@ main {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
+  .links {
+    > .line {
+      width: 28vw;
+    }
+  }
+  .hero-bg {
+    margin-bottom: 420px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .img-container {
+    > img {
+      height: 68vh;
+    }
+  }
+
+  .shadow-container {
+    padding-top: 88px;
+  }
+
+  .headline-text {
+    font-size: 26px;
+  }
+
+  .headline {
+    font-size: 44px;
+    height: 50px;
+  }
+
+  .links {
+    > .line {
+      width: 29vw;
+    }
+  }
+
+  .hero-bg {
+    margin-bottom: 412px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .links {
+    > .line {
+      width: 26vw;
+    }
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .headline-text {
+    font-size: 24px;
+  }
+
+  .headline {
+    font-size: 37px;
+    height: 41px;
+  }
+
+  .links {
+    > .line {
+      width: 23vw;
+    }
+  }
 }

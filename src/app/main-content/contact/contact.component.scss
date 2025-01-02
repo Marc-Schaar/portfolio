@@ -5,6 +5,7 @@ main {
   position: relative;
   height: calc(100vh - 99px);
   max-height: 100%;
+  z-index: 10;
 }
 
 h2 {
@@ -53,7 +54,7 @@ textarea {
   border-radius: 8px;
   padding: 16px 24px;
   color: white;
-  background: unset;
+  background: var(--bg-color);
   outline: none;
   font-size: 16px;
   width: 100%;
@@ -206,7 +207,7 @@ a {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 425px) {
   main {
     padding: 0 16px;
   }
