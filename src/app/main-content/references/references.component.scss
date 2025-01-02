@@ -87,6 +87,8 @@ main {
 
 .img-box {
   position: absolute;
+  z-index: -1;
+
   display: flex;
   overflow-x: hidden;
   justify-content: flex-start;
@@ -102,7 +104,7 @@ main {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1028px) {
   .container {
     flex-direction: column-reverse;
     align-items: center;
@@ -163,7 +165,8 @@ main {
 
   .img-box {
     width: 40vw;
-    top: -65vh;
+    top: -26vh;
+    right: -48px;
     > img {
       width: 150%;
       position: relative;
@@ -174,7 +177,7 @@ main {
 
 @media screen and (max-width: 480px) {
   .img-box {
-    top: 14vh;
+    top: -14vh;
   }
 }
 
@@ -189,10 +192,5 @@ main {
 
   .img-container > .line {
     right: -16px;
-  }
-
-  .img-box {
-    top: -17px;
-    right: -23px;
   }
 }

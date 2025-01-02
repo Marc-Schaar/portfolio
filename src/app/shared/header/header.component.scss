@@ -81,20 +81,18 @@ nav {
   height: 200px; /* Beispielhöhe für ein geöffnetes Menü */
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1000px) {
+  header {
+    height: 80px;
+    padding: 0 48px;
+  }
+
   nav {
     display: none;
   }
 
   .menu-icon {
     display: inline-block;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  header {
-    height: 80px;
-    padding: 0 48px;
   }
 }
 
