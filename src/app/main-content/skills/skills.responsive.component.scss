@@ -1,3 +1,9 @@
+@media screen and (max-width: 1280px) {
+  .line {
+    top: -12px;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   main {
     height: unset;
@@ -29,7 +35,6 @@
   .line {
     grid-column: 2;
     grid-row: 1;
-    top: -18px;
   }
 
   .skill {
@@ -55,16 +60,34 @@
   }
 }
 
+@media screen and (max-width: 777px) {
+  .line {
+    top: -20px;
+  }
+}
+
+@media screen and (max-width: 453px) {
+  .line {
+    top: -32px;
+  }
+}
+
 @media screen and (max-width: 425px) {
   main {
     padding: 0 0 0 16px;
     grid-template-columns: 1fr 24px;
   }
   .line {
-    top: -30px;
+    top: -23px;
   }
 
   .img-box {
     width: 45vw;
+  }
+}
+
+@media screen and (max-width: 385px) {
+  .line {
+    top: -30px;
   }
 }
