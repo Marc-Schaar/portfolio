@@ -1,0 +1,52 @@
+                    @font-face {
+                        font-family: roboto;
+                        src: url(./fonts/Raleway/Raleway-VariableFont_wght.ttf);
+                    }
+                    
+                    * {
+                        scroll-behavior: smooth;
+                        font-family: roboto;
+                    }
+                    
+                    main {
+                        flex: 1;
+                        max-width: 1440px;
+                    }
+                    
+                    .column {
+                        flex-direction: column;
+                    }
+                    
+                    p {
+                        margin: 0;
+                    }
+                    
+                    .icon {
+                        height: 40px;
+                        width: 40px;
+                    }
+                    
+                    .pointer:hover {
+                        cursor: pointer;
+                    }
+                    
+                    .transparent {
+                        color: transparent !important;
+                    }
+                    
+                    #content {
+                        margin: 8px;
+                        margin-top: 120px;
+                        gap: 64px;
+                        min-width: 360px;
+                    }
+                    
+                    #load-more-btn {
+                        font-weight: 700;
+                        font-size: 19px;
+                        width: 214px;
+                    }
+                    
+                    #load-more-btn img {
+                        width: 25%;
+                    }

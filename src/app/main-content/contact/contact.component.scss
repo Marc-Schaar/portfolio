@@ -105,10 +105,7 @@ textarea {
 button {
   background-color: var(--primary);
   align-self: center;
-
-  &:disabled {
-    background-color: lightgray;
-  }
+  padding: 16px 30px;
 }
 
 a {

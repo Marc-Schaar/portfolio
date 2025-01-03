@@ -1,0 +1,84 @@
+@media (max-width: 535px) {
+    #pokemon-img {
+        width: 186px !important;
+        height: 160px !important;
+    }
+    .chain {
+        width: 75px !important;
+        height: 75px !important
+    }
+}
+
+@media (max-width: 467px) {
+    #header-container {
+        align-items: flex-start !important;
+        height: 85px;
+    }
+    .search {
+        flex-direction: column-reverse;
+        height: 80px !important;
+    }
+    #overlayer {
+        padding: 0 20px !important;
+    }
+}
+
+@media (max-width: 430px) {
+    #headline {
+        display: none;
+    }
+    .btn-group {
+        flex-direction: column;
+        gap: 4px;
+    }
+    .font-14 {
+        font-size: 14px !important;
+    }
+    .p-responive-0 {
+        padding: 0 !important;
+    }
+    #detail-info {
+        font-size: 14px;
+        height: 90vh;
+    }
+    #pokemon-name-id {
+        font-size: 16px;
+    }
+    #spider-chart {
+        height: 90% !important;
+    }
+    #stats-table {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #overlayer {
+        padding: 0 8px !important;
+    }
+    .card-body {
+        padding: 8px !important;
+    }
+}
+
+@media (max-width: 380px) {
+    #spider-chart {
+        height: 80% !important;
+    }
+    .arrow {
+        height: 20px !important;
+    }
+    #evo-container {
+        flex-direction: column;
+        margin-top: 106px;
+    }
+}
+
+@media (max-width: 338px) {
+    #pokemon-img {
+        width: 160px !important;
+        height: 155px !important;
+    }
+    #spider-chart {
+        height: 75% !important;
+    }
+}

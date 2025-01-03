@@ -1,0 +1,103 @@
+.detail-info-bg {
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0 40px;
+    z-index: 100;
+}
+
+.detail-info {
+    background: linear-gradient(0deg, rgb(124, 230, 241), rgb(255, 255, 255));
+    height: 88vh;
+    max-height: 800px;
+    width: 550px;
+    z-index: -2;
+}
+
+.bg-img-container {
+    height: 264px;
+    z-index: -1;
+    gap: 80px;
+    width: 96%;
+}
+
+.opacity {
+    opacity: 0.15;
+}
+
+#pokemon-name-id {
+    font-weight: 700;
+}
+
+#pokemon-img {
+    width: 300px;
+    height: 200px;
+    z-index: 1;
+}
+
+#statName {
+    font-size: 12px;
+    width: 150px;
+}
+
+#next img,
+#prev img {
+    height: 24px;
+}
+
+#play-icon {
+    width: 40px;
+}
+
+#container {
+    max-height: 200px;
+}
+
+#container::-webkit-scrollbar,
+#moves-container::-webkit-scrollbar {
+    width: 4px;
+}
+
+#container::-webkit-scrollbar-thumb,
+#moves-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 2px;
+}
+
+#container::-webkit-scrollbar-track,
+#moves-container::-webkit-scrollbar-track {
+    background: #f1f1f100;
+}
+
+.chain {
+    width: 80px;
+    height: 80px;
+}
+
+.arrow {
+    height: 40px;
+}
+
+.appearance {
+    height: 90px;
+    width: 90px;
+}
+
+.wrap {
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+#evo-container-first-evo {
+    max-width: 300px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.move {
+    font-size: 12px;
+}
+
+#spider-chart {
+    height: 100%;
+}
