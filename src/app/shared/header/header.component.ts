@@ -17,7 +17,12 @@ export class HeaderComponent {
   }
 
   toggleMenu() {
-    console.log(this.isOpen);
     this.isOpen = !this.isOpen;
+
+    if (this.isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
   }
 }

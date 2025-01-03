@@ -53,17 +53,12 @@ body {
 app-header {
   position: sticky;
   top: 0;
-  background-color: var(--bg-color);
   z-index: 100;
 }
 
 app-root {
   display: flex;
   flex-direction: column;
-}
-
-app-footer {
-  z-index: 1000;
 }
 
 main {

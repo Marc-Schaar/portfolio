@@ -17,3 +17,28 @@
         </svg>
     </div>
 </header>
+
+
+<main [class.open]="isOpen">
+    <header>
+        <a>
+            <h2>Mar<span class="highlight">c</span> </h2>
+        </a>
+
+        <div class="menu-icon" [class.open]="isOpen">
+            <svg (click)="toggleMenu()" width="40" height="30" viewBox="0 0 40 30" xmlns="http://www.w3.org/2000/svg">
+                <line x1="5" y1="7" x2="35" y2="7" class="line top"></line>
+                <line x1="5" y1="15" x2="35" y2="15" class="line middle"></line>
+                <line x1="5" y1="23" x2="35" y2="23" class="line bottom"></line>
+            </svg>
+        </div>
+    </header>
+
+    <nav>
+        <a (click)="toggleMenu()" href="#about-me">About me</a>
+        <a (click)="toggleMenu()" href="#skills">Skills</a>
+        <a (click)="toggleMenu()" href="#portfolio">Portfolio</a>
+    </nav>
+
+
+</main>
