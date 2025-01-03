@@ -1,9 +1,10 @@
 main {
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   position: relative;
-  height: calc(100vh - 99px);
+  height: calc(100vh - 135px);
   max-height: 100%;
   z-index: 10;
   padding: 0 64px 32px;
@@ -27,7 +28,6 @@ h2 {
   display: flex;
   justify-content: space-between;
   width: 100%;
-
   margin-bottom: 80px;
   gap: 40px;
 }
@@ -39,7 +39,7 @@ section {
 }
 
 span {
-  text-justify: justify;
+  text-align: justify;
 }
 
 form {
@@ -73,28 +73,28 @@ textarea {
 .checkbox {
   position: relative;
   display: inline-block;
-}
 
-.checkbox input[type="checkbox"] {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
+  input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
 
-.checkbox label {
-  display: inline-block;
-  margin-right: 12px;
-  width: 24px;
-  height: 24px;
-  background-color: var(--bg-color);
-  background-image: url("./../../../assets/icons/unchecked.png");
-  background-size: cover;
-  cursor: pointer;
-}
+  label {
+    display: inline-block;
+    margin-right: 12px;
+    width: 24px;
+    height: 24px;
+    background-color: var(--bg-color);
+    background-image: url("./../../../assets/icons/unchecked.png");
+    background-size: cover;
+    cursor: pointer;
+  }
 
-.checkbox input[type="checkbox"]:checked + label {
-  background-image: url("./../../../assets/icons/checked.png");
+  input[type="checkbox"]:checked + label {
+    background-image: url("./../../../assets/icons/checked.png");
+  }
 }
 
 textarea {
@@ -135,6 +135,7 @@ a {
   animation: fade-in forwards, opacity forwards;
   animation-duration: 0.125s;
 }
+
 .img-box {
   position: absolute;
   display: flex;
@@ -151,10 +152,12 @@ a {
   background-color: unset;
   padding: 0;
   align-self: flex-end;
+
   &:hover {
     filter: var(--filterPrimary);
   }
 }
+
 @keyframes fade-in {
   0% {
     opacity: 0;

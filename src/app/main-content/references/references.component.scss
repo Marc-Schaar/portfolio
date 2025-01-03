@@ -7,6 +7,7 @@ main {
   gap: 32px;
   position: relative;
   z-index: 10;
+
   > div {
     display: inherit;
     gap: 32px;
@@ -39,6 +40,7 @@ main {
 
   > .row {
     gap: 16px;
+
     > .line {
       flex: 1;
     }
@@ -48,6 +50,7 @@ main {
 .img-container {
   display: flex;
   align-items: center;
+
   > img {
     background-color: antiquewhite;
     width: 272px;
@@ -71,14 +74,17 @@ main {
 
   > button {
     padding: 4px;
+
     &:hover {
       outline: 2px solid var(--secundary);
       border-radius: 50%;
     }
   }
+
   > img {
     transition: filter 0.125s ease-in-out, scale 0.125s ease-in-out;
   }
+
   > .active {
     scale: 1.5;
     filter: brightness(1.5) var(--filterSecundary) !important;
@@ -88,7 +94,6 @@ main {
 .img-box {
   position: absolute;
   z-index: -1;
-
   display: flex;
   overflow-x: hidden;
   justify-content: flex-start;

@@ -76,15 +76,6 @@ button {
   }
 }
 
-#spech-bubble {
-  position: absolute;
-  top: -100%;
-  left: -14%;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.125s ease, transform 0.125s ease;
-}
-
 .wrapper {
   position: relative;
 
@@ -111,6 +102,15 @@ button {
       z-index: 2;
     }
   }
+}
+
+#spech-bubble {
+  position: absolute;
+  top: -100%;
+  left: -14%;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.125s ease, transform 0.125s ease;
 }
 
 .img-box {
