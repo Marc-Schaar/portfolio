@@ -6,7 +6,7 @@ main {
   height: calc(100vh - 99px);
   max-height: 100%;
   z-index: 10;
-  padding-bottom: 32px;
+  padding: 0 64px 32px;
 }
 
 h2 {
@@ -27,7 +27,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 0 64px;
+
   margin-bottom: 80px;
   gap: 40px;
 }

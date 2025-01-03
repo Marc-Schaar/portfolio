@@ -1,0 +1,30 @@
+main {
+  flex-direction: column;
+  padding: 12px 64px 64px 64px;
+}
+
+h2,
+h3 {
+  white-space: unset;
+  font-size: initial;
+}
+
+h2 {
+  margin: 16px;
+}
+
+h3 {
+  margin: 12px;
+}
+
+p {
+  text-align: justify;
+  margin: 8px;
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+    flex-direction: column;
+    padding: 12px 48px 64px 48px;
+  }
+}
