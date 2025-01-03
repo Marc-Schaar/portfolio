@@ -6,6 +6,7 @@ main {
   height: calc(100vh - 99px);
   max-height: 100%;
   z-index: 10;
+  padding-bottom: 32px;
 }
 
 h2 {
@@ -146,6 +147,14 @@ a {
   justify-content: flex-end;
 }
 
+.btn-up {
+  background-color: unset;
+  padding: 0;
+  align-self: flex-end;
+  &:hover {
+    filter: var(--filterPrimary);
+  }
+}
 @keyframes fade-in {
   0% {
     opacity: 0;

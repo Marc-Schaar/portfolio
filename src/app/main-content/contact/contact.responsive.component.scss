@@ -1,6 +1,6 @@
 @media screen and (max-width: 1000px) {
   main {
-    padding: 0 48px;
+    padding: 0 48px 32px;
     align-items: flex-start;
     height: unset;
   }
@@ -34,7 +34,7 @@
 
 @media screen and (max-width: 425px) {
   main {
-    padding: 0 16px;
+    padding: 0 16px 32px;
   }
 
   .img-box {

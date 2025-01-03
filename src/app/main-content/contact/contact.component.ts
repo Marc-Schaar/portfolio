@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { GlobalService } from '../../shared/global.service';
 
 @Component({
   selector: 'app-contact',
@@ -13,6 +14,8 @@ import { FormsModule, NgForm } from '@angular/forms';
   ],
 })
 export class ContactComponent {
+  constructor(private globalService: GlobalService) {}
+
   form: { name: string; email: string; message: string } = {
     name: '',
     email: '',
@@ -31,5 +34,9 @@ export class ContactComponent {
         message: '',
       };
     }
+  }
+
+  scroll() {
+    this.globalService.scrollToTop();
   }
 }
