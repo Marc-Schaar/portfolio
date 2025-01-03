@@ -1,0 +1,3 @@
+[submodule "src/assets/projects/pokedex"]
+	path = src/assets/projects/pokedex
+	url = https://github.com/FelixFeliices/pokedex.git
