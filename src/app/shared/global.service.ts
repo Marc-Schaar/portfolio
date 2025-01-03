@@ -11,8 +11,4 @@ export class GlobalService {
       top: 0,
     });
   }
-
-  // globalFunction(): string {
-  //   return 'Ich bin eine globale Funktion!';
-  // }
 }

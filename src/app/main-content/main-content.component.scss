@@ -6,10 +6,8 @@ app-references,
 app-contact {
   position: relative;
 }
-
 .content {
-  overflow-x: hidden;
-  flex-direction: column;
+  overflow: hidden;
 }
 
 .anchor {
