@@ -1,3 +1,6 @@
 [submodule "src/assets/projects/pokedex"]
 	path = src/assets/projects/pokedex
 	url = https://github.com/FelixFeliices/pokedex.git
+[submodule "src/assets/projects/join"]
+	path = src/assets/projects/join
+	url = https://github.com/FelixFeliices/Join.git
