@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { GlobalService } from '../global.service';
+import { TranslationService } from './../translation.service';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,10 @@ import { GlobalService } from '../global.service';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  constructor(private globalService: GlobalService) {}
+  constructor(
+    private globalService: GlobalService,
+    private translationService: TranslationService
+  ) {}
   isOpen = false;
 
   scroll() {
@@ -24,5 +28,10 @@ export class HeaderComponent {
     } else {
       document.body.style.overflow = '';
     }
+  }
+
+  changeLanguage(lang: string): void {
+    this.translationService.changeLanguage(lang); // Sprache ändern
+    console.log(lang);
   }
 }
