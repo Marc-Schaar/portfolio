@@ -5,5 +5,13 @@
     "subDiscription1": "Flexibel in Bezug auf Arbeitsumgebungen kann ich sowohl vor Ort in Düsseldorf als auch remote effektiv arbeiten.",
     "subDiscription2": "Ich bin aufgeschlossen und immer auf der Suche nach persönlichen Herausforderungen, um mein Wissen und meine Fähigkeiten ständig zu verbessern.",
     "subDiscription3": "In meinem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben; es ist eine kreative Form der Problemlösung. Ich bin stolz auf meine Fähigkeit, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu übersetzen. Auf diese Weise helfe ich Ihnen"
+  },
+
+  "skills": {
+    "experience": "Ich habe Erfahrung in der Umsetzung von Projekten mit verschiedenen Frontend-Technologien und Konzepten gesammelt.",
+    "lookingFor": "Ich suche nach",
+    "additionalSkill": "einer weiteren Fähigkeit",
+    "contactMessage": "Kontaktieren Sie mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.",
+    "buttonText": "Kontakt aufnehmen"
   }
 }
