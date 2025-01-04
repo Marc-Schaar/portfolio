@@ -1,25 +1,19 @@
 <main>
     <div class="line"></div>
-    <h2>Contact</h2>
+    <h2>{{ 'contact.title' | translate }}</h2>
     <div class="container scroll-animation">
         <section>
-            <h3>Got a problem to solve?</h3>
-            <span>
-                Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing
-                to
-                your projects
-                with my work.
-            </span>
-
-            <p>Need a Frontend developer? <b>Contact me!</b></p>
+            <h3>{{ 'contact.subtitle' | translate }}</h3>
+            <span>{{ 'contact.description' | translate }}</span>
+            <p>{{ 'contact.needDeveloper' | translate }} <b>{{ 'contact.contactMe' | translate }}</b></p>
         </section>
 
         <section>
-            <form (ngSubmit)=" onSubmit(contactForm)" #contactForm='ngForm'>
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                 <div class="input-row">
-                    <input type="text" name="name" [(ngModel)]="form.name" placeholder="Your name" required
-                        minlength="2" #name="ngModel"
-                        [ngClass]="{'red-border': name.invalid && (name.dirty || name.touched)}">
+                    <input type="text" name="name" [(ngModel)]="form.name"
+                        placeholder="{{ 'contact.form.placeholders.name' | translate }}" required minlength="2"
+                        #name="ngModel" [ngClass]="{'red-border': name.invalid && (name.dirty || name.touched)}">
 
                     <img class="form-validation-icon" *ngIf="name.valid"
                         src="./../../../assets/icons/form_validation/correct.png" alt="">
@@ -28,43 +22,45 @@
                 </div>
 
                 <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
-                    <div *ngIf="name.errors?.['required']">Your name is required.</div>
-                    <div *ngIf="name.errors?.['minlength']">Your name must be at least 2 characters long.</div>
+                    <div *ngIf="name.errors?.['required']">{{ 'contact.form.validation.nameRequired' | translate }}
+                    </div>
+                    <div *ngIf="name.errors?.['minlength']">{{ 'contact.form.validation.nameMinLength' | translate }}
+                    </div>
                 </div>
 
                 <div class="input-row">
-                    <input type="email" name="email" [(ngModel)]="form.email" placeholder="Your email" required
-                        #email="ngModel" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                    <input type="email" name="email" [(ngModel)]="form.email"
+                        placeholder="{{ 'contact.form.placeholders.email' | translate }}" required #email="ngModel"
+                        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
                         [ngClass]="{'red-border': email.invalid && (email.dirty || email.touched)}">
 
                     <img class="form-validation-icon" *ngIf="email.valid"
                         src="./../../../assets/icons/form_validation/correct.png" alt="">
                     <img class="form-validation-icon" *ngIf="email.invalid && (email.dirty || email.touched)"
                         src="./../../../assets/icons/form_validation/wrong.png" alt="">
-
                 </div>
 
                 <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert">
-                    <div *ngIf="email.errors?.['required']">Your email is required.</div>
-                    <div *ngIf="email.errors?.['pattern']">Please enter a valid email
-                        address.<br>example&#64;example.com
+                    <div *ngIf="email.errors?.['required']">{{ 'contact.form.validation.emailRequired' | translate }}
+                    </div>
+                    <div *ngIf="email.errors?.['pattern']">{{ 'contact.form.validation.emailPattern' | translate }}
                     </div>
                 </div>
 
                 <div class="input-row">
-                    <textarea name="message" [(ngModel)]="form.message" placeholder="Your message" required
-                        #message="ngModel"
+                    <textarea name="message" [(ngModel)]="form.message"
+                        placeholder="{{ 'contact.form.placeholders.message' | translate }}" required #message="ngModel"
                         [ngClass]="{'red-border': message.invalid && (message.dirty || message.touched)}"></textarea>
-                    <img class=" form-validation-icon" *ngIf="message.valid"
+                    <img class="form-validation-icon" *ngIf="message.valid"
                         src="./../../../assets/icons/form_validation/correct.png" alt="Correct">
                     <img class="form-validation-icon" *ngIf="message.invalid && (message.dirty || message.touched)"
                         src="./../../../assets/icons/form_validation/wrong.png" alt="False">
                 </div>
 
                 <div *ngIf="message.invalid && (message.dirty || message.touched)" class="alert">
-                    <div *ngIf="message.errors?.['required']">Message is required.</div>
+                    <div *ngIf="message.errors?.['required']">{{ 'contact.form.validation.messageRequired' | translate
+                        }}</div>
                 </div>
-
 
                 <div class="row">
                     <div class="checkbox">
@@ -72,28 +68,27 @@
                         <label for="checkbox"></label>
                     </div>
                     <span>
-                        I've read the <a href="imprint">privacy policy</a> and agree to the processing of my data as
-                        outlined.
+                        {{ 'contact.form.checkboxBeforLinkText' | translate }} <a href='imprint'>{{
+                            'contact.form.privacyPolice' | translate }}</a> {{
+                        'contact.form.checkboxAfterLinkText' | translate }}
                     </span>
                 </div>
 
                 <div *ngIf="checkbox.invalid && (checkbox.dirty || checkbox.touched)" class="alert">
                     <div *ngIf="checkbox?.errors?.['required']">
-                        You must agree to the privacy policy.
+                        {{ 'contact.form.validation.privacyRequired' | translate }}
                     </div>
                 </div>
 
                 <button type="submit" [disabled]="!contactForm.valid">
-                    Send Message :)
+                    {{ 'contact.form.button' | translate }}
                 </button>
-
             </form>
         </section>
-
-
     </div>
 
-    <button (click)="scroll()" class="btn-up"><img src="./../../../assets/icons/navigation/up.png" alt=""></button>
+    <button (click)="scroll()" class="btn-up"><img src="./../../../assets/icons/navigation/up.png"
+            alt="{{ 'contact.scrollButtonAlt' | translate }}"></button>
 </main>
 <div class="img-box">
     <img src="./../../../assets/img/background-objects/33. Purple shadow Footer.svg" alt="">

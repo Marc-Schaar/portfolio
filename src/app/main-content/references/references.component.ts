@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-references',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './references.component.html',
   styleUrls: [
     './references.component.scss',
@@ -27,21 +28,6 @@ export class ReferencesComponent {
       name: 'lara',
       img: 'quelle',
       text: 'super gemacht',
-    },
-    {
-      name: '1',
-      img: 'quelle',
-      text: 'prima gemacht',
-    },
-    {
-      name: '2',
-      img: 'quelle',
-      text: 'klasse gemacht',
-    },
-    {
-      name: '3',
-      img: 'quelle',
-      text: 'seh gut gemacht',
     },
   ];
 

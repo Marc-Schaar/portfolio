@@ -21,5 +21,32 @@
     "elPolloLocoDescription": "Jump-and-Run-Spiel, das spaßiges Gameplay mit fortschrittlicher Spiel-Logik kombiniert, entwickelt mit objektorientierter Programmierung.",
     "pokedexDescription": "Beschreibung des Pokédex.",
     "daBubbleDescription": "In Bearbeitung . . ."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Haben Sie ein Problem zu lösen?",
+    "description": "Kontaktieren Sie mich über dieses Formular. Ich freue mich, von Ihnen zu hören, Ihre Ideen zu erfahren und mit meiner Arbeit zu Ihren Projekten beizutragen.",
+    "needDeveloper": "Brauchen Sie einen Frontend-Entwickler?",
+    "contactMe": "Kontaktieren Sie mich!",
+    "form": {
+      "placeholders": {
+        "name": "Ihr Name",
+        "email": "Ihre E-Mail",
+        "message": "Ihre Nachricht"
+      },
+      "validation": {
+        "nameRequired": "Ihr Name ist erforderlich.",
+        "nameMinLength": "Ihr Name muss mindestens 2 Zeichen lang sein.",
+        "emailRequired": "Ihre E-Mail ist erforderlich.",
+        "emailPattern": "Bitte geben Sie eine gültige E-Mail-Adresse ein.<br>beispiel@beispiel.de",
+        "messageRequired": "Eine Nachricht ist erforderlich.",
+        "privacyRequired": "Sie müssen der Datenschutzerklärung zustimmen."
+      },
+      "checkboxBeforLinkText": "Ich habe die",
+      "privacyPolice": "Datenschutzerklärung",
+      "checkboxAfterLinkText": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+      "button": "Nachricht senden :)"
+    },
+    "scrollButtonAlt": "Nach oben scrollen"
   }
 }
