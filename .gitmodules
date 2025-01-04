@@ -4,3 +4,6 @@
 [submodule "src/assets/projects/join"]
 	path = src/assets/projects/join
 	url = https://github.com/FelixFeliices/Join.git
+[submodule "src/assets/projects/el-pollo-loco"]
+	path = src/assets/projects/el-pollo-loco
+	url = https://github.com/FelixFeliices/El-Pollo-Loco.git
