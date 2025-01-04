@@ -13,5 +13,13 @@
     "additionalSkill": "einer weiteren Fähigkeit",
     "contactMessage": "Kontaktieren Sie mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.",
     "buttonText": "Kontakt aufnehmen"
+  },
+
+  "portfolio": {
+    "subtitle": "Entdecken Sie hier eine Auswahl meiner Arbeiten – interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "joinDescription": "Task-Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
+    "elPolloLocoDescription": "Jump-and-Run-Spiel, das spaßiges Gameplay mit fortschrittlicher Spiel-Logik kombiniert, entwickelt mit objektorientierter Programmierung.",
+    "pokedexDescription": "Beschreibung des Pokédex.",
+    "daBubbleDescription": "In Bearbeitung . . ."
   }
 }

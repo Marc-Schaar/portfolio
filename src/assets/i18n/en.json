@@ -12,5 +12,12 @@
     "additionalSkill": "another skill",
     "contactMessage": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
     "buttonText": "Get in touch"
+  },
+  "portfolio": {
+    "subtitle": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+    "joinDescription": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+    "elPolloLocoDescription": "Jump-and-run game that combines fun gameplay with advanced game logic, built using object-oriented programming.",
+    "pokedexDescription": "pokedex discription",
+    "daBubbleDescription": "In Progress . . ."
   }
 }
