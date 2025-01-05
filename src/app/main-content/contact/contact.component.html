@@ -11,7 +11,7 @@
         <section>
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                 <div class="input-row">
-                    <input type="text" name="name" [(ngModel)]="form.name"
+                    <input type="text" name="name" [(ngModel)]="contactData.name"
                         placeholder="{{ 'contact.form.placeholders.name' | translate }}" required minlength="2"
                         #name="ngModel" [ngClass]="{'red-border': name.invalid && (name.dirty || name.touched)}">
 
@@ -29,7 +29,7 @@
                 </div>
 
                 <div class="input-row">
-                    <input type="email" name="email" [(ngModel)]="form.email"
+                    <input type="email" name="email" [(ngModel)]="contactData.email"
                         placeholder="{{ 'contact.form.placeholders.email' | translate }}" required #email="ngModel"
                         pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
                         [ngClass]="{'red-border': email.invalid && (email.dirty || email.touched)}">
@@ -48,7 +48,7 @@
                 </div>
 
                 <div class="input-row">
-                    <textarea name="message" [(ngModel)]="form.message"
+                    <textarea name="message" [(ngModel)]="contactData.message"
                         placeholder="{{ 'contact.form.placeholders.message' | translate }}" required #message="ngModel"
                         [ngClass]="{'red-border': message.invalid && (message.dirty || message.touched)}"></textarea>
                     <img class="form-validation-icon" *ngIf="message.valid"
