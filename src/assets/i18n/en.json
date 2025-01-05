@@ -20,6 +20,11 @@
     "pokedexDescription": "pokedex discription",
     "daBubbleDescription": "In Progress . . ."
   },
+  "references": {
+    "jamal": "Jamals reference",
+    "marc": "marcs reference",
+    "lara": "laras reference"
+  },
   "contact": {
     "title": "Contact",
     "subtitle": "Got a problem to solve?",

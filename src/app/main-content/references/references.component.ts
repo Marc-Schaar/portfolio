@@ -17,17 +17,14 @@ export class ReferencesComponent {
     {
       name: 'marc',
       img: 'quelle',
-      text: 'gut gemacht',
     },
     {
       name: 'jamal',
       img: 'quelle',
-      text: 'toll gemacht',
     },
     {
       name: 'lara',
       img: 'quelle',
-      text: 'super gemacht',
     },
   ];
 

@@ -2,10 +2,10 @@
     <div class="container scroll-animation">
         <section class="references">
             <img src="./../../../assets/icons/quotation_mark.png">
-            <span>{{references[currentIndex].text}}</span>
+            <span>{{ 'references.' + references[currentIndex].name | translate }}</span>
             <div class="row">
                 <div class="line"></div>
-                <span>{{references[currentIndex].name}} - Team Partner</span>
+                <span>{{ references[currentIndex].name }} - Team Partner</span>
             </div>
         </section>
         <section class="img-container">

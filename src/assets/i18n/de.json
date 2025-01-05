@@ -22,6 +22,11 @@
     "pokedexDescription": "Beschreibung des Pokédex.",
     "daBubbleDescription": "In Bearbeitung . . ."
   },
+  "references": {
+    "jamal": "asaa",
+    "marc": "dsad",
+    "lara": "wddasdaad"
+  },
   "contact": {
     "title": "Kontakt",
     "subtitle": "Haben Sie ein Problem zu lösen?",
