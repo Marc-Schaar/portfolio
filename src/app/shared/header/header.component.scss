@@ -10,7 +10,18 @@ header {
   background-color: var(--bg-color);
 }
 
+.language-btns {
+  display: flex;
+  gap: 60px;
+  font-size: 24px;
+  > button {
+    position: relative;
+    box-shadow: unset;
+  }
+}
+
 nav {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -18,8 +29,8 @@ nav {
   transition: all 0.125s ease-in-out;
   font-size: 2em;
 
-  > a {
-    position: relative;
+  > a,
+  button {
     text-decoration: none;
     color: inherit;
     &:hover,
@@ -35,13 +46,22 @@ nav {
       width: 0%;
       height: 2px;
       background-color: var(--secundary);
-      transition: all 0.125s ease-in-out;
     }
     &:hover::after,
     &:active::after {
-      width: 100%;
       max-width: 54px;
+      animation: fadeIn 0.125s 1 forwards;
     }
+  }
+  > button {
+    position: relative;
+    font-size: 24px;
+  }
+}
+
+.underline {
+  &::after {
+    animation: fadeIn 0.125s 1 forwards;
   }
 }
 
@@ -97,6 +117,18 @@ main {
 
 .open {
   transform: translateX(0%);
+}
+
+@keyframes fadeIn {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 30%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1000px) {

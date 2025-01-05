@@ -7,17 +7,21 @@ import { TranslateService } from '@ngx-translate/core';
 export class GlobalService {
   constructor(private translate: TranslateService) {
     let browserLang = this.translate.getBrowserLang();
-    let initialLang = browserLang?.match(/en|de/) ? browserLang : 'en';
+    let initialLang = browserLang?.match(/de/) ? browserLang : 'en';
     this.translate.use(initialLang);
   }
 
-  scrollToTop() {
+  scrollToTop(): void {
     window.scrollTo({
       top: 0,
     });
   }
 
-  changeLanguage(lang: string) {
+  changeLanguage(lang: string): void {
     this.translate.use(lang);
+  }
+
+  getCurrentLanguage(): string {
+    return this.translate.currentLang;
   }
 }

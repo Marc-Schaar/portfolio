@@ -1,4 +1,8 @@
 {
+  "atf": {
+    "label": "Lass uns reden!"
+  },
+
   "aboutMe": {
     "title": "Über mich",
     "discription": "Hallo, ich bin ein deutschsprachiger Frontend-Entwickler aus der Nähe von Düsseldorf. Motiviert von den grenzenlosen Möglichkeiten in der IT freue ich mich darauf, visuell fesselnde und intuitive Websites und Anwendungen zu entwickeln.",
@@ -8,6 +12,7 @@
   },
 
   "skills": {
+    "title": "Meine Fähigkeiten",
     "experience": "Ich habe Erfahrung in der Umsetzung von Projekten mit verschiedenen Frontend-Technologien und Konzepten gesammelt.",
     "lookingFor": "Ich suche nach",
     "additionalSkill": "einer weiteren Fähigkeit",

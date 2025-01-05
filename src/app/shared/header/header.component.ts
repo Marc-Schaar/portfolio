@@ -1,16 +1,18 @@
 import { Component } from '@angular/core';
 import { GlobalService } from '../global.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
   constructor(private globalService: GlobalService) {}
   isOpen = false;
+  currentLang = this.globalService.getCurrentLanguage();
 
   scroll() {
     this.globalService.scrollToTop();
@@ -28,6 +30,6 @@ export class HeaderComponent {
 
   changeLanguage(lang: string): void {
     this.globalService.changeLanguage(lang);
-    console.log(lang);
+    this.currentLang = lang;
   }
 }

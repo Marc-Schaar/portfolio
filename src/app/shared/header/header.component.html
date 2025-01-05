@@ -3,14 +3,11 @@
         <h2>Mar<span class="highlight-secundary">c</span> </h2>
     </a>
 
-
-
-    <button (click)="changeLanguage('de')">de</button>
-    <button (click)="changeLanguage('en')">en</button>
-
     <nav>
-        <a href="#about-me">About me</a>
-        <a href="#skills">Skills</a>
+        <button [class.underline]="currentLang == 'de'" (click)="changeLanguage('de')">de</button>
+        <button [class.underline]="currentLang == 'en'" (click)="changeLanguage('en')">en</button>
+        <a href="#about-me">{{ 'aboutMe.title' | translate }}</a>
+        <a href="#skills">{{ 'skills.title' | translate }}</a>
         <a href="#portfolio">Portfolio</a>
     </nav>
 
@@ -43,6 +40,10 @@
         <a (click)="toggleMenu()" href="#about-me">About me</a>
         <a (click)="toggleMenu()" href="#skills">Skills</a>
         <a (click)="toggleMenu()" href="#portfolio">Portfolio</a>
+        <div class="language-btns">
+            <button [class.underline]="currentLang == 'de'" (click)="changeLanguage('de')">de</button>
+            <button [class.underline]="currentLang == 'en'" (click)="changeLanguage('en')">en</button>
+        </div>
     </nav>
 
 
