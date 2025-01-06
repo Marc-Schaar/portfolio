@@ -4,11 +4,12 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { GlobalService } from '../../shared/global.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslateModule],
+  imports: [CommonModule, FormsModule, TranslateModule, RouterLink],
   templateUrl: './contact.component.html',
   styleUrls: [
     './contact.component.scss',
@@ -34,7 +35,7 @@ export class ContactComponent {
   mailTest = false;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'http://marc-schaar.dev/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {

@@ -1,14 +1,17 @@
 <header>
-    <a href="" (click)="scroll()">
+    <a routerLink="" (click)="scroll()">
         <h2>Mar<span class="highlight-secundary">c</span> </h2>
     </a>
 
     <nav>
-        <button [class.underline]="currentLang == 'de'" (click)="changeLanguage('de')">de</button>
-        <button [class.underline]="currentLang == 'en'" (click)="changeLanguage('en')">en</button>
         <a href="#about-me">{{ 'aboutMe.title' | translate }}</a>
         <a href="#skills">{{ 'skills.title' | translate }}</a>
         <a href="#portfolio">Portfolio</a>
+        <div class="row">
+            <button [class.underline]="currentLang == 'de'" (click)="changeLanguage('de')">de</button>
+            <div class="divider"></div>
+            <button [class.underline]="currentLang == 'en'" (click)="changeLanguage('en')">en</button>
+        </div>
     </nav>
 
     <div class="menu-icon" [class.open]="isOpen">
@@ -42,8 +45,10 @@
         <a (click)="toggleMenu()" href="#portfolio">Portfolio</a>
         <div class="language-btns">
             <button [class.underline]="currentLang == 'de'" (click)="changeLanguage('de')">de</button>
+            <div class="divider"></div>
             <button [class.underline]="currentLang == 'en'" (click)="changeLanguage('en')">en</button>
         </div>
+
     </nav>
 
 

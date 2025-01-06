@@ -9,6 +9,10 @@ main {
   gap: 36px;
 }
 
+h2 {
+  white-space: nowrap;
+}
+
 .row {
   display: flex;
   align-items: center;

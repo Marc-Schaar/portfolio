@@ -1,7 +1,7 @@
 <main>
     <div class="container scroll-animation">
         <section class="references">
-            <img src="./../../../assets/icons/quotation_mark.png">
+            <img src="assets/icons/quotation_mark.png">
             <span>{{ 'references.' + references[currentIndex].name | translate }}</span>
             <div class="row">
                 <div class="line"></div>
@@ -9,19 +9,19 @@
             </div>
         </section>
         <section class="img-container">
-            <img src="./../../../assets/img/me/schaar-hero.png" alt="{{references[currentIndex].name}} ">
+            <img src="assets/img/me/schaar-hero.png" alt="{{references[currentIndex].name}} ">
             <div class="line"></div>
 
             <div class="img-box">
-                <img src="./../../../assets/img/background-objects/31. Green shadow Skills Portfolio.svg" alt="">
+                <img src="assets/img/background-objects/31. Green shadow Skills Portfolio.svg" alt="">
             </div>
         </section>
     </div>
 
     <section id="index-row" class="index-row">
-        <button (click)="back()"><img src="./../../../assets/icons/navigation/arrow_back.png" alt=""></button>
+        <button (click)="back()"><img src="assets/icons/navigation/arrow_back.png" alt=""></button>
         <img *ngFor="let dot of references let i = index" id="dot-{{i}}" [class.active]="i === currentIndex"
-            src="./../../../assets/icons/dot.png">
-        <button (click)="next()"><img src="./../../../assets/icons/navigation/arrow_forward.png" alt=""></button>
+            src="assets/icons/dot.png">
+        <button (click)="next()"><img src="assets/icons/navigation/arrow_forward.png" alt=""></button>
     </section>
 </main>

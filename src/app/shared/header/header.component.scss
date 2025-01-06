@@ -12,12 +12,19 @@ header {
 
 .language-btns {
   display: flex;
-  gap: 60px;
+  gap: 24px;
   font-size: 24px;
+  align-items: center;
   > button {
     position: relative;
     box-shadow: unset;
   }
+}
+
+.divider {
+  height: 22px;
+  width: 2px;
+  background-color: white;
 }
 
 nav {
@@ -36,6 +43,8 @@ nav {
     &:hover,
     &:active {
       color: var(--primary);
+    }
+    &:hover {
       transform: scale(1.1) translateY(-2px);
     }
     &::after {
@@ -53,13 +62,19 @@ nav {
       animation: fadeIn 0.125s 1 forwards;
     }
   }
-  > button {
-    position: relative;
-    font-size: 24px;
+  > {
+    .row {
+      gap: 8px;
+      button {
+        position: relative;
+        font-size: 24px;
+      }
+    }
   }
 }
 
 .underline {
+  color: var(--primary) !important;
   &::after {
     animation: fadeIn 0.125s 1 forwards;
   }
@@ -110,7 +125,7 @@ main {
     flex-direction: column;
     flex: 1;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     background-color: rgb(65, 72, 86);
   }
 }
