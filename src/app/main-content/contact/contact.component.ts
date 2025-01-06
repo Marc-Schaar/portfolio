@@ -26,7 +26,6 @@ export class ContactComponent {
   };
 
   http = inject(HttpClient);
-  #name: string = '';
 
   scroll() {
     this.globalService.scrollToTop();
@@ -35,7 +34,7 @@ export class ContactComponent {
   mailTest = false;
 
   post = {
-    endPoint: 'http://marc-schaar.dev/sendMail.php',
+    endPoint: 'https://marc-schaar.dev/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -52,11 +51,6 @@ export class ContactComponent {
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
-            this.contactData = {
-              name: '',
-              email: '',
-              message: '',
-            };
           },
           error: (error) => {
             console.error(error);
@@ -67,11 +61,6 @@ export class ContactComponent {
       console.log(this.contactData);
 
       ngForm.resetForm();
-      this.contactData = {
-        name: '',
-        email: '',
-        message: '',
-      };
     }
   }
 }
