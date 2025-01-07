@@ -55,5 +55,9 @@
       "button": "Send Message :)"
     },
     "scrollButtonAlt": "Scroll up"
+  },
+  "footer": {
+    "legalNotice": "Legal Notice",
+    "imprint": "Imprint"
   }
 }

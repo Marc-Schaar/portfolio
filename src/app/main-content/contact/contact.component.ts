@@ -17,7 +17,8 @@ import { RouterLink } from '@angular/router';
   ],
 })
 export class ContactComponent {
-  constructor(private globalService: GlobalService) {}
+  constructor() {}
+  globalService = inject(GlobalService);
 
   contactData: { name: string; email: string; message: string } = {
     name: '',
