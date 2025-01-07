@@ -40,8 +40,8 @@
     </header>
 
     <nav>
-        <a (click)="toggleMenu()" href="#about-me">About me</a>
-        <a (click)="toggleMenu()" href="#skills">Skills</a>
+        <a (click)="toggleMenu()" href="#about-me">{{ 'aboutMe.title' | translate }}</a>
+        <a (click)="toggleMenu()" href="#skills">{{ 'skills.title' | translate }}</a>
         <a (click)="toggleMenu()" href="#portfolio">Portfolio</a>
         <div class="language-btns">
             <button [class.underline]="currentLang == 'de'" (click)="changeLanguage('de')">de</button>
