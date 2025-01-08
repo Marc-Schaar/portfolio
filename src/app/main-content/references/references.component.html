@@ -1,7 +1,7 @@
 <main>
     <div class="container scroll-animation">
         <section class="references">
-            <img src="assets/icons/quotation_mark.png">
+            <img class="primary-filter" src="assets/icons/quotation_mark.png">
             <span>{{ 'references.' + references[currentIndex].name | translate }}</span>
             <div class="row">
                 <div class="line"></div>
@@ -20,9 +20,11 @@
     </div>
 
     <section id="index-row" class="index-row">
-        <button (click)="back()"><img src="assets/icons/navigation/arrow_back.png" alt=""></button>
+        <button (click)="back()"><img class="secundary-filter" src="assets/icons/navigation/arrow_back.png"
+                alt=""></button>
         <img *ngFor="let dot of references let i = index" id="dot-{{i}}" [class.active]="i === currentIndex"
-            src="assets/icons/dot.png">
-        <button (click)="next()"><img src="assets/icons/navigation/arrow_forward.png" alt=""></button>
+            class="primary-filter" src="assets/icons/dot.png">
+        <button (click)="next()"><img class="secundary-filter" src="assets/icons/navigation/arrow_forward.png"
+                alt=""></button>
     </section>
 </main>
