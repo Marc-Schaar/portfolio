@@ -33,7 +33,7 @@
                     <input type="email" name="email" [(ngModel)]="contactData.email"
                         placeholder="{{ 'contact.form.placeholders.email' | translate }}" required #email="ngModel"
                         pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-                        [ngClass]="{'red-border': email.invalid && (email.dirty || email.touched)}" autocomplete="off">
+                        [ngClass]="{'red-border': email.invalid && (email.dirty || email.touched)}" autocomplete="on">
 
                     <img class="form-validation-icon" *ngIf="email.valid" src="assets/icons/form_validation/correct.png"
                         alt="">
@@ -44,7 +44,8 @@
                 <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert">
                     <div *ngIf="email.errors?.['required']">{{ 'contact.form.validation.emailRequired' | translate }}
                     </div>
-                    <div *ngIf="email.errors?.['pattern']">{{ 'contact.form.validation.emailPattern' | translate }}
+                    <div *ngIf="email.errors?.['pattern']">{{ 'contact.form.validation.emailPattern' | translate }} <br>
+                        {{ 'contact.form.validation.emailPatternExample' | translate }}
                     </div>
                 </div>
 

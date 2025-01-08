@@ -1,57 +1,58 @@
 {
   "atf": {
-    "label": "Lass uns reden!"
+    "label": "Kontaktiere mich!"
   },
   "aboutMe": {
     "title": "Über mich",
-    "discription": "Hallo, ich bin ein deutschsprachiger Frontend-Entwickler aus der Nähe von Düsseldorf. Motiviert von den grenzenlosen Möglichkeiten in der IT freue ich mich darauf, visuell fesselnde und intuitive Websites und Anwendungen zu entwickeln.",
-    "subDiscription1": "Flexibel in Bezug auf Arbeitsumgebungen kann ich sowohl vor Ort in Düsseldorf als auch remote effektiv arbeiten.",
-    "subDiscription2": "Ich bin aufgeschlossen und immer auf der Suche nach persönlichen Herausforderungen, um mein Wissen und meine Fähigkeiten ständig zu verbessern.",
-    "subDiscription3": "In meinem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben; es ist eine kreative Form der Problemlösung. Ich bin stolz auf meine Fähigkeit, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu übersetzen. Auf diese Weise helfe ich Ihnen"
+    "discription": "Hallo, ich bin Frontend-Entwickler  und wohne in Düsseldorf. Begeistert von den grenzenlosen Möglichkeiten der IT, finde ich Freude daran, visuell ansprechende und benutzerfreundliche Webseiten und Anwendungen zu entwickeln.",
+    "subDiscription1": "Ich bin anpassungsfähig in Bezug auf Arbeitsumgebungen und arbeite sowohl vor Ort in Düsseldorf als auch remote effizient.",
+    "subDiscription2": "Ich bin aufgeschlossen und suche ständig nach persönlichen Herausforderungen, um mein Wissen und meine Fähigkeiten weiter zu verbessern.",
+    "subDiscription3": "Für mich geht es beim Programmieren nicht nur ums Codieren, sondern um kreative Problemlösungen. Ich bin stolz darauf, komplexe technische Probleme in klare, benutzerfreundliche Lösungen zu verwandeln und es Ihnen so leichter zu machen."
   },
   "skills": {
     "title": "Meine Fähigkeiten",
-    "experience": "Ich habe Erfahrung in der Umsetzung von Projekten mit verschiedenen Frontend-Technologien und Konzepten gesammelt.",
-    "lookingFor": "Ich suche nach",
-    "additionalSkill": "einer weiteren Fähigkeit",
-    "contactMessage": "Kontaktieren Sie mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.",
+    "experience": "Ich habe Erfahrungen gesammelt im Entwickeln von Projekten mit verschiedenen Frontend-Technologien und Design-Konzepten.",
+    "lookingFor": "Auf der Suche nach",
+    "additionalSkill": "weiteren Fähigkeiten",
+    "contactMessage": "Zögern Sie nicht, mich zu kontaktieren. Ich freue mich darauf, mein Wissen zu erweitern und Neues zu lernen.",
     "buttonText": "Kontakt aufnehmen"
   },
   "portfolio": {
-    "subtitle": "Entdecken Sie hier eine Auswahl meiner Arbeiten – interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "subtitle": "Entdecken Sie eine ausgewählte Sammlung meiner Projekte – Interagieren Sie mit ihnen, um meine Fähigkeiten hautnah zu erleben.",
     "joinDescription": "Task-Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
     "elPolloLocoDescription": "Jump-and-Run-Spiel, das spaßiges Gameplay mit fortschrittlicher Spiel-Logik kombiniert, entwickelt mit objektorientierter Programmierung.",
-    "pokedexDescription": "Beschreibung des Pokédex.",
+    "pokedexDescription": "Pokédex-App, die Pokémon-Daten von einer API abruft. Sehen Sie detaillierte Informationen zu jedem Pokémon, einschließlich Statuswerten, Fähigkeiten und Entwicklungen.",
     "daBubbleDescription": "In Bearbeitung . . ."
   },
   "references": {
-    "jamal": "asaa",
-    "marc": "dsad",
-    "lara": "wddasdaad"
+    "Michael": "Ich arbeitete mit Marc an einem Frontend-Projekt. Er war stets gut organisiert, und ich schätzte seine klare Kommunikation sowie seine lösungsorientierte Herangehensweise.",
+    "Julia": "Er war sehr detailverliebt und hatte tolle Ideen, um die Benutzererfahrung zu verbessern.",
+    "Thomas": "Ich schätze seine effizient und zuverlässig. Er passte sich schnell neuen Herausforderungen an."
   },
   "contact": {
-    "title": "Kontakt",
-    "subtitle": "Haben Sie ein Problem zu lösen?",
-    "description": "Kontaktieren Sie mich über dieses Formular. Ich freue mich, von Ihnen zu hören, Ihre Ideen zu erfahren und mit meiner Arbeit zu Ihren Projekten beizutragen.",
-    "needDeveloper": "Brauchen Sie einen Frontend-Entwickler?",
-    "contactMe": "Kontaktieren Sie mich!",
+    "title": "Kontakt aufnehmen",
+    "subtitle": "Haben Sie ein Anliegen oder eine Idee?",
+    "description": "Kontaktieren Sie mich über dieses Formular. Ich freue mich darauf, von Ihnen zu hören, Ihre Ideen zu erfahren und an Ihren Projekten mitzuwirken.",
+    "needDeveloper": "Suchen Sie einen Frontend-Entwickler?",
+    "contactMe": "Lassen Sie uns reden!",
     "form": {
       "placeholders": {
-        "name": "Ihr Name",
-        "email": "Ihre E-Mail",
-        "message": "Ihre Nachricht"
+        "name": "Geben Sie Ihren Namen ein",
+        "email": "Geben Sie Ihre E-Mail-Adresse ein",
+        "message": "Schreiben Sie Ihre Nachricht"
       },
       "validation": {
-        "nameRequired": "Ihr Name ist erforderlich.",
+        "nameRequired": "Bitte geben Sie Ihren Namen an.",
         "nameMinLength": "Ihr Name muss mindestens 2 Zeichen lang sein.",
-        "emailRequired": "Ihre E-Mail ist erforderlich.",
-        "emailPattern": "Bitte geben Sie eine gültige E-Mail-Adresse ein.<br>beispiel@beispiel.de",
-        "messageRequired": "Eine Nachricht ist erforderlich.",
+        "emailRequired": "Bitte geben Sie Ihre E-Mail-Adresse an.",
+        "emailPattern": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+        "emailPatternExample": "beispiel@beispiel.com",
+        "messageRequired": "Bitte schreiben Sie eine Nachricht.",
         "privacyRequired": "Sie müssen der Datenschutzerklärung zustimmen."
       },
       "checkboxBeforLinkText": "Ich habe die",
       "privacyPolice": "Datenschutzerklärung",
-      "checkboxAfterLinkText": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+      "checkboxAfterLinkText": "gelesen und stimme der Verarbeitung meiner Daten zu.",
       "button": "Nachricht senden :)"
     },
     "scrollButtonAlt": "Nach oben scrollen"

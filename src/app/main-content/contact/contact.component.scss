@@ -67,32 +67,46 @@ textarea {
   &:valid {
     border-color: var(--secundary);
   }
+
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px var(--bg-color) inset;
+    box-shadow: 0 0 0px 1000px var(--bg-color) inset;
+    -webkit-text-fill-color: white;
+  }
 }
 
 .checkbox {
   position: relative;
   display: inline-block;
+  margin-right: 12px;
 
   input[type="checkbox"] {
     position: absolute;
     opacity: 0;
     width: 0;
     height: 0;
+
+    &:checked + label::after {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 8px;
+      width: 6px;
+      height: 12px;
+      border: solid var(--secundary);
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
   }
 
   label {
     display: inline-block;
-    margin-right: 12px;
     width: 24px;
     height: 24px;
+    border: 2px solid var(--secundary);
     background-color: var(--bg-color);
-    background-image: url("./../../../assets/icons/unchecked.png");
-    background-size: cover;
+    border-radius: 4px;
     cursor: pointer;
-  }
-
-  input[type="checkbox"]:checked + label {
-    background-image: url("./../../../assets/icons/checked.png");
   }
 }
 

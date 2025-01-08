@@ -15,20 +15,20 @@ import { TranslateModule } from '@ngx-translate/core';
 export class ReferencesComponent {
   references: any[] = [
     {
-      name: 'marc',
+      name: 'Michael',
       img: 'quelle',
     },
     {
-      name: 'jamal',
+      name: 'Julia',
       img: 'quelle',
     },
     {
-      name: 'lara',
+      name: 'Thomas',
       img: 'quelle',
     },
   ];
 
-  currentIndex: number = 2 % this.references.length;
+  currentIndex: number = Math.floor(Math.random() * this.references.length);
   isChanging: boolean = false;
 
   back() {

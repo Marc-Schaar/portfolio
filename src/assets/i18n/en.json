@@ -4,57 +4,58 @@
   },
   "aboutMe": {
     "title": "About Me",
-    "discription": "Hi, I´m a german speaking Frontend Developer based near Düsseldorf. Motivated by the limitless opportunities within IT, I am excited about crafting visually captivating and intuitive websites and applications.",
-    "subDiscription1": "Flexible in terms of working environments, I can work effectively both on-site in Düsseldorf and remotely.",
-    "subDiscription2": "I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills.",
-    "subDiscription3": "In my profession, programming isn't just about writing code; it's a creative form of problem-solving. I take pride in my ability to distill complex technical challenges into simple, user-friendly solutions. This way, I help you"
+    "discription": "Hello, I am a frontend developer based in Düsseldorf. With a deep passion for the endless possibilities in IT, I enjoy creating visually appealing and user-friendly websites and applications.",
+    "subDiscription1": "I am adaptable when it comes to work environments, capable of working effectively both on-site in Düsseldorf and remotely.",
+    "subDiscription2": "I am open-minded and constantly seek personal challenges to push my knowledge and skills to new heights.",
+    "subDiscription3": "For me, programming goes beyond just writing code; it’s a creative problem-solving process. I take pride in breaking down complex technical problems into clear, intuitive solutions, making it easier for you."
   },
   "skills": {
     "title": "My Skills",
-    "experience": "I have gained experience in building projects with different frontend technologies and concepts.",
-    "lookingFor": "Looking for",
-    "additionalSkill": "another skill",
-    "contactMessage": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
+    "experience": "I have accumulated experience in developing projects using various frontend technologies and design concepts.",
+    "lookingFor": "Seeking",
+    "additionalSkill": "an additional skill",
+    "contactMessage": "Don't hesitate to get in touch. I'm excited to build on my existing expertise and learn more.",
     "buttonText": "Get in touch"
   },
   "portfolio": {
-    "subtitle": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+    "subtitle": "Discover a curated collection of my projects - Engage with them to experience my skills firsthand.",
     "joinDescription": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
     "elPolloLocoDescription": "Jump-and-run game that combines fun gameplay with advanced game logic, built using object-oriented programming.",
-    "pokedexDescription": "pokedex discription",
+    "pokedexDescription": "Pokédex app that fetches Pokémon data from an API. View detailed information about each Pokémon, including stats, abilities, and evolutions.",
     "daBubbleDescription": "In Progress . . ."
   },
   "references": {
-    "jamal": "Jamals reference",
-    "marc": "marcs reference",
-    "lara": "laras reference"
+    "Michael": "I worked with Marc on a frontend project. He was always well-organized, and I appreciated his clear communication and solution-oriented approach.",
+    "Julia": "She was very detail-oriented and had great ideas for improving the user experience.",
+    "Thomas": "I appreciate his efficiency and reliability. He quickly adapted to new challenges."
   },
   "contact": {
-    "title": "Contact",
-    "subtitle": "Got a problem to solve?",
-    "description": "Contact me through this form, I am interested in hearing from you, knowing your ideas, and contributing to your projects with my work.",
-    "needDeveloper": "Need a Frontend developer?",
-    "contactMe": "Contact me!",
+    "title": "Get in Touch",
+    "subtitle": "Have a challenge to discuss?",
+    "description": "Feel free to reach out via this form. I’m eager to hear your ideas, collaborate on your projects, and help bring them to life.",
+    "needDeveloper": "Looking for a Frontend Developer?",
+    "contactMe": "Let’s Connect!",
     "form": {
       "placeholders": {
-        "name": "Your name",
-        "email": "Your email",
-        "message": "Your message"
+        "name": "Enter your name",
+        "email": "Enter your email",
+        "message": "Type your message"
       },
       "validation": {
-        "nameRequired": "Your name is required.",
-        "nameMinLength": "Your name must be at least 2 characters long.",
-        "emailRequired": "Your email is required.",
-        "emailPattern": "Please enter a valid email address.<br>example@example.com",
-        "messageRequired": "Message is required.",
-        "privacyRequired": "You must agree to the privacy policy."
+        "nameRequired": "Please provide your name.",
+        "nameMinLength": "Your name should be at least 2 characters long.",
+        "emailRequired": "Please provide your email address.",
+        "emailPattern": "Enter a valid email address.",
+        "emailPatternExample": "example@example.com",
+        "messageRequired": "Please write a message.",
+        "privacyRequired": "You need to accept the privacy policy."
       },
-      "checkboxBeforLinkText": "I've read the",
-      "privacyPolice": "privacy police",
-      "checkboxAfterLinkText": "and agree to the processing of my data as outlined.",
+      "checkboxBeforLinkText": "I have read the",
+      "privacyPolice": "privacy policy",
+      "checkboxAfterLinkText": "and agree to the use of my data as described.",
       "button": "Send Message :)"
     },
-    "scrollButtonAlt": "Scroll up"
+    "scrollButtonAlt": "Scroll to the top"
   },
   "footer": {
     "legalNotice": "Legal Notice",
