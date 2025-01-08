@@ -17,6 +17,12 @@
   .hero-bg {
     margin-top: 100px;
   }
+
+  .shadow-container {
+    > #shadow-left {
+      left: 24vw;
+    }
+  }
 }
 
 @media screen and (max-width: 1000px) {
