@@ -55,6 +55,7 @@
       "checkboxAfterLinkText": "and agree to the use of my data as described.",
       "button": "Send Message :)"
     },
+    "succesMsg": "Message sent successfully",
     "scrollButtonAlt": "Scroll to the top"
   },
   "footer": {

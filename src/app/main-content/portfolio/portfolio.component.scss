@@ -28,11 +28,12 @@ h3 {
 section {
   display: flex;
   align-items: flex-end;
+  justify-content: center;
   margin-top: 80px;
   width: 100%;
 
   > img {
-    width: 50%;
+    width: 100%;
     max-width: 620px;
   }
 }

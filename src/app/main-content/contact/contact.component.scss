@@ -44,6 +44,7 @@ span {
 form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
   position: relative;
 }
@@ -127,6 +128,7 @@ a {
 
 .input-row {
   position: relative;
+  width: 100%;
 }
 
 .form-validation-icon {
@@ -156,6 +158,21 @@ a {
   height: 540px;
   align-items: flex-start;
   justify-content: flex-end;
+}
+
+.succesMsg {
+  transition: all 0.125s ease-in-out;
+  transform: translateX(100vh);
+  position: absolute;
+  bottom: 50%;
+  border: 1px solid var(--secundary);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.show {
+  transform: translateX(0);
 }
 
 .btn-up {

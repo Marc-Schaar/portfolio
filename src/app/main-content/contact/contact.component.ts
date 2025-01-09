@@ -19,6 +19,9 @@ import { RouterLink } from '@angular/router';
 export class ContactComponent {
   constructor() {}
   globalService = inject(GlobalService);
+  http = inject(HttpClient);
+  mailTest: boolean = false;
+  mailSendSucess: boolean = false;
 
   contactData: { name: string; email: string; message: string } = {
     name: '',
@@ -26,16 +29,12 @@ export class ContactComponent {
     message: '',
   };
 
-  http = inject(HttpClient);
-
   scroll() {
     this.globalService.scrollToTop();
   }
 
-  mailTest = false;
-
   post = {
-    endPoint: 'http://marc-schaar.com/sendMail.php',
+    endPoint: 'https://marc-schaar.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -52,6 +51,10 @@ export class ContactComponent {
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
+            this.mailSendSucess = true;
+            setTimeout(() => {
+              this.mailSendSucess = false;
+            }, 2000);
           },
           error: (error) => {
             console.error(error);
@@ -59,9 +62,15 @@ export class ContactComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      console.log(this.contactData);
-
       ngForm.resetForm();
+      this.showSuccesMsg();
     }
+  }
+
+  showSuccesMsg() {
+    this.mailSendSucess = true;
+    setTimeout(() => {
+      this.mailSendSucess = false;
+    }, 2000);
   }
 }

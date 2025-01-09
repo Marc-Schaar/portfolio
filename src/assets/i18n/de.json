@@ -55,6 +55,7 @@
       "checkboxAfterLinkText": "gelesen und stimme der Verarbeitung meiner Daten zu.",
       "button": "Nachricht senden :)"
     },
+    "succesMsg": "Nachricht erfolgreich gesendet",
     "scrollButtonAlt": "Nach oben scrollen"
   },
   "footer": {

@@ -1,17 +1,16 @@
 :root {
   --bg-color: rgb(20, 29, 47);
   --primary: rgb(0, 190, 232);
-  // --primary: rgb(152, 71, 255);
   --filterPrimary: brightness(0) saturate(100%) invert(67%) sepia(59%)
     saturate(4327%) hue-rotate(150deg) brightness(97%) contrast(102%);
-  // --filterPrimary: brightness(0) saturate(100%) invert(30%) sepia(78%)
-  //   saturate(2527%) hue-rotate(250deg) brightness(100%) contrast(102%);
+  --filterPrimaryWithBlur: brightness(0) saturate(100%) invert(67%) sepia(59%)
+    saturate(4327%) hue-rotate(150deg) brightness(97%) contrast(102%) blur(20px);
+
   --secundary: rgb(75, 71, 255);
-  // --secundary: rgb(112, 230, 29);
   --filterSecundary: brightness(0) saturate(100%) invert(37%) sepia(66%)
     saturate(6973%) hue-rotate(236deg) brightness(98%) contrast(108%);
-  // --filterSecundary: brightness(0) saturate(100%) invert(85%) sepia(30%)
-  //   saturate(1227%) hue-rotate(38deg) brightness(92%) contrast(95%);
+  --filterSecundaryWithBlur: brightness(0) saturate(100%) invert(37%) sepia(66%)
+    saturate(6973%) hue-rotate(236deg) brightness(98%) contrast(108%) blur(20px);
   --warning: rgba(230, 28, 64);
 }
 
@@ -125,8 +124,16 @@ h3 {
   filter: var(--filterPrimary);
 }
 
+.primary-filter-blur {
+  filter: var(--filterPrimaryWithBlur);
+}
+
 .secundary-filter {
   filter: var(--filterSecundary);
+}
+
+.secundary-filter-blur {
+  filter: var(--filterSecundaryWithBlur);
 }
 
 .social-links-container {
@@ -143,6 +150,14 @@ h3 {
 
 .icon {
   height: 28px;
+}
+
+.dev-c {
+  width: 67px;
+  aspect-ratio: 1;
+  stroke: var(--primary);
+  stroke-width: 12px;
+  fill: none;
 }
 
 .scroll-animation {
@@ -167,5 +182,9 @@ h3 {
 
   button {
     font-size: 1em;
+  }
+
+  .dev-c {
+    width: 34px;
   }
 }

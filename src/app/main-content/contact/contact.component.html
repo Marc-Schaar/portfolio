@@ -85,13 +85,19 @@
                 <button type="submit" [disabled]="!contactForm.valid">
                     {{ 'contact.form.button' | translate }}
                 </button>
+
+                <span [ngClass]="{'show': mailSendSucess}" class="succesMsg">{{ 'contact.succesMsg' | translate
+                    }}!</span>
             </form>
         </section>
     </div>
 
     <button (click)="scroll()" class="btn-up"><img src="assets/icons/navigation/up.png"
             alt="{{ 'contact.scrollButtonAlt' | translate }}"></button>
+
+
+
 </main>
 <div class="img-box">
-    <img class="primary-filter" src="assets/img/background-objects/33. Purple shadow Footer.svg" alt="">
+    <img class="primary-filter-blur" src="assets/img/background-objects/33. Purple shadow Footer.svg" alt="">
 </div>
