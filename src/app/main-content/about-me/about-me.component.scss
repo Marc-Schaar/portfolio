@@ -40,28 +40,39 @@ h2 {
 
 .about-me-text {
   width: 50%;
-  max-width: 515px;
+  max-width: 535px;
   padding-left: 64px;
   text-align: justify;
 }
 
 .img-container {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
   width: 50%;
+  aspect-ratio: 1;
+  overflow: hidden;
 
-  > img {
-    position: relative;
-    z-index: 1;
-    width: 400px;
+  > .box {
+    display: flex;
     aspect-ratio: 1;
-    border-radius: 50%;
-    border: 4px solid var(--secundary);
+    justify-content: center;
+    align-items: center;
+    max-width: 540px;
+    > img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid var(--secundary);
+    }
   }
 }
 
 .line {
-  width: 100%;
+  width: 8%;
   height: 4px;
   background-color: var(--secundary);
 }

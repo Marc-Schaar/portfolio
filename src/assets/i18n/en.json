@@ -4,10 +4,10 @@
   },
   "aboutMe": {
     "title": "About Me",
-    "discription": "Hello, I am a frontend developer based in Düsseldorf. With a deep passion for the endless possibilities in IT, I enjoy creating visually appealing and user-friendly websites and applications.",
-    "subDiscription1": "I am adaptable when it comes to work environments, capable of working effectively both on-site in Düsseldorf and remotely.",
-    "subDiscription2": "I am open-minded and constantly seek personal challenges to push my knowledge and skills to new heights.",
-    "subDiscription3": "For me, programming goes beyond just writing code; it’s a creative problem-solving process. I take pride in breaking down complex technical problems into clear, intuitive solutions, making it easier for you."
+    "description": "Hi, I’m Marc and I live in Düsseldorf. Just as life’s diversity fascinates me, so does the world of IT. The boundless creativity and countless possibilities motivate me to develop visually appealing and user-friendly websites and applications that truly bring joy to people.",
+    "subDescription1": "For me, programming is much more than just writing code – it’s the art of finding creative solutions and constantly developing new ideas that lead to success. I love transforming complex technical challenges into clear, intuitive solutions that not only work but also make life simpler and more enjoyable.",
+    "subDescription2": "I am flexible and adapt effortlessly to different work environments – whether on-site in an inspiring office with colleagues or working remotely, I always work efficiently and with focus.",
+    "subDescription3": "I see good collaboration as a true enrichment and am always open to new challenges to further develop my knowledge and skills. As a team player, I view myself as part of the bigger picture – like a puzzle where every piece works perfectly together to achieve the common goal. I quickly integrate into teams, enjoy working with others, and adapt flexibly to varying requirements."
   },
   "skills": {
     "title": "My Skills",
@@ -25,9 +25,10 @@
     "daBubbleDescription": "In Progress . . ."
   },
   "references": {
-    "Michael": "I worked with Marc on a frontend project. He was always well-organized, and I appreciated his clear communication and solution-oriented approach.",
-    "Julia": "She was very detail-oriented and had great ideas for improving the user experience.",
-    "Thomas": "I appreciate his efficiency and reliability. He quickly adapted to new challenges."
+    "Antoine": "Working with Marc was a great pleasure for me; his positivity was an enrichment for the entire team.",
+    "Hiroshi": "Marc always came up with great ideas that helped us achieve our goals together.",
+    "Dimitri": "Marc impressed not only with his reliability but also by keeping a clear head and finding solutions in tricky situations.",
+    "Romina": "During our collaboration, Marc demonstrated that he could take the lead when needed and ensured good motivation!"
   },
   "contact": {
     "title": "Get in Touch",

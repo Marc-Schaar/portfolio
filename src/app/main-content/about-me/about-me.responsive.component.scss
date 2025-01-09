@@ -4,10 +4,13 @@
     flex-direction: column;
     justify-content: center;
   }
+
   .img-container {
-    > img,
-    .line {
-      display: none;
+    > .box {
+      > img,
+      .line {
+        display: none;
+      }
     }
   }
 

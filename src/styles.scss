@@ -24,7 +24,7 @@ body {
   background-color: var(--bg-color);
   color: white;
   font-family: Poppins, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 a {
@@ -152,14 +152,6 @@ h3 {
   height: 28px;
 }
 
-.dev-c {
-  width: 67px;
-  aspect-ratio: 1;
-  stroke: var(--primary);
-  stroke-width: 12px;
-  fill: none;
-}
-
 .scroll-animation {
   transform: translateX(99%);
   filter: blur(10px);
@@ -182,9 +174,5 @@ h3 {
 
   button {
     font-size: 1em;
-  }
-
-  .dev-c {
-    width: 34px;
   }
 }
