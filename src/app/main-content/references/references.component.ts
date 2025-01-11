@@ -15,15 +15,19 @@ import { TranslateModule } from '@ngx-translate/core';
 export class ReferencesComponent {
   references: any[] = [
     {
-      name: 'Michael',
+      name: 'Antoine',
       img: 'quelle',
     },
     {
-      name: 'Julia',
+      name: 'Hiroshi',
       img: 'quelle',
     },
     {
-      name: 'Thomas',
+      name: 'Dimitri',
+      img: 'quelle',
+    },
+    {
+      name: 'Romina',
       img: 'quelle',
     },
   ];

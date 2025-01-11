@@ -45,9 +45,9 @@
         <a (click)="toggleMenu()" href="#skills">{{ 'skills.title' | translate }}</a>
         <a (click)="toggleMenu()" href="#portfolio">Portfolio</a>
         <div class="language-btns">
-            <button [class.underline]="currentLang == 'de'" (click)="changeLanguage('de')">de</button>
+            <button [class.underline]="currentLang == 'de'" (click)="changeLanguage('de'); toggleMenu()">de</button>
             <div class="divider"></div>
-            <button [class.underline]="currentLang == 'en'" (click)="changeLanguage('en')">en</button>
+            <button [class.underline]="currentLang == 'en'" (click)="changeLanguage('en'); toggleMenu()">en</button>
         </div>
 
     </nav>

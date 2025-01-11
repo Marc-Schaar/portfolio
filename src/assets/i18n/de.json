@@ -4,10 +4,10 @@
   },
   "aboutMe": {
     "title": "Über mich",
-    "discription": "Hi, ich bin Marc und lebe in Düsseldorf. Genau wie das Leben in seiner Vielfalt begeistert mich auch die Welt der IT. Die grenzenlose Kreativität und die unzähligen Möglichkeiten motivieren mich, visuell ansprechende und benutzerfreundliche Webseiten und Anwendungen zu entwickeln, die Menschen wirklich Freude bereiten.",
-    "subDiscription1": "Für mich bedeutet Programmieren weit mehr als nur Code zu schreiben – es ist die Kunst, kreative Lösungen zu finden und immer wieder neue Ideen zu entwickeln, die zum Ziel führen. Ich liebe es, komplexe technische Herausforderungen in klare, intuitive Lösungen zu verwandeln, die nicht nur funktionieren, sondern das Leben einfacher und angenehmer machen.",
-    "subDiscription2": "Ich bin flexibel und passe mich unterschiedlichen Arbeitsumgebungen mühelos an – ob vor Ort im inspirierenden Office mit Kolleg*innen oder remote, ich arbeite stets effizient und zielorientiert.",
-    "subDiscription3": "Ich empfinde eine gute Zusammenarbeit als echte Bereicherung und bin stets offen für neue Herausforderungen, um mein Wissen und meine Fähigkeiten weiterzuentwickeln. Als Teamplayer sehe ich mich als ein Teil des großen Ganzen – wie ein Puzzle, bei dem jedes Teil perfekt zusammenarbeitet, um das gemeinsame Ziel zu erreichen. Ich füge mich schnell in Teams ein, arbeite gerne mit anderen zusammen und passe mich flexibel an unterschiedliche Anforderungen an."
+    "description": "Hi, ich bin Marc und lebe in Düsseldorf. Genau wie das Leben in seiner Vielfalt begeistert mich auch die Welt der IT. Die grenzenlose Kreativität und die unzähligen Möglichkeiten motivieren mich, visuell ansprechende und benutzerfreundliche Webseiten und Anwendungen zu entwickeln, die Menschen wirklich Freude bereiten.",
+    "subDescription1": "Für mich bedeutet Programmieren weit mehr als nur Code zu schreiben – es ist die Kunst, kreative Lösungen zu finden und immer wieder neue Ideen zu entwickeln, die zum Ziel führen. Ich liebe es, komplexe technische Herausforderungen in klare, intuitive Lösungen zu verwandeln, die nicht nur funktionieren, sondern das Leben einfacher und angenehmer machen.",
+    "subDescription2": "Ich bin flexibel und passe mich unterschiedlichen Arbeitsumgebungen mühelos an – ob vor Ort im inspirierenden Office mit Kolleg*innen oder remote, ich arbeite stets effizient und zielorientiert.",
+    "subDescription3": "Ich empfinde eine gute Zusammenarbeit als echte Bereicherung und bin stets offen für neue Herausforderungen, um mein Wissen und meine Fähigkeiten weiterzuentwickeln. Als Teamplayer sehe ich mich als ein Teil des großen Ganzen – wie ein Puzzle, bei dem jedes Teil perfekt zusammenarbeitet, um das gemeinsame Ziel zu erreichen. Ich füge mich schnell in Teams ein, arbeite gerne mit anderen zusammen und passe mich flexibel an unterschiedliche Anforderungen an."
   },
   "skills": {
     "title": "Meine Fähigkeiten",
@@ -62,5 +62,15 @@
   "footer": {
     "legalNotice": "Datenschutzerklärung",
     "imprint": "Impressum"
+  },
+  "imprint": {
+    "title": "Impressum",
+    "dgb_title": "Angaben gemäß § 5 DDG",
+    "represent_title": "Vertreten durch: ",
+    "contact_title": "Kontakt:",
+    "privacy_title": "Datenschutz",
+    "details1": "Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.",
+    "details2": "Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.",
+    "details3": "Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor."
   }
 }

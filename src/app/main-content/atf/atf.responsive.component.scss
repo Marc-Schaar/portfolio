@@ -67,21 +67,17 @@
   .links {
     margin-top: 80px;
     justify-content: center;
-    width: 100%;
+    width: calc(50% + 46px);
 
-    > .line {
-      position: absolute;
-      left: 0;
-      width: 37vw;
-    }
-    a:last-child {
-      display: none;
-    }
     > a {
       background: var(--bg-color);
       position: relative;
       z-index: 1;
     }
+  }
+
+  .mail {
+    display: none;
   }
 
   .hero-bg {
@@ -91,11 +87,6 @@
 }
 
 @media screen and (max-width: 480px) {
-  .links {
-    > .line {
-      width: 28vw;
-    }
-  }
   .hero-bg {
     margin-bottom: 420px;
   }
@@ -121,26 +112,12 @@
     height: 50px;
   }
 
-  .links {
-    > .line {
-      width: 29vw;
-    }
-  }
-
   .hero-bg {
     margin-bottom: 412px;
   }
 }
 
 @media screen and (max-width: 375px) {
-  .links {
-    > .line {
-      width: 26vw;
-    }
-  }
-}
-
-@media screen and (max-width: 325px) {
   .headline-text {
     font-size: 24px;
   }
@@ -149,10 +126,28 @@
     font-size: 37px;
     height: 41px;
   }
+}
 
-  .links {
-    > .line {
-      width: 23vw;
+@media screen and (max-width: 325px) {
+}
+
+@media screen and (min-width: 1920px) {
+  main {
+    min-width: 1920px;
+  }
+
+  .img-container {
+    max-width: initial;
+
+    > img {
+      left: 4vw;
     }
+  }
+  .shadow-container {
+    left: -4vw;
+  }
+
+  .headline-container {
+    align-items: flex-end;
   }
 }

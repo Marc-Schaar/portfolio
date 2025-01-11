@@ -5,10 +5,19 @@ import { TranslateService } from '@ngx-translate/core';
   providedIn: 'root',
 })
 export class GlobalService {
+  private setLanguage: string = 'setLanguage';
+
   constructor(private translate: TranslateService) {
+    let savedLang = localStorage.getItem(this.setLanguage);
     let browserLang = this.translate.getBrowserLang();
-    let initialLang = browserLang?.match(/de/) ? browserLang : 'en';
+    let initialLang =
+      savedLang || (browserLang?.match(/de/) ? browserLang : 'en');
+
     this.translate.use(initialLang);
+
+    if (!savedLang) {
+      localStorage.setItem(this.setLanguage, initialLang);
+    }
   }
 
   scrollToTop(): void {
@@ -19,6 +28,7 @@ export class GlobalService {
 
   changeLanguage(lang: string): void {
     this.translate.use(lang);
+    localStorage.setItem(this.setLanguage, lang);
   }
 
   getCurrentLanguage(): string {

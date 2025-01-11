@@ -85,7 +85,7 @@ main {
 }
 
 .line {
-  width: 100px;
+  flex: 1;
   height: 4px;
   background-color: var(--primary);
   border-radius: 0 2px 2px 0;
@@ -106,8 +106,15 @@ main {
 .links {
   display: flex;
   align-items: center;
-  gap: 36px;
   position: fixed;
+  gap: 36px;
+  width: 520px;
+}
+
+.row {
+  justify-content: center;
+  gap: 36px;
+  white-space: nowrap;
 }
 
 .hero-bg {
