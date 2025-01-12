@@ -1,8 +1,17 @@
 main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.container {
   display: grid;
-  grid-template-columns: 1fr 1fr 68px;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   gap: 16px;
+  padding: 0 68px;
   align-items: center;
   align-content: center;
   min-height: calc(100vh - 99px);
@@ -18,13 +27,13 @@ main {
   flex-wrap: wrap;
   column-gap: 88px;
   row-gap: 24px;
-  padding-left: 64px;
 }
 
 .grid-headline-section {
   grid-column: 2;
   grid-row: 1;
   text-align: end;
+  background-color: var(--bg-color);
 }
 
 .grid-contact-section {
@@ -34,13 +43,12 @@ main {
 }
 
 .line {
-  grid-column: 3;
-  grid-row: 1;
-  margin-left: 4px;
+  position: absolute;
+  right: 0;
+  top: calc(50% - 120px);
+  width: 62px;
   height: 4px;
   background-color: var(--primary);
-  position: relative;
-  top: -12px;
 }
 
 button {

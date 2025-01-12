@@ -1,34 +1,35 @@
-<main class="scroll-animation">
-    <section class="skills-container">
-        <div *ngFor="let skill of frontEndSkills" class="skill">
-            <img class="skill-icon" src="assets/icons/front_end_stack/{{skill}}.png" alt="{{skill}}">
-            {{skill}}
-        </div>
-
-        <div class="wrapper">
-            <div class="skill highlight-primary learning-icon">
-                <img id="learning-icon" class="primary-filter" src="assets/icons/learning.png" alt="">
-                Continually <br> learning
+<main>
+    <div class="container max-width scroll-animation">
+        <section class="skills-container">
+            <div *ngFor="let skill of frontEndSkills" class="skill">
+                <img class="skill-icon" src="assets/icons/front_end_stack/{{skill}}.png" alt="{{skill}}">
+                {{skill}}
             </div>
-            <img id="spech-bubble" src="assets/Group 18.png" alt="">
-        </div>
-    </section>
+
+            <div class="wrapper">
+                <div class="skill highlight-primary learning-icon">
+                    <img id="learning-icon" class="primary-filter" src="assets/icons/learning.png" alt="">
+                    Continually <br> learning
+                </div>
+                <img id="spech-bubble" src="assets/Group 18.png" alt="">
+            </div>
+        </section>
 
 
-    <section class="grid-headline-section">
-        <h2>{{ 'skills.title' | translate }}</h2>
-        <p>{{ 'skills.experience' | translate }}</p>
-    </section>
+        <section class="grid-headline-section">
+            <h2>{{ 'skills.title' | translate }}</h2>
+            <p>{{ 'skills.experience' | translate }}</p>
+        </section>
+
+        <section class="grid-contact-section">
+            <h3>{{ 'skills.lookingFor' | translate }} <span class="highlight-primary">{{'skills.additionalSkill' |
+                    translate}}</span>?</h3>
+            <p>{{ 'skills.contactMessage' | translate }}</p>
+            <button><a href="#contact">{{ 'skills.buttonText' | translate }}</a></button>
+        </section>
+    </div>
 
     <div class="line"></div>
-
-    <section class="grid-contact-section">
-        <h3>{{ 'skills.lookingFor' | translate }} <span class="highlight-primary">{{'skills.additionalSkill' |
-                translate}}</span>?</h3>
-        <p>{{ 'skills.contactMessage' | translate }}</p>
-        <button><a href="#contact">{{ 'skills.buttonText' | translate }}</a></button>
-    </section>
-
 </main>
 
 <div class="img-box">

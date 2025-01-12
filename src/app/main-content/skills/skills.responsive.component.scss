@@ -1,11 +1,17 @@
 @media screen and (max-width: 1280px) {
   .line {
-    top: -12px;
+    top: calc(50% - 166px);
+  }
+}
+
+@media screen and (max-width: 1117px) {
+  .line {
+    top: calc(50% - 170px);
   }
 }
 
 @media screen and (max-width: 1000px) {
-  main {
+  .container {
     height: unset;
     padding: 0 0 0 48px;
     grid-template-columns: 1fr 60px;
@@ -32,11 +38,6 @@
     grid-row: 3;
   }
 
-  .line {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
   .skill {
     width: 48px;
   }
@@ -47,6 +48,11 @@
       top: -89%;
       left: -40%;
     }
+  }
+
+  .line {
+    top: calc(50% - 238px);
+    width: 54px;
   }
 
   .img-box {
@@ -60,25 +66,32 @@
   }
 }
 
-@media screen and (max-width: 777px) {
+@media screen and (max-width: 665px) {
   .line {
-    top: -20px;
+    top: calc(50% - 312px);
   }
 }
 
-@media screen and (max-width: 453px) {
+@media screen and (max-width: 590px) {
   .line {
-    top: -32px;
+    top: calc(50% - 338px);
+  }
+}
+
+@media screen and (max-width: 461px) {
+  .line {
+    top: calc(50% - 414px);
   }
 }
 
 @media screen and (max-width: 425px) {
-  main {
+  .container {
     padding: 0 0 0 16px;
     grid-template-columns: 1fr 24px;
   }
+
   .line {
-    top: -23px;
+    top: calc(50% - 352px);
   }
 
   .img-box {
@@ -86,8 +99,20 @@
   }
 }
 
-@media screen and (max-width: 385px) {
+@media screen and (max-width: 393px) {
   .line {
-    top: -30px;
+    top: calc(50% - 414px);
+  }
+}
+
+@media screen and (max-width: 344px) {
+  .line {
+    top: calc(50% - 430px);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .line {
+    width: calc(50vw - 910px);
   }
 }
