@@ -113,7 +113,7 @@
   }
 
   .hero-bg {
-    margin-bottom: 412px;
+    margin-bottom: 350px;
   }
 }
 
@@ -128,17 +128,12 @@
   }
 }
 
-@media screen and (max-width: 325px) {
-}
-
 @media screen and (min-width: 1920px) {
   main {
     min-width: 1920px;
   }
 
   .img-container {
-    max-width: initial;
-
     > img {
       left: 4vw;
     }
@@ -147,7 +142,9 @@
     left: -4vw;
   }
 
-  .headline-container {
-    align-items: flex-end;
+  .hero-bg {
+    // left: -25vw;
+    // margin-top: 350px;
+    // width: 133vw;
   }
 }

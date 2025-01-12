@@ -7,11 +7,26 @@ main {
   gap: 32px;
   position: relative;
   z-index: 10;
+}
 
-  > div {
-    display: inherit;
-    gap: 32px;
+.gap {
+  gap: 36px;
+}
+
+.container {
+  align-items: center;
+  width: 100%;
+  > .row {
+    justify-content: center;
     width: 100%;
+    > .row {
+      width: 100%;
+      padding: 0 104px;
+    }
+    > .line {
+      position: absolute;
+      right: 0;
+    }
   }
 }
 
@@ -21,9 +36,9 @@ main {
   flex-direction: column;
   justify-content: space-between;
   flex: 1;
+  max-width: 100%;
   border: 4px solid var(--secundary);
   border-radius: 8px;
-  margin: 0 0 0 136px;
   padding: 48px 96px;
   height: 272px;
   background-color: var(--bg-color);
@@ -98,7 +113,7 @@ main {
   overflow-x: hidden;
   justify-content: flex-start;
   align-items: flex-start;
-  top: -25vh;
+  margin-bottom: 250px;
   right: 0;
   width: 240px;
 

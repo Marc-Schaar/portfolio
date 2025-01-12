@@ -1,32 +1,42 @@
 main {
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  padding: 12px 64px 64px 64px;
   min-height: calc(100vh - 385px);
+  padding: 12px 64px 64px 64px;
 }
 
-h2,
-h3 {
-  white-space: unset;
-  font-size: initial;
+section {
+  max-width: 1920px;
+}
+h1 {
+  font-size: 34px;
 }
 
 h2 {
-  margin: 16px;
-}
-
-h3 {
-  margin: 12px;
+  font-size: 20px;
+  margin-top: 24px;
 }
 
 p {
   text-align: justify;
-  margin: 8px;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 1000px) {
   main {
-    flex-direction: column;
     padding: 12px 48px 64px 48px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  main {
+    padding: 12px 16px 64px 16px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-size: initial;
   }
 }
