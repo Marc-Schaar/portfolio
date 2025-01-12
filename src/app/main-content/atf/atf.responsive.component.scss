@@ -129,11 +129,8 @@
 }
 
 @media screen and (min-width: 1920px) {
-  main {
-    min-width: 1920px;
-  }
-
   .img-container {
+    max-width: inherit;
     > img {
       left: 4vw;
     }
@@ -141,10 +138,14 @@
   .shadow-container {
     left: -4vw;
   }
-
   .hero-bg {
-    // left: -25vw;
-    // margin-top: 350px;
-    // width: 133vw;
+    width: 125vw;
+    left: -30vw;
+    margin-top: 251px;
+  }
+  .line {
+    position: absolute;
+    left: -30vw;
+    width: 28vw;
   }
 }

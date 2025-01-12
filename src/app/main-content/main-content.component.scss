@@ -5,7 +5,6 @@ app-portfolio,
 app-references,
 app-contact {
   position: relative;
-  // max-width: 1920px;
 }
 
 .content {
@@ -31,7 +30,7 @@ app-about-me {
 }
 
 @media screen and (min-width: 1920px) {
-  // .content {
-  //   align-items: center;
-  // }
+  app-atf {
+    align-self: center;
+  }
 }
