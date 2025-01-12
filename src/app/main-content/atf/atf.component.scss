@@ -81,7 +81,8 @@ main {
 }
 
 .rotate-90 {
-  transform: rotate(-90deg);
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
 }
 
 .line {
@@ -119,6 +120,7 @@ main {
 
 .hero-bg {
   position: absolute;
+  max-height: 100vh;
   margin-top: 146px;
   width: 100%;
   z-index: -10;

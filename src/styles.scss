@@ -93,7 +93,6 @@ main {
 
 h2 {
   font-size: 90px;
-  // white-space: nowrap;
   z-index: 2;
 }
 
@@ -178,12 +177,5 @@ h3 {
 
   button {
     font-size: 1em;
-  }
-}
-
-@media screen and (min-width: 1920px) {
-  .img-box {
-    overflow-x: visible !important;
-    overflow-y: visible !important;
   }
 }
