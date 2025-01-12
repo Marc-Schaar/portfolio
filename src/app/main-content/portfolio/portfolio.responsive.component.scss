@@ -83,3 +83,9 @@
     max-height: 534px;
   }
 }
+
+@media screen and (min-width: 1920px) {
+  section {
+    justify-content: space-between;
+  }
+}

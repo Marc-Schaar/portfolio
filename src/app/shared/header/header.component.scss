@@ -1,13 +1,20 @@
 header {
   display: flex;
+  justify-content: center;
+  background-color: var(--bg-color);
+  padding: 0 64px;
+  height: 135px;
+}
+
+.container {
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 135px;
-  padding: 0 64px;
+  width: 100%;
+
   > a {
     cursor: pointer;
   }
-  background-color: var(--bg-color);
 }
 
 .language-btns {
