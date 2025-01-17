@@ -89,11 +89,14 @@
                 <span [ngClass]="{'show': mailSendSucess}" class="succesMsg">{{ 'contact.succesMsg' | translate
                     }}!</span>
             </form>
+
+            <button (click)="scroll()" class="btn-up"><img src="assets/icons/navigation/up.png"
+                    alt="{{ 'contact.scrollButtonAlt' | translate }}"></button>
         </section>
+
     </div>
 
-    <button (click)="scroll()" class="btn-up"><img src="assets/icons/navigation/up.png"
-            alt="{{ 'contact.scrollButtonAlt' | translate }}"></button>
+
 
 
 

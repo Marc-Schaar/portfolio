@@ -125,6 +125,8 @@ main {
   transition: all 0.125s ease-in-out;
   transform: translateX(100%);
   > header {
+    justify-content: space-between;
+    align-items: baseline;
     width: 100%;
   }
 
