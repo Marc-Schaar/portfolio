@@ -142,6 +142,7 @@ a {
 }
 
 .alert {
+  align-self: baseline;
   color: var(--warning);
   animation: fade-in forwards, opacity forwards;
   animation-duration: 0.125s;

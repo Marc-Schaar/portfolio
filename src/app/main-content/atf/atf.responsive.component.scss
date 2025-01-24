@@ -27,10 +27,19 @@
 
 @media screen and (max-width: 1000px) {
   .content {
-    height: 100vh;
+    min-height: 100dvh;
     display: flex;
+    justify-content: center;
     flex-direction: column;
   }
+
+  main {
+    height: calc(100dvh - 200px);
+    justify-content: flex-end;
+    // height: initial;
+    // justify-content: initial;
+  }
+
   main {
     flex-direction: column;
     align-items: center;
@@ -38,9 +47,15 @@
   }
 
   .img-container {
+    flex: initial;
+    display: flex;
+    justify-content: center;
+    align-content: initial;
     > img {
       left: 0;
-      height: 53vh;
+      // height: 53vh;
+      width: 65%;
+      height: initial;
     }
   }
 
@@ -93,9 +108,13 @@
 }
 
 @media screen and (max-width: 425px) {
+  .headline-container {
+    gap: 12px;
+  }
+
   .img-container {
     > img {
-      height: 68vh;
+      width: 80%;
     }
   }
 
