@@ -27,14 +27,14 @@
 
 @media screen and (max-width: 1000px) {
   .content {
-    min-height: 100dvh;
+    min-height: 100svh;
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
 
   main {
-    height: calc(100dvh - 200px);
+    height: calc(100svh - 200px);
     justify-content: flex-end;
     // height: initial;
     // justify-content: initial;
@@ -51,11 +51,14 @@
     display: flex;
     justify-content: center;
     align-content: initial;
+    height: calc(100% - 80px);
     > img {
       left: 0;
-      // height: 53vh;
-      width: 65%;
-      height: initial;
+      // // height: 53vh;
+      // width: 65%;
+      height: 100%;
+      width: 100%;
+      // height: initial;
     }
   }
 
