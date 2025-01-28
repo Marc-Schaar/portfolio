@@ -15,10 +15,10 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "ES2017",
+    "target": "ES2015",
     "module": "commonjs",
     "useDefineForClassFields": false,
-    "lib": ["ES2017", "dom"]
+    "lib": ["ES2015", "dom"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
