@@ -20,6 +20,11 @@
   scroll-behavior: smooth;
 }
 
+img {
+  user-select: none;
+  pointer-events: none;
+}
+
 body {
   background-color: var(--bg-color);
   color: white;
