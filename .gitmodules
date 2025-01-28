@@ -1,9 +1,9 @@
 [submodule "src/assets/projects/pokedex"]
 	path = src/assets/projects/pokedex
-	url = https://github.com/FelixFeliices/pokedex.git
+	url = https://github.com/Marc-Schaar/pokedex.git
 [submodule "src/assets/projects/join"]
 	path = src/assets/projects/join
-	url = https://github.com/FelixFeliices/Join.git
+	url = https://github.com/Marc-Schaar/Join.git
 [submodule "src/assets/projects/el-pollo-loco"]
 	path = src/assets/projects/el-pollo-loco
-	url = https://github.com/FelixFeliices/El-Pollo-Loco.git
+	url = https://github.com/Marc-Schaar/El-Pollo-Loco.git
