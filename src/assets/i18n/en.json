@@ -19,10 +19,12 @@
   },
   "portfolio": {
     "subtitle": "Discover a curated collection of my projects - Engage with them to experience my skills firsthand.",
-    "joinDescription": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
-    "elPolloLocoDescription": "Jump-and-run game that combines fun gameplay with advanced game logic, built using object-oriented programming.",
-    "pokedexDescription": "Pokédex app that fetches Pokémon data from an API. View detailed information about each Pokémon, including stats, abilities, and evolutions.",
-    "daBubbleDescription": "In Progress . . ."
+    "joinDescription": "Task manager in the style of a Kanban board, built with Angular, Firestore, and Realtime Database. Tasks can be managed via drag and drop, with support for user and category assignments. Authentication is handled via a custom-built login system.",
+
+    "elPolloLocoDescription": "Jump-and-run game featuring engaging gameplay and advanced game logic. Developed using object-oriented programming with a focus on performance and smooth animations.",
+
+    "pokedexDescription": "Interactive Pokédex app that fetches Pokémon data from a public API. Provides detailed information on each Pokémon, including stats, abilities, and evolutions.",
+    "daBubbleDescription": "DA-Bubble is a real-time chat messenger inspired by Slack, built with Angular and Firebase. Users can communicate via public channels or private direct messages. The app features a clean user interface, fast synchronization via Firestore, and secure authentication using Firebase Auth."
   },
   "references": {
     "Antoine": "Working with Marc was a great pleasure for me; his positivity was an enrichment for the entire team.",

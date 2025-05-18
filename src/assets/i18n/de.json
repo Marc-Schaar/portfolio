@@ -19,10 +19,12 @@
   },
   "portfolio": {
     "subtitle": "Entdecken Sie eine ausgewählte Sammlung meiner Projekte – Interagieren Sie mit ihnen, um meine Fähigkeiten hautnah zu erleben.",
-    "joinDescription": "Task-Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
-    "elPolloLocoDescription": "Jump-and-Run-Spiel, das spaßiges Gameplay mit fortschrittlicher Spiel-Logik kombiniert, entwickelt mit objektorientierter Programmierung.",
-    "pokedexDescription": "Pokédex-App, die Pokémon-Daten von einer API abruft. Sehen Sie detaillierte Informationen zu jedem Pokémon, einschließlich Statuswerten, Fähigkeiten und Entwicklungen.",
-    "daBubbleDescription": "In Bearbeitung . . ."
+    "joinDescription": "Task-Manager im Stil eines Kanban-Boards, entwickelt mit Angular, Firestore und der Realtime Database. Aufgaben lassen sich per Drag & Drop verwalten, Benutzer und Kategorien zuweisen. Die Authentifizierung erfolgt über ein selbst entwickeltes Login-System.",
+
+    "elPolloLocoDescription": "Jump-and-Run-Spiel mit unterhaltsamem Gameplay und komplexer Spiel-Logik. Entwickelt mit objektorientierter Programmierung und einem Fokus auf Performance und Animationen.",
+
+    "pokedexDescription": "Interaktive Pokédex-App, die Pokémon-Daten über eine öffentliche API lädt. Bietet detaillierte Informationen zu Pokémon, darunter Statuswerte, Fähigkeiten und Entwicklungsstufen.",
+    "daBubbleDescription": "DA-Bubble ist ein Echtzeit-Chat-Messenger, inspiriert von Slack, entwickelt mit Angular und Firebase. Nutzer können in öffentlichen Channels oder privaten Direktnachrichten kommunizieren. Die Anwendung bietet eine übersichtliche Benutzeroberfläche, schnelle Synchronisation über Firestore sowie eine sichere Authentifizierung über Firebase Auth."
   },
   "references": {
     "Antoine": "Die Arbeit mit Marc hat mir große Freude bereitet, mit seiner Positivität war er eine Bereicherung fürs ganze Team.",
