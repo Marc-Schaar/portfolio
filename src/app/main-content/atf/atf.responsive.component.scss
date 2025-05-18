@@ -5,42 +5,28 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .headline-text {
-    font-size: 2rem;
-  }
-
-  .headline {
-    font-size: 4.125rem;
-    height: 4.563rem;
-  }
-
   .hero-bg {
     margin-top: 100px;
   }
 
   .shadow-container {
     > #shadow-left {
-      left: 24vw;
+      left: 12vw;
     }
   }
 }
 
 @media screen and (max-width: 1000px) {
   .content {
-    min-height: 100dvh;
+    min-height: 100svh;
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
 
   main {
-    height: calc(100dvh - 200px);
+    height: calc(100svh - 200px);
     justify-content: flex-end;
-    // height: initial;
-    // justify-content: initial;
-  }
-
-  main {
     flex-direction: column;
     align-items: center;
     padding: 0;
@@ -51,11 +37,11 @@
     display: flex;
     justify-content: center;
     align-content: initial;
+    height: calc(100% - 80px);
     > img {
+      object-fit: cover;
       left: 0;
-      // height: 53vh;
-      width: 65%;
-      height: initial;
+      height: 100%;
     }
   }
 
@@ -66,17 +52,13 @@
     }
 
     > #shadow-right {
-      position: relative;
       right: 4vw;
     }
   }
-  .headline-text {
-    font-size: 2rem;
-  }
 
-  .headline {
-    font-size: 3.25rem;
-    height: 3.625rem;
+  .headline-container {
+    flex: 1;
+    align-items: center;
   }
 
   .links {
@@ -97,42 +79,41 @@
 
   .hero-bg {
     margin-top: 0;
-    margin-bottom: 320px;
+    margin-bottom: 20rem;
+  }
+
+  @media screen and (max-width: 570px) {
+    .headline-text {
+      font-size: 2.2rem;
+    }
+
+    .headline {
+      font-size: 3.75rem;
+    }
   }
 }
 
 @media screen and (max-width: 480px) {
-  .hero-bg {
-    margin-bottom: 420px;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .headline-container {
-    gap: 12px;
-  }
-
-  .img-container {
-    > img {
-      width: 80%;
-    }
-  }
-
-  .shadow-container {
-    padding-top: 88px;
-  }
-
   .headline-text {
     font-size: 1.625rem;
   }
 
   .headline {
     font-size: 2.75rem;
-    height: 3.125rem;
+  }
+
+  .headline-container {
+    gap: 12px;
   }
 
   .hero-bg {
-    margin-bottom: 350px;
+    margin-bottom: 240px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .shadow-container {
+    padding-top: 88px;
   }
 }
 
@@ -143,7 +124,6 @@
 
   .headline {
     font-size: 2.313rem;
-    height: 2.563rem;
   }
 }
 

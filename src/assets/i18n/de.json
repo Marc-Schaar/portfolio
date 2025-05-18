@@ -4,9 +4,9 @@
   },
   "aboutMe": {
     "title": "Über mich",
-    "description": "Hi, ich bin Marc und lebe in Düsseldorf. Genau wie das Leben in seiner Vielfalt begeistert mich auch die Welt der IT. Die grenzenlose Kreativität und die unzähligen Möglichkeiten motivieren mich, visuell ansprechende und benutzerfreundliche Webseiten und Anwendungen zu entwickeln, die Menschen wirklich Freude bereiten.",
+    "description": "Hi, ich bin Marc und lebe in Düsseldorf. Genau wie das Leben in seiner Vielfalt, begeistert mich auch die Welt der IT. Die grenzenlose Kreativität und die unzähligen Möglichkeiten motivieren mich, visuell ansprechende und benutzerfreundliche Webseiten und Anwendungen zu entwickeln, die Menschen wirklich Freude bereiten.",
     "subDescription1": "Für mich bedeutet Programmieren weit mehr als nur Code zu schreiben – es ist die Kunst, kreative Lösungen zu finden und immer wieder neue Ideen zu entwickeln, die zum Ziel führen. Ich liebe es, komplexe technische Herausforderungen in klare, intuitive Lösungen zu verwandeln, die nicht nur funktionieren, sondern das Leben einfacher und angenehmer machen.",
-    "subDescription2": "Ich bin flexibel und passe mich unterschiedlichen Arbeitsumgebungen mühelos an – ob vor Ort im inspirierenden Office mit Kolleg*innen oder remote, ich arbeite stets effizient und zielorientiert.",
+    "subDescription2": "Ich bin flexibel und passe mich unterschiedlichen Arbeitsumgebungen mühelos an – ob vor Ort im inspirierenden Office mit Kolleg*innen oder Remote, ich arbeite stets effizient und zielorientiert.",
     "subDescription3": "Ich empfinde eine gute Zusammenarbeit als echte Bereicherung und bin stets offen für neue Herausforderungen, um mein Wissen und meine Fähigkeiten weiterzuentwickeln. Als Teamplayer sehe ich mich als ein Teil des großen Ganzen – wie ein Puzzle, bei dem jedes Teil perfekt zusammenarbeitet, um das gemeinsame Ziel zu erreichen. Ich füge mich schnell in Teams ein, arbeite gerne mit anderen zusammen und passe mich flexibel an unterschiedliche Anforderungen an."
   },
   "skills": {
@@ -14,7 +14,7 @@
     "experience": "Ich habe Erfahrungen gesammelt im Entwickeln von Projekten mit verschiedenen Frontend-Technologien und Design-Konzepten.",
     "lookingFor": "Auf der Suche nach",
     "additionalSkill": "weiteren Fähigkeiten",
-    "contactMessage": "Zögern Sie nicht, mich zu kontaktieren. Ich freue mich darauf, mein Wissen zu erweitern und Neues zu lernen.",
+    "contactMessage": "Zögern Sie nicht mich zu kontaktieren. Ich freue mich darauf, mein Wissen zu erweitern und Neues zu lernen.",
     "buttonText": "Kontakt aufnehmen"
   },
   "portfolio": {
@@ -26,9 +26,9 @@
   },
   "references": {
     "Antoine": "Die Arbeit mit Marc hat mir große Freude bereitet, mit seiner Positivität war er eine Bereicherung fürs ganze Team.",
-    "Hiroshi": "Marc hatte immer wieder tolle Ideen die uns gemeinsam an Ziel gebracht haben.",
+    "Hiroshi": "Marc hatte immer wieder tolle Ideen die uns gemeinsam ans Ziel gebracht haben.",
     "Dimitri": "Marc hat nicht nur durch seine Zuverlässigkeit überzeugt, sondern auch in kniffligen Situationen stets einen klaren Kopf bewahrt und Lösungen gefunden.",
-    "Romina": "Marc hatte während er gemeinsamen Arbeit gezeigt, dass er bei Bedarf die Führung übernehmen kann und sorgte für eine gute Motivation!"
+    "Romina": "Marc hatte während der gemeinsamen Arbeit gezeigt, dass er bei Bedarf die Führung übernehmen kann und sorgte für eine gute Motivation!"
   },
   "contact": {
     "title": "Kontakt aufnehmen",

@@ -90,6 +90,7 @@ main {
 
   > button {
     padding: 4px;
+    transition: scale 0.125s ease-in-out;
 
     &:hover {
       outline: 2px solid var(--secundary);
@@ -98,7 +99,7 @@ main {
   }
 
   > img {
-    transition: filter 0.125s ease-in-out, scale 0.125s ease-in-out;
+    transition: scale 0.125s ease-in-out;
   }
 
   > .active {
