@@ -32,7 +32,8 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/assets/fonts/poppins-v22-latin/poppins.scss"
+              "src/assets/fonts/poppins-v22-latin/poppins.scss",
+              "node_modules/aos/dist/aos.css"
             ],
             "scripts": []
           },
@@ -91,7 +92,7 @@
               "src/sendMail.php",
               "src/.htaccess"
             ],
-            "styles": ["src/styles.scss"],
+            "styles": ["src/styles.scss", "node_modules/aos/dist/aos.css"],
             "scripts": []
           }
         }

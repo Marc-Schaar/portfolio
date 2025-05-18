@@ -1,106 +1,185 @@
 <main>
-    <div class="line"></div>
-    <h2>{{ 'contact.title' | translate }}</h2>
-    <div class="container max-width scroll-animation">
-        <section>
-            <h3>{{ 'contact.subtitle' | translate }}</h3>
-            <span>{{ 'contact.description' | translate }}</span>
-            <p>{{ 'contact.needDeveloper' | translate }} <b>{{ 'contact.contactMe' | translate }}</b></p>
-        </section>
+  <div class="line"></div>
+  <h2>{{ "contact.title" | translate }}</h2>
+  <div data-aos="zoom-in-up" class="container max-width">
+    <section>
+      <h3>{{ "contact.subtitle" | translate }}</h3>
+      <span>{{ "contact.description" | translate }}</span>
+      <p>
+        {{ "contact.needDeveloper" | translate }}
+        <b>{{ "contact.contactMe" | translate }}</b>
+      </p>
+    </section>
 
-        <section>
-            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-                <div class="input-row">
-                    <input type="text" name="name" [(ngModel)]="contactData.name"
-                        placeholder="{{ 'contact.form.placeholders.name' | translate }}" required minlength="2"
-                        #name="ngModel" [ngClass]="{'red-border': name.invalid && (name.dirty || name.touched)}"
-                        autocomplete="given-name">
+    <section>
+      <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <div class="input-row">
+          <input
+            type="text"
+            name="name"
+            [(ngModel)]="contactData.name"
+            placeholder="{{ 'contact.form.placeholders.name' | translate }}"
+            required
+            minlength="2"
+            #name="ngModel"
+            [ngClass]="{
+              'red-border': name.invalid && (name.dirty || name.touched)
+            }"
+            autocomplete="given-name"
+          />
 
-                    <img class="form-validation-icon" *ngIf="name.valid" src="assets/icons/form_validation/correct.png"
-                        alt="">
-                    <img class="form-validation-icon" *ngIf="name.invalid && (name.dirty || name.touched)"
-                        src="assets/icons/form_validation/wrong.png" alt="">
-                </div>
+          <img
+            class="form-validation-icon"
+            *ngIf="name.valid"
+            src="assets/icons/form_validation/correct.png"
+            alt=""
+          />
+          <img
+            class="form-validation-icon"
+            *ngIf="name.invalid && (name.dirty || name.touched)"
+            src="assets/icons/form_validation/wrong.png"
+            alt=""
+          />
+        </div>
 
-                <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
-                    <div *ngIf="name.errors?.['required']">{{ 'contact.form.validation.nameRequired' | translate }}
-                    </div>
-                    <div *ngIf="name.errors?.['minlength']">{{ 'contact.form.validation.nameMinLength' | translate }}
-                    </div>
-                </div>
+        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
+          <div *ngIf="name.errors?.['required']">
+            {{ "contact.form.validation.nameRequired" | translate }}
+          </div>
+          <div *ngIf="name.errors?.['minlength']">
+            {{ "contact.form.validation.nameMinLength" | translate }}
+          </div>
+        </div>
 
-                <div class="input-row">
-                    <input type="email" name="email" [(ngModel)]="contactData.email"
-                        placeholder="{{ 'contact.form.placeholders.email' | translate }}" required #email="ngModel"
-                        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-                        [ngClass]="{'red-border': email.invalid && (email.dirty || email.touched)}" autocomplete="on">
+        <div class="input-row">
+          <input
+            type="email"
+            name="email"
+            [(ngModel)]="contactData.email"
+            placeholder="{{ 'contact.form.placeholders.email' | translate }}"
+            required
+            #email="ngModel"
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+            [ngClass]="{
+              'red-border': email.invalid && (email.dirty || email.touched)
+            }"
+            autocomplete="on"
+          />
 
-                    <img class="form-validation-icon" *ngIf="email.valid" src="assets/icons/form_validation/correct.png"
-                        alt="">
-                    <img class="form-validation-icon" *ngIf="email.invalid && (email.dirty || email.touched)"
-                        src="assets/icons/form_validation/wrong.png" alt="">
-                </div>
+          <img
+            class="form-validation-icon"
+            *ngIf="email.valid"
+            src="assets/icons/form_validation/correct.png"
+            alt=""
+          />
+          <img
+            class="form-validation-icon"
+            *ngIf="email.invalid && (email.dirty || email.touched)"
+            src="assets/icons/form_validation/wrong.png"
+            alt=""
+          />
+        </div>
 
-                <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert">
-                    <div *ngIf="email.errors?.['required']">{{ 'contact.form.validation.emailRequired' | translate }}
-                    </div>
-                    <div *ngIf="email.errors?.['pattern']">{{ 'contact.form.validation.emailPattern' | translate }} <br>
-                        {{ 'contact.form.validation.emailPatternExample' | translate }}
-                    </div>
-                </div>
+        <div
+          *ngIf="email.invalid && (email.dirty || email.touched)"
+          class="alert"
+        >
+          <div *ngIf="email.errors?.['required']">
+            {{ "contact.form.validation.emailRequired" | translate }}
+          </div>
+          <div *ngIf="email.errors?.['pattern']">
+            {{ "contact.form.validation.emailPattern" | translate }} <br />
+            {{ "contact.form.validation.emailPatternExample" | translate }}
+          </div>
+        </div>
 
-                <div class="input-row">
-                    <textarea name="message" [(ngModel)]="contactData.message"
-                        placeholder="{{ 'contact.form.placeholders.message' | translate }}" required #message="ngModel"
-                        [ngClass]="{'red-border': message.invalid && (message.dirty || message.touched)}"></textarea>
-                    <img class="form-validation-icon" *ngIf="message.valid"
-                        src="assets/icons/form_validation/correct.png" alt="Correct">
-                    <img class="form-validation-icon" *ngIf="message.invalid && (message.dirty || message.touched)"
-                        src="assets/icons/form_validation/wrong.png" alt="False">
-                </div>
+        <div class="input-row">
+          <textarea
+            name="message"
+            [(ngModel)]="contactData.message"
+            placeholder="{{ 'contact.form.placeholders.message' | translate }}"
+            required
+            #message="ngModel"
+            [ngClass]="{
+              'red-border':
+                message.invalid && (message.dirty || message.touched)
+            }"
+          ></textarea>
+          <img
+            class="form-validation-icon"
+            *ngIf="message.valid"
+            src="assets/icons/form_validation/correct.png"
+            alt="Correct"
+          />
+          <img
+            class="form-validation-icon"
+            *ngIf="message.invalid && (message.dirty || message.touched)"
+            src="assets/icons/form_validation/wrong.png"
+            alt="False"
+          />
+        </div>
 
-                <div *ngIf="message.invalid && (message.dirty || message.touched)" class="alert">
-                    <div *ngIf="message.errors?.['required']">{{ 'contact.form.validation.messageRequired' | translate
-                        }}</div>
-                </div>
+        <div
+          *ngIf="message.invalid && (message.dirty || message.touched)"
+          class="alert"
+        >
+          <div *ngIf="message.errors?.['required']">
+            {{ "contact.form.validation.messageRequired" | translate }}
+          </div>
+        </div>
 
-                <div class="row">
-                    <div class="checkbox">
-                        <input id="checkbox" type="checkbox" name="privacy" ngModel required #checkbox="ngModel">
-                        <label for="checkbox"></label>
-                    </div>
-                    <span>
-                        {{ 'contact.form.checkboxBeforLinkText' | translate }} <a [routerLink]="['/legal-notice']">{{
-                            'contact.form.privacyPolice' | translate }}</a> {{
-                        'contact.form.checkboxAfterLinkText' | translate }}
-                    </span>
-                </div>
+        <div class="row">
+          <div class="checkbox">
+            <input
+              id="checkbox"
+              type="checkbox"
+              name="privacy"
+              ngModel
+              required
+              #checkbox="ngModel"
+            />
+            <label for="checkbox"></label>
+          </div>
+          <span>
+            {{ "contact.form.checkboxBeforLinkText" | translate }}
+            <a [routerLink]="['/legal-notice']">{{
+              "contact.form.privacyPolice" | translate
+            }}</a>
+            {{ "contact.form.checkboxAfterLinkText" | translate }}
+          </span>
+        </div>
 
-                <div *ngIf="checkbox.invalid && (checkbox.dirty || checkbox.touched)" class="alert">
-                    <div *ngIf="checkbox?.errors?.['required']">
-                        {{ 'contact.form.validation.privacyRequired' | translate }}
-                    </div>
-                </div>
+        <div
+          *ngIf="checkbox.invalid && (checkbox.dirty || checkbox.touched)"
+          class="alert"
+        >
+          <div *ngIf="checkbox?.errors?.['required']">
+            {{ "contact.form.validation.privacyRequired" | translate }}
+          </div>
+        </div>
 
-                <button type="submit" [disabled]="!contactForm.valid">
-                    {{ 'contact.form.button' | translate }}
-                </button>
+        <button type="submit" [disabled]="!contactForm.valid">
+          {{ "contact.form.button" | translate }}
+        </button>
 
-                <span [ngClass]="{'show': mailSendSucess}" class="succesMsg">{{ 'contact.succesMsg' | translate
-                    }}!</span>
-            </form>
+        <span [ngClass]="{ show: mailSendSucess }" class="succesMsg"
+          >{{ "contact.succesMsg" | translate }}!</span
+        >
+      </form>
 
-            <button (click)="scroll()" class="btn-up"><img src="assets/icons/navigation/up.png"
-                    alt="{{ 'contact.scrollButtonAlt' | translate }}"></button>
-        </section>
-
-    </div>
-
-
-
-
-
+      <button (click)="scroll()" class="btn-up">
+        <img
+          src="assets/icons/navigation/up.png"
+          alt="{{ 'contact.scrollButtonAlt' | translate }}"
+        />
+      </button>
+    </section>
+  </div>
 </main>
 <div class="img-box">
-    <img class="primary-filter-blur" src="assets/img/background-objects/33. Purple shadow Footer.svg" alt="">
+  <img
+    class="primary-filter-blur"
+    src="assets/img/background-objects/33. Purple shadow Footer.svg"
+    alt=""
+  />
 </div>

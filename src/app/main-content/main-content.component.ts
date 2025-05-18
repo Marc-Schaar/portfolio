@@ -1,10 +1,11 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, OnInit } from '@angular/core';
 import { AtfComponent } from './atf/atf.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { SkillsComponent } from './skills/skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ReferencesComponent } from './references/references.component';
 import { ContactComponent } from './contact/contact.component';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-main-content',
@@ -22,6 +23,12 @@ import { ContactComponent } from './contact/contact.component';
 })
 export class MainContentComponent implements AfterViewInit {
   ngAfterViewInit(): void {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: false,
+      mirror: true,
+    });
     const elements = document.querySelectorAll('.scroll-animation');
     const observer = new IntersectionObserver(
       (entries) => {
