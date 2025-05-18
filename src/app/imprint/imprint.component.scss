@@ -8,18 +8,19 @@ main {
 section {
   max-width: 1920px;
 }
+
 h1 {
-  font-size: 34px;
+  font-size: 2rem;
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 1.25rem;
   margin-top: 24px;
 }
 
 p {
   text-align: justify;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 @media screen and (max-width: 1000px) {

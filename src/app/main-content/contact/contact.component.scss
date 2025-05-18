@@ -56,12 +56,12 @@ textarea {
   color: white;
   background: var(--bg-color);
   outline: none;
-  font-size: 16px;
+  font-size: 1rem;
   width: 100%;
 
   &::placeholder {
     color: white;
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   &:valid {
@@ -168,7 +168,7 @@ a {
   border: 1px solid var(--secundary);
   padding: 8px 16px;
   border-radius: 8px;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .show {
