@@ -7,3 +7,7 @@
 [submodule "src/assets/projects/el-pollo-loco"]
 	path = src/assets/projects/el-pollo-loco
 	url = https://github.com/Marc-Schaar/El-Pollo-Loco.git
+[submodule "libs/da-bubble"]
+	path = libs/da-bubble
+	url = https://github.com/Marc-Schaar/da-bubble.git
+	branch = portfolio-branch
