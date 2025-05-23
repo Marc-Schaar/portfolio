@@ -1,30 +1,68 @@
-<main class="">
+<main>
   <div class="container max-width">
     <section class="about-me-text gap-l column">
-      <h2>{{ "aboutMe.title" | translate }}</h2>
+      <h2
+        data-aos="flip-up"
+        data-aos-delay="150"
+        [attr.data-aos-anchor]="'#anchor-aboutme'"
+      >
+        {{ "aboutMe.title" | translate }}
+      </h2>
+
       <div class="gap-m column">
-        <span>{{ "aboutMe.description" | translate }}</span>
+        <p
+          id="about-me-description1"
+          data-aos="fade"
+          data-aos-delay="150"
+          [attr.data-aos-anchor]="'#anchor-aboutme'"
+        >
+          {{ "aboutMe.description" | translate }}
+        </p>
+
         <div class="gap-s column">
-          <div class="row">
+          <div class="row" id="about-me-description2">
             <img
               class="secundary-filter"
               src="assets/icons/Property 1=default (1).svg"
-              alt=""
-            />{{ "aboutMe.subDescription1" | translate }}
+              data-aos="flip-down"
+              data-aos-delay="250"
+            />
+            <p
+              data-aos="fade-up"
+              [attr.data-aos-anchor]="'#about-me-description1'"
+            >
+              {{ "aboutMe.subDescription1" | translate }}
+            </p>
           </div>
-          <div class="row">
+
+          <div class="row" id="about-me-description3">
             <img
               class="secundary-filter"
               src="assets/icons/Property 1=Default.svg"
-              alt=""
-            />{{ "aboutMe.subDescription2" | translate }}
+              data-aos="flip-down"
+              data-aos-delay="350"
+            />
+            <p
+              data-aos="fade-up"
+              [attr.data-aos-anchor]="'#about-me-description2'"
+            >
+              {{ "aboutMe.subDescription2" | translate }}
+            </p>
           </div>
+
           <div class="row">
             <img
               class="secundary-filter"
               src="assets/icons/Property 1=Defauñt.svg"
-              alt=""
-            />{{ "aboutMe.subDescription3" | translate }}
+              data-aos="flip-down"
+              data-aos-delay="450"
+            />
+            <p
+              data-aos="fade-up"
+              [attr.data-aos-anchor]="'#about-me-description3'"
+            >
+              {{ "aboutMe.subDescription3" | translate }}
+            </p>
           </div>
         </div>
       </div>
@@ -32,12 +70,22 @@
 
     <section class="img-container">
       <div class="box">
-        <img src="assets/img/me/schaar-hero.png" alt="" />
+        <img
+          src="assets/img/me/schaar-hero.png"
+          alt="Bild von Marc"
+          data-aos="zoom-in"
+          [attr.data-aos-anchor]="'#about-me-description2'"
+        />
       </div>
     </section>
   </div>
 
-  <div class="line"></div>
+  <div
+    class="line"
+    data-aos="fade-right"
+    data-aos-delay="250"
+    [attr.data-aos-anchor]="'#about-me-description2'"
+  ></div>
 </main>
 
 <div class="img-box">
