@@ -1,34 +1,54 @@
 <main>
-    <div class="container column scroll-animation">
-        <div class="row">
-            <div class="row gap max-width ">
-                <section class="references">
-                    <img class="primary-filter" src="assets/icons/quotation_mark.png">
-                    <span>{{ 'references.' + references[currentIndex].name | translate }}</span>
-                    <div class="row">
-                        <div class="line"></div>
-                        <span>{{ references[currentIndex].name }} - Team Partner</span>
-                    </div>
-                </section>
-                <section class="img-container">
-                    <img src="assets/icons/user.png" alt="{{references[currentIndex].name}} ">
-                </section>
-            </div>
+  <div class="container column">
+    <div class="row">
+      <div class="row gap max-width" data-aos="fade-right">
+        <section class="references">
+          <img class="primary-filter" src="assets/icons/quotation_mark.png" />
+          <p>{{ "references." + references[currentIndex].name | translate }}</p>
+          <div class="row">
             <div class="line"></div>
-        </div>
-
-
-        <section id="index-row" class="index-row">
-            <button (click)="back()"><img class="secundary-filter" src="assets/icons/navigation/arrow_back.png"
-                    alt=""></button>
-            <img *ngFor="let dot of references let i = index" id="dot-{{i}}" [class.active]="i === currentIndex"
-                class="primary-filter" src="assets/icons/dot.png">
-            <button (click)="next()"><img class="secundary-filter" src="assets/icons/navigation/arrow_forward.png"
-                    alt=""></button>
+            <span>{{ references[currentIndex].name }} - Team Partner</span>
+          </div>
         </section>
+        <section class="img-container">
+          <img
+            src="assets/icons/user.png"
+            alt="{{ references[currentIndex].name }} "
+          />
+        </section>
+      </div>
+      <div class="line" data-aos="fade-left"></div>
     </div>
-    <div class="img-box">
-        <img class="secundary-filter-blur" src="assets/img/background-objects/31. Green shadow Skills Portfolio.svg"
-            alt="">
-    </div>
+
+    <section id="index-row" class="index-row" data-aos="fade-up">
+      <button (click)="back()">
+        <img
+          class="secundary-filter"
+          src="assets/icons/navigation/arrow_back.png"
+          alt=""
+        />
+      </button>
+      <img
+        *ngFor="let dot of references; let i = index"
+        id="dot-{{ i }}"
+        [class.active]="i === currentIndex"
+        class="primary-filter"
+        src="assets/icons/dot.png"
+      />
+      <button (click)="next()">
+        <img
+          class="secundary-filter"
+          src="assets/icons/navigation/arrow_forward.png"
+          alt=""
+        />
+      </button>
+    </section>
+  </div>
+  <div class="img-box" data-aos="fade" data-aos-delay="100">
+    <img
+      class="secundary-filter-blur"
+      src="assets/img/background-objects/31. Green shadow Skills Portfolio.svg"
+      alt=""
+    />
+  </div>
 </main>

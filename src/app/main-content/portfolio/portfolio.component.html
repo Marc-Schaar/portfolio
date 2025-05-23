@@ -20,7 +20,12 @@
         [attr.data-aos-delay]="baseDelay * i + aosDuration / 2 + 20"
         [attr.data-aos-duration]="aosDuration"
       />
-      <div class="box">
+      <div
+        class="box"
+        data-aos="zoom-out"
+        [attr.data-aos-delay]="baseDelay * i + aosDuration / 2 + 20"
+        [attr.data-aos-duration]="aosDuration"
+      >
         <h3>{{ projcet.title }}</h3>
         <p class="sub-title">
           {{ projcet.skills.join(" | ") }}
@@ -47,7 +52,7 @@
   </ng-container>
 </main>
 
-<div class="img-box">
+<div class="img-box" data-aos="fade" data-aos-delay="100">
   <img
     class="bg-object primary-filter-blur"
     src="assets/img/background-objects/32 Purple shadow portfolio.svg"
