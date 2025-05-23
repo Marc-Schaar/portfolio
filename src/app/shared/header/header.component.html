@@ -1,33 +1,48 @@
 <header>
-    <div class="container max-width">
-        <a routerLink="" (click)="scroll()">
-            <h2>Marc</h2>
-        </a>
+  <div class="container max-width">
+    <a routerLink="" (click)="scroll()">
+      <h2>Marc</h2>
+    </a>
 
-        <nav>
-            <a href="#about-me">{{ 'aboutMe.title' | translate }}</a>
-            <a href="#skills">{{ 'skills.title' | translate }}</a>
-            <a href="#portfolio">Portfolio</a>
-            <div class="row">
-                <button [class.underline]="currentLang == 'de'" (click)="changeLanguage('de')">de</button>
-                <div class="divider"></div>
-                <button [class.underline]="currentLang == 'en'" (click)="changeLanguage('en')">en</button>
-            </div>
-        </nav>
+    <nav>
+      <a href="#about-me">{{ "aboutMe.title" | translate }}</a>
+      <a href="#skills">{{ "skills.title" | translate }}</a>
+      <a href="#portfolio">Portfolio</a>
+      <div class="row">
+        <button
+          [class.underline]="currentLang == 'de'"
+          (click)="changeLanguage('de')"
+        >
+          de
+        </button>
+        <div class="divider"></div>
+        <button
+          [class.underline]="currentLang == 'en'"
+          (click)="changeLanguage('en')"
+        >
+          en
+        </button>
+      </div>
+    </nav>
 
-        <div class="menu-icon" [class.open]="isOpen">
-            <svg (click)="toggleMenu()" width="40" height="30" viewBox="0 0 40 30" xmlns="http://www.w3.org/2000/svg">
-                <line x1="5" y1="7" x2="35" y2="7" class="line top"></line>
-                <line x1="5" y1="15" x2="35" y2="15" class="line middle"></line>
-                <line x1="5" y1="23" x2="35" y2="23" class="line bottom"></line>
-            </svg>
-        </div>
+    <div class="menu-icon" [class.open]="isOpen">
+      <svg
+        (click)="toggleMenu()"
+        width="40"
+        height="30"
+        viewBox="0 0 40 30"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line x1="5" y1="7" x2="35" y2="7" class="line top"></line>
+        <line x1="5" y1="15" x2="35" y2="15" class="line middle"></line>
+        <line x1="5" y1="23" x2="35" y2="23" class="line bottom"></line>
+      </svg>
     </div>
+  </div>
 </header>
 
-
-<main [class.open]="isOpen">
-    <header>
+<main [ngClass]="{ 'full-height': isOpen }">
+  <!-- <header>
         <a>
             <h2>Marc</h2>
         </a>
@@ -39,18 +54,30 @@
                 <line x1="5" y1="23" x2="35" y2="23" class="line bottom"></line>
             </svg>
         </div>
-    </header>
+    </header> -->
 
-    <nav>
-        <a (click)="toggleMenu()" href="#about-me">{{ 'aboutMe.title' | translate }}</a>
-        <a (click)="toggleMenu()" href="#skills">{{ 'skills.title' | translate }}</a>
-        <a (click)="toggleMenu()" href="#portfolio">Portfolio</a>
-        <div class="language-btns">
-            <button [class.underline]="currentLang == 'de'" (click)="changeLanguage('de'); toggleMenu()">de</button>
-            <div class="divider"></div>
-            <button [class.underline]="currentLang == 'en'" (click)="changeLanguage('en'); toggleMenu()">en</button>
-        </div>
-
-    </nav>
-
+  <nav [class.open]="isOpen">
+    <a (click)="toggleMenu()" href="#about-me">{{
+      "aboutMe.title" | translate
+    }}</a>
+    <a (click)="toggleMenu()" href="#skills">{{
+      "skills.title" | translate
+    }}</a>
+    <a (click)="toggleMenu()" href="#portfolio">Portfolio</a>
+    <div class="language-btns">
+      <button
+        [class.underline]="currentLang == 'de'"
+        (click)="changeLanguage('de'); toggleMenu()"
+      >
+        de
+      </button>
+      <div class="divider"></div>
+      <button
+        [class.underline]="currentLang == 'en'"
+        (click)="changeLanguage('en'); toggleMenu()"
+      >
+        en
+      </button>
+    </div>
+  </nav>
 </main>

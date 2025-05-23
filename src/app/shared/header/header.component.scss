@@ -121,29 +121,37 @@ main {
   flex-direction: column;
   position: fixed;
   top: 0;
-  height: 100vh;
   width: 100%;
-  transition: all 0.125s ease-in-out;
-  transform: translateX(100%);
-  > header {
-    justify-content: space-between;
-    align-items: baseline;
-    width: 100%;
-  }
-
-  > nav {
+  margin-top: 80px;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(2.5px);
+  nav {
     display: flex;
     flex-direction: column;
     flex: 1;
-    max-height: 100%;
+    gap: 40px;
+    max-height: 0;
+    overflow: hidden;
     align-items: center;
-    justify-content: space-evenly;
     background-color: rgb(65, 72, 86);
+    transition: max-height 0.275s ease-in-out;
+
+    a:first-child {
+      margin-top: 40px;
+    }
   }
 }
 
+.full-height {
+  height: 100%;
+}
+
 .open {
-  transform: translateX(0%);
+  max-height: 50svh !important;
+  overflow: unset;
 }
 
 @keyframes fadeIn {
