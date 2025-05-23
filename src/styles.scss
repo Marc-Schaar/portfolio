@@ -12,6 +12,8 @@
   --filterSecundaryWithBlur: brightness(0) saturate(100%) invert(37%) sepia(66%)
     saturate(6973%) hue-rotate(236deg) brightness(98%) contrast(108%) blur(20px);
   --warning: rgba(230, 28, 64);
+
+  --scrollbar-width: 8px;
 }
 
 * {
@@ -30,6 +32,7 @@ body {
   color: white;
   font-family: Poppins, sans-serif;
   font-size: 1rem;
+  width: calc(100vw - var(--scrollbar-width) - 2px);
 }
 
 a {
@@ -70,7 +73,7 @@ button {
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: var(--scrollbar-width);
 }
 
 ::-webkit-scrollbar-track {
@@ -89,7 +92,7 @@ button {
 app-header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 200;
 }
 
 main {
