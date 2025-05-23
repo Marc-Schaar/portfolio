@@ -13,5 +13,5 @@ import * as AOS from 'aos';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'portfolio';
+  title = 'Marc Schaar - Portfolio';
 }

@@ -1,16 +1,22 @@
 <main>
   <div class="container max-width scroll-animation">
     <section class="skills-container">
-      <div *ngFor="let skill of frontEndSkills" class="skill">
-        <img
-          class="skill-icon"
-          src="assets/icons/front_end_stack/{{ skill }}.png"
-          alt="{{ skill }}"
-        />
-        {{ skill }}
-      </div>
+      <ng-container *ngFor="let skill of frontEndSkills; index as i">
+        <div class="skill" data-aos="fade-up" [attr.data-aos-delay]="150 * i">
+          <img
+            class="skill-icon"
+            src="assets/icons/front_end_stack/{{ skill }}.png"
+            alt="{{ skill }}"
+          />
+          {{ skill }}
+        </div>
+      </ng-container>
 
-      <div class="wrapper">
+      <div
+        data-aos="fade-in"
+        [attr.data-aos-delay]="150 * frontEndSkills.length"
+        class="wrapper"
+      >
         <div class="skill highlight-primary learning-icon">
           <img
             id="learning-icon"
