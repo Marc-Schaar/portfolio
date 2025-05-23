@@ -27,6 +27,7 @@ export class MainContentComponent implements AfterViewInit {
       easing: 'ease-in-out',
       once: false,
       mirror: true,
+      offset: 120,
     });
     const elements = document.querySelectorAll('.scroll-animation');
     const observer = new IntersectionObserver(
