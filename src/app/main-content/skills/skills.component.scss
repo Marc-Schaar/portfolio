@@ -70,18 +70,18 @@ button {
   width: 75px;
   gap: 12px;
   z-index: 1;
+  will-change: transform;
+
+  &:hover {
+    .skill-icon {
+      animation: jumpIcon 1s ease-in-out forwards 1 !important;
+    }
+  }
 }
 
 .skill-icon {
   width: 60px;
   aspect-ratio: 1;
-
-  &:hover {
-    animation-name: jumpIcon;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 1;
-  }
 }
 
 .wrapper {
@@ -118,7 +118,7 @@ button {
   left: -14%;
   opacity: 0;
   transform: translateY(10px);
-  transition: opacity 0.125s ease, transform 0.125s ease;
+  transition: opacity 0.125s ease, transform 0.125s ease-in-out;
 }
 
 .img-box {
@@ -136,9 +136,11 @@ button {
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-16px);
   }
+
   100% {
     transform: translateY(0);
   }
