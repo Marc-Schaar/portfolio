@@ -1,5 +1,5 @@
 <div class="content">
-  <main>
+  <main id="anchor-atf">
     <section class="img-container" data-aos="fade" data-aos-delay="150">
       <img class="hero-img" src="assets/img/me/schaar-hero.png" alt="" />
       <div class="shadow-container">
@@ -33,7 +33,12 @@
   </main>
 
   <aside class="social-links-container">
-    <div class="links">
+    <div
+      class="links"
+      data-aos="fade"
+      data-aos-delay="150"
+      [attr.data-aos-anchor]="'#anchor-atf'"
+    >
       <div class="line"></div>
       <div class="row">
         <a href="https://github.com/Marc-Schaar" target="_blank"
