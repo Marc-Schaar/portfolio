@@ -1,0 +1,51 @@
+<main [ngClass]="{ 'header-login': userService.login }" class="header">
+  <div class="logo-container">
+    <a routerLink="/"><img src="img/headerlogo.png" alt="" /></a>
+  </div>
+  <div class="searchbar">
+    <div class="input" *ngIf="!userService.login && userService.dashboard">
+      <input
+        [(ngModel)]="input"
+        (input)="searchService.observeInput(input, 'header')"
+        (click)="searchService.closeList(); searchService.setResult(false)"
+        type="text"
+        placeholder="Devspace durchsuchen"
+        class="full-width"
+      />
+      <button><img src="img/icons.png" alt="" /></button>
+    </div>
+
+    @if (searchService.getHeaderListBoolean()) {
+    <div class="tag-container">
+      <app-search-result [(input)]="input"></app-search-result>
+    </div>
+    }
+  </div>
+
+  <div class="signup" *ngIf="userService.login && !userService.dashboard">
+    <p>Neu bei DABubble?</p>
+    <a routerLink="/signup">Konto erstellen</a>
+  </div>
+  <div class="user-menu" *ngIf="!userService.login && userService.dashboard">
+    <div
+      (click)="navigationService.isMobile ? showMenuMobile() : showmenu()"
+      [matMenuTriggerFor]="!navigationService.isMobile ? beforeMenu : null"
+    >
+      <span>{{ auth.currentUser?.displayName }}</span>
+      <img [src]="auth.currentUser?.photoURL || 'img/profilephoto.png'" alt="" />
+      @if (!navigationService.isMobile) {
+      <mat-icon>keyboard_arrow_down</mat-icon>
+      }
+
+      <mat-menu class="menu-box" #beforeMenu="matMenu" xPosition="before" (closed)="onMenuClosed()">
+        <button (click)="openUserProfile()" class="menu-box-btn" mat-menu-item (click)="$event.stopPropagation()">Profil</button>
+        <button (click)="signOut()" class="menu-box-btn" mat-menu-item>Log out</button>
+      </mat-menu>
+    </div>
+  </div>
+</main>
+
+@if (showBackground) {
+<div (click)="onMenuClosed()" class="background"></div>
+
+}

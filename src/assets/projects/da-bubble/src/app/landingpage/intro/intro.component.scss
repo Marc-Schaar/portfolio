@@ -1,0 +1,182 @@
+.main {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(1.46deg, #313ae6 1.22%, #797ef3 98.76%) !important;
+  opacity: 1;
+  animation: changeOpacity 1000ms ease-in-out 3000ms 1 normal forwards;
+  .intro {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 184px;
+    transform: translate(-50%, -50%);
+    animation: moveLogo 500ms ease-in-out 3000ms 1 normal forwards;
+    @media (max-width: 1023px) {
+       animation: moveLogoMobile 500ms ease-in-out 3000ms 1 normal forwards;
+    }
+    .logo-img {
+      animation: moveSide 500ms ease-in-out 1000ms 1 normal forwards;
+      @media (max-width: 1023px) {
+        animation: moveSideMobile 500ms ease-in-out 1000ms 1 normal forwards;
+      }
+      img {
+        animation: changeSize 500ms ease-in-out 3000ms 1 normal forwards;
+        @media (max-width: 1023px) {
+          animation: changeSizeMobile 500ms ease-in-out 3000ms 1 normal forwards;
+          width: 70px;
+          height: 70px;
+        }
+      }
+    }
+    .help-cont {
+      position: absolute;
+      .project-name {
+        position: absolute;
+        overflow: hidden;
+        transform: translateY(-50%);
+        left: 130px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        animation: encrease 500ms ease-in-out 1800ms 1 normal forwards, moveAfterShrink 500ms ease-in-out 3000ms 1 normal forwards;
+        @media (max-width: 1023px) {
+          animation:
+          encreaseMobile 500ms ease-in-out 1800ms 1 normal forwards,
+          moveAfterShrinkMobile 500ms ease-in-out 3000ms 1 normal forwards; 
+          left: 45px;       
+        }
+        span {
+          position: inherit;
+          color: white;
+          font-size: 44px;
+          right: 200px;
+          @media (max-width: 1023px) {
+           font-size: 24px;
+           right: 188px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+@keyframes showName {
+  0% {
+    right: 200px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+@keyframes moveAfterShrink {
+  0% {
+    left: 130px;
+  }
+  100% {
+    left: 60px;
+  }
+}
+
+@keyframes moveAfterShrinkMobile {
+  0% {
+    left: 45px;
+  }
+  100% {
+    left: 30px;
+  }
+}
+
+@keyframes moveLogo {
+  0% {
+    top: 50%;
+    left: 50%;
+  }
+  100% {
+    top: 65px;
+    left: 100px;
+  }
+}
+
+@keyframes moveLogoMobile {
+  0% {
+    top: 50%;
+    left: 50%;
+  }
+  100% {
+    top: 150px;
+
+  }
+}
+
+@keyframes moveSide {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes moveSideMobile {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes encrease {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 404px;
+  }
+}
+
+@keyframes encreaseMobile {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 300px;
+  }
+}
+
+@keyframes changeSize {
+  0% {
+    width: 188px;
+    height: 184px;
+  }
+  100% {
+    width: 77px;
+    height: 77px;
+  }
+}
+
+@keyframes changeSizeMobile {
+  0% {
+    width: 70px;
+    height: 70px;
+  }
+  100% {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@keyframes changeOpacity {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

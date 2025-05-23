@@ -11,3 +11,7 @@
 	path = libs/da-bubble
 	url = https://github.com/Marc-Schaar/da-bubble.git
 	branch = portfolio-branch
+[submodule "src/assets/projects/libs/da-bubble"]
+	path = src/assets/projects/da-bubble
+	url = https://github.com/Marc-Schaar/da-bubble.git
+	branch = portfolio-branch
