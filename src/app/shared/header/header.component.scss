@@ -133,10 +133,10 @@ main {
     display: flex;
     flex-direction: column;
     flex: 1;
-    gap: 40px;
     max-height: 0;
     overflow: hidden;
     align-items: center;
+    justify-content: space-between;
     background-color: rgb(65, 72, 86);
     transition: max-height 0.275s ease-in-out;
     pointer-events: all;
