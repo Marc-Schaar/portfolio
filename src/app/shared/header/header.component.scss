@@ -137,7 +137,10 @@ main {
     overflow: hidden;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(65, 72, 86);
+    background: linear-gradient(to bottom, var(--bg-color), rgb(30, 56, 108));
+
+    // background-color: var(--bg-color);
+    //  background-color: rgb(65, 72, 86);
     transition: max-height 0.275s ease-in-out;
     pointer-events: all;
 
