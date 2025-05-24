@@ -25,6 +25,7 @@ footer {
 }
 
 .social-links-container {
+  position: initial;
   > a:hover {
     transform: scale(1.25) translateX(4px) translateY(4px);
   }
