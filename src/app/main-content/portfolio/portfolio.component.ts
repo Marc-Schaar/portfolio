@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-portfolio',
@@ -58,4 +59,20 @@ export class PortfolioComponent {
   public baseDelay = 300;
   public aosDuration = 400;
   public aosAnchorOffset = 600;
+  private readonly DEFAULT_OFFSET = 600;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: UIEvent) {
+    const w = (event.target as Window).innerWidth;
+    this.updateAnchorOffset(w);
+    AOS.refresh();
+  }
+
+  private updateAnchorOffset(width: number) {
+    width < 1000
+      ? (this.aosAnchorOffset = Math.round(
+          this.DEFAULT_OFFSET - this.DEFAULT_OFFSET
+        ))
+      : (this.aosAnchorOffset = this.DEFAULT_OFFSET);
+  }
 }

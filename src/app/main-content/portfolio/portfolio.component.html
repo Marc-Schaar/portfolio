@@ -6,7 +6,11 @@
   </p>
 
   <ng-container *ngFor="let projcet of projects; let i = index">
-    <section class="max-width" [ngClass]="{ 'row-reverse': i % 2 === 0 }">
+    <section
+      [id]="'project-' + i"
+      class="max-width"
+      [ngClass]="{ 'row-reverse': i % 2 === 0 }"
+    >
       <img
         [src]="'assets/img/projects/' + projcet.image + '.png'"
         [alt]="'Desktop Ansicht von ' + projcet.title"
@@ -29,7 +33,7 @@
           {{ projcet.skills.join(" | ") }}
         </p>
         <p>{{ "portfolio." + projcet.description | translate }}</p>
-        <div [id]="'project-' + i" class="row">
+        <div class="row">
           <button class="primary hover-secundary">
             <a
               [href]="'https://' + projcet.image + '.marc-schaar.com'"
