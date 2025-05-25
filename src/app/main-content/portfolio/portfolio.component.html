@@ -6,32 +6,30 @@
   </p>
 
   <ng-container *ngFor="let projcet of projects; let i = index">
-    <section
-      class="max-width"
-      [ngClass]="{ 'row-reverse': i % 2 === 0 }"
-      [attr.data-aos]="aosEffects[i % aosEffects.length]"
-      [attr.data-aos-delay]="baseDelay * i"
-      [attr.data-aos-duration]="aosDuration"
-    >
+    <section class="max-width" [ngClass]="{ 'row-reverse': i % 2 === 0 }">
       <img
         [src]="'assets/img/projects/' + projcet.image + '.png'"
         [alt]="'Desktop Ansicht von ' + projcet.title"
-        data-aos="zoom-in"
-        [attr.data-aos-delay]="baseDelay * i + aosDuration / 2 + 20"
+        [attr.data-aos]="aosEffects[i % aosEffects.length]"
+        [attr.data-aos-delay]="baseDelay * i"
         [attr.data-aos-duration]="aosDuration"
+        [attr.data-aos-anchor]="'#project-' + i"
+        [attr.data-aos-anchor-offset]="aosAnchorOffset"
       />
       <div
         class="box"
-        data-aos="zoom-out"
-        [attr.data-aos-delay]="baseDelay * i + aosDuration / 2 + 20"
+        [attr.data-aos]="aosEffects[(i + 1) % aosEffects.length]"
+        [attr.data-aos-delay]="baseDelay * i"
         [attr.data-aos-duration]="aosDuration"
+        [attr.data-aos-anchor]="'#project-' + i"
+        [attr.data-aos-anchor-offset]="aosAnchorOffset"
       >
         <h3>{{ projcet.title }}</h3>
         <p class="sub-title">
           {{ projcet.skills.join(" | ") }}
         </p>
         <p>{{ "portfolio." + projcet.description | translate }}</p>
-        <div class="row">
+        <div [id]="'project-' + i" class="row">
           <button class="primary hover-secundary">
             <a
               [href]="'https://' + projcet.image + '.marc-schaar.com'"

@@ -54,8 +54,8 @@ export class PortfolioComponent {
     },
   ];
 
-  public aosEffects = ['slide-down', 'slide-left', 'slide-up', 'slide-right'];
-
-  public baseDelay = 200;
-  public aosDuration = 600;
+  public aosEffects = ['fade-left', 'fade-right'];
+  public baseDelay = 300;
+  public aosDuration = 400;
+  public aosAnchorOffset = 600;
 }
