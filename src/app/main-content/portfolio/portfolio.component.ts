@@ -16,7 +16,7 @@ import AOS from 'aos';
 export class PortfolioComponent {
   public projects = [
     {
-      title: 'Da Bubble',
+      title: 'DA Bubble',
       description: 'daBubbleDescription',
       image: 'da-bubble',
       skills: [
