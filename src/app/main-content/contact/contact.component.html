@@ -26,6 +26,7 @@
               'red-border': name.invalid && (name.dirty || name.touched)
             }"
             autocomplete="given-name"
+            pattern="[a-zA-Z0-9äöüÄÖÜß ,.!?@-]+"
           />
 
           <img
@@ -137,6 +138,7 @@
               ngModel
               required
               #checkbox="ngModel"
+              pattern="[a-zA-Z0-9äöüÄÖÜß ,.!?@-]+"
             />
             <label for="checkbox"></label>
           </div>
