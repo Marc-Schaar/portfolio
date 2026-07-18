@@ -14,20 +14,15 @@
     </section>
 
     <section>
-      <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
         <app-input
           type="text"
-          name="name"
-          [(ngModel)]="contactData.name"
+          formControlName="name"
           placeholder="{{ 'contact.form.placeholders.name' | translate }}"
-          required
-          minlength="2"
-          #name="ngModel"
-          [invalid]="name.invalid && (name.dirty || name.touched)"
-          [valid]="name.valid"
+          [invalid]="!!name?.invalid && !!(name?.dirty || name?.touched)"
+          [valid]="!!name?.valid"
           [showValidationIcon]="true"
           autocomplete="given-name"
-          pattern="[a-zA-Z0-9äöüÄÖÜß ,.!?@-]+"
         ></app-input>
 
         <app-field-error
@@ -40,14 +35,10 @@
 
         <app-input
           type="email"
-          name="email"
-          [(ngModel)]="contactData.email"
+          formControlName="email"
           placeholder="{{ 'contact.form.placeholders.email' | translate }}"
-          required
-          #email="ngModel"
-          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-          [invalid]="email.invalid && (email.dirty || email.touched)"
-          [valid]="email.valid"
+          [invalid]="!!email?.invalid && !!(email?.dirty || email?.touched)"
+          [valid]="!!email?.valid"
           [showValidationIcon]="true"
           autocomplete="on"
         ></app-input>
@@ -64,13 +55,10 @@
         ></app-field-error>
 
         <app-textarea
-          name="message"
-          [(ngModel)]="contactData.message"
+          formControlName="message"
           placeholder="{{ 'contact.form.placeholders.message' | translate }}"
-          required
-          #message="ngModel"
-          [invalid]="message.invalid && (message.dirty || message.touched)"
-          [valid]="message.valid"
+          [invalid]="!!message?.invalid && !!(message?.dirty || message?.touched)"
+          [valid]="!!message?.valid"
           [showValidationIcon]="true"
         ></app-textarea>
 
@@ -86,11 +74,7 @@
             <input
               id="checkbox"
               type="checkbox"
-              name="privacy"
-              ngModel
-              required
-              #checkbox="ngModel"
-              pattern="[a-zA-Z0-9äöüÄÖÜß ,.!?@-]+"
+              formControlName="privacy"
             />
             <label for="checkbox"></label>
           </div>
@@ -104,13 +88,13 @@
         </div>
 
         <app-field-error
-          [control]="checkbox"
+          [control]="privacy"
           [messages]="{
             required: ['contact.form.validation.privacyRequired']
           }"
         ></app-field-error>
 
-        <app-button type="submit" [disabled]="!contactForm.valid">
+        <app-button type="submit" [disabled]="contactForm.invalid">
           {{ "contact.form.button" | translate }}
         </app-button>
 

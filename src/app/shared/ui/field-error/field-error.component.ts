@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { NgModel } from '@angular/forms';
+import { AbstractControl } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -11,7 +11,7 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrls: ['./field-error.component.scss'],
 })
 export class FieldErrorComponent {
-  @Input() control!: NgModel;
+  @Input() control!: AbstractControl | null;
   @Input() messages: { [errorKey: string]: string[] } = {};
 
   get visible(): boolean {

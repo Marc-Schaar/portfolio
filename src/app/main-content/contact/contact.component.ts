@@ -1,6 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { GlobalService } from '../../shared/global.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
@@ -17,7 +22,7 @@ import { FieldErrorComponent } from '../../shared/ui/field-error/field-error.com
   standalone: true,
   imports: [
     CommonModule,
-    FormsModule,
+    ReactiveFormsModule,
     TranslateModule,
     RouterLink,
     ButtonComponent,
@@ -34,17 +39,48 @@ import { FieldErrorComponent } from '../../shared/ui/field-error/field-error.com
   ],
 })
 export class ContactComponent {
-  constructor() {}
   globalService = inject(GlobalService);
   http = inject(HttpClient);
+  private fb = inject(FormBuilder);
+
   mailTest: boolean = false;
   mailSendSucess: boolean = false;
 
-  contactData: { name: string; email: string; message: string } = {
-    name: '',
-    email: '',
-    message: '',
-  };
+  contactForm: FormGroup = this.fb.group({
+    name: [
+      '',
+      [
+        Validators.required,
+        Validators.minLength(2),
+        Validators.pattern('[a-zA-Z0-9äöüÄÖÜß ,.!?@-]+'),
+      ],
+    ],
+    email: [
+      '',
+      [
+        Validators.required,
+        Validators.pattern('[a-zA-Z0-9._%+\\-]+@[a-zA-Z0-9.\\-]+\\.[a-zA-Z]{2,}'),
+      ],
+    ],
+    message: ['', [Validators.required]],
+    privacy: [false, [Validators.requiredTrue]],
+  });
+
+  get name() {
+    return this.contactForm.get('name');
+  }
+
+  get email() {
+    return this.contactForm.get('email');
+  }
+
+  get message() {
+    return this.contactForm.get('message');
+  }
+
+  get privacy() {
+    return this.contactForm.get('privacy');
+  }
 
   scroll() {
     this.globalService.scrollToTop();
@@ -61,27 +97,31 @@ export class ContactComponent {
     },
   };
 
-  onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http
-        .post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response) => {
-            ngForm.resetForm();
-            this.mailSendSucess = true;
-            setTimeout(() => {
-              this.mailSendSucess = false;
-            }, 2000);
-          },
-          error: (error) => {
-            console.error(error);
-          },
-          complete: () => console.info('send post complete'),
-        });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      ngForm.resetForm();
-      this.showSuccesMsg();
+  onSubmit() {
+    if (this.contactForm.invalid) {
+      this.contactForm.markAllAsTouched();
+      return;
     }
+
+    const { name, email, message } = this.contactForm.value;
+    const contactData = { name, email, message };
+
+    if (this.mailTest) {
+      this.contactForm.reset();
+      this.showSuccesMsg();
+      return;
+    }
+
+    this.http.post(this.post.endPoint, this.post.body(contactData)).subscribe({
+      next: () => {
+        this.contactForm.reset();
+        this.showSuccesMsg();
+      },
+      error: (error) => {
+        console.error(error);
+      },
+      complete: () => console.info('send post complete'),
+    });
   }
 
   showSuccesMsg() {
