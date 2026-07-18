@@ -1,8 +1,10 @@
 
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { BgDecorationComponent } from '../../shared/ui/bg-decoration/bg-decoration.component';
 import { SectionTitleComponent } from '../../shared/ui/section-title/section-title.component';
+import { ReducedMotionService } from '../../shared/three/reduced-motion.service';
+import { shouldUseStaticBackgroundFallback } from '../../shared/three/ambient-fallback';
 
 @Component({
     selector: 'app-about-me',
@@ -18,6 +20,11 @@ import { SectionTitleComponent } from '../../shared/ui/section-title/section-tit
     ]
 })
 export class AboutMeComponent {
+  private readonly reducedMotion = inject(ReducedMotionService);
+  readonly useStaticBackground = shouldUseStaticBackgroundFallback(
+    this.reducedMotion.prefersReducedMotion
+  );
+
   subDescriptionRows: { icon: string; textKey: string; rowId?: string; anchor: string }[] = [
     {
       icon: 'assets/icons/Property 1=default (1).svg',

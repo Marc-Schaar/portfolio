@@ -66,7 +66,9 @@
       }
     </section>
 
-    <app-bg-decoration
-      class="img-box"
-      src="assets/img/background-objects/32 Purple shadow portfolio.svg"
-    ></app-bg-decoration>
+    @if (useStaticBackground) {
+      <app-bg-decoration
+        class="img-box"
+        src="assets/img/background-objects/32 Purple shadow portfolio.svg"
+      ></app-bg-decoration>
+    }

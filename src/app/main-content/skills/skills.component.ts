@@ -1,8 +1,10 @@
 
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { BgDecorationComponent } from '../../shared/ui/bg-decoration/bg-decoration.component';
 import { SectionTitleComponent } from '../../shared/ui/section-title/section-title.component';
+import { ReducedMotionService } from '../../shared/three/reduced-motion.service';
+import { shouldUseStaticBackgroundFallback } from '../../shared/three/ambient-fallback';
 
 @Component({
     selector: 'app-skills',
@@ -15,6 +17,11 @@ import { SectionTitleComponent } from '../../shared/ui/section-title/section-tit
     styleUrls: ['./skills.component.scss', './skills.responsive.component.scss']
 })
 export class SkillsComponent {
+  private readonly reducedMotion = inject(ReducedMotionService);
+  readonly useStaticBackground = shouldUseStaticBackgroundFallback(
+    this.reducedMotion.prefersReducedMotion
+  );
+
   frontEndSkills: string[] = [
     'HTML',
     'CSS',

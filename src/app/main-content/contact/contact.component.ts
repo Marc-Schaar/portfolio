@@ -16,6 +16,8 @@ import { TextareaComponent } from '../../shared/ui/textarea/textarea.component';
 import { BgDecorationComponent } from '../../shared/ui/bg-decoration/bg-decoration.component';
 import { SectionTitleComponent } from '../../shared/ui/section-title/section-title.component';
 import { FieldErrorComponent } from '../../shared/ui/field-error/field-error.component';
+import { ReducedMotionService } from '../../shared/three/reduced-motion.service';
+import { shouldUseStaticBackgroundFallback } from '../../shared/three/ambient-fallback';
 
 @Component({
     selector: 'app-contact',
@@ -41,6 +43,10 @@ export class ContactComponent {
   globalService = inject(GlobalService);
   http = inject(HttpClient);
   private fb = inject(FormBuilder);
+  private readonly reducedMotion = inject(ReducedMotionService);
+  readonly useStaticBackground = shouldUseStaticBackgroundFallback(
+    this.reducedMotion.prefersReducedMotion
+  );
 
   mailTest: boolean = false;
   mailSendSucess: boolean = false;

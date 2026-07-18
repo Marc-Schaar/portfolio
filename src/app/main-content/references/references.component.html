@@ -58,9 +58,11 @@
           {{ "references.slideStatus" | translate: { current: currentIndex + 1, total: references.length, name: references[currentIndex].name } }}
         </div>
       </div>
-      <app-bg-decoration
-        class="img-box"
-        filter="secundary"
-        src="assets/img/background-objects/31. Green shadow Skills Portfolio.svg"
-      ></app-bg-decoration>
+      @if (useStaticBackground) {
+        <app-bg-decoration
+          class="img-box"
+          filter="secundary"
+          src="assets/img/background-objects/31. Green shadow Skills Portfolio.svg"
+        ></app-bg-decoration>
+      }
     </section>
