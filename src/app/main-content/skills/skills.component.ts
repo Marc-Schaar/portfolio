@@ -5,13 +5,15 @@ import { BgDecorationComponent } from '../../shared/ui/bg-decoration/bg-decorati
 import { SectionTitleComponent } from '../../shared/ui/section-title/section-title.component';
 import { ReducedMotionService } from '../../shared/three/reduced-motion.service';
 import { shouldUseStaticBackgroundFallback } from '../../shared/three/ambient-fallback';
+import { SkillsParticlesComponent } from './skills-particles/skills-particles.component';
 
 @Component({
     selector: 'app-skills',
     imports: [
     TranslateModule,
     BgDecorationComponent,
-    SectionTitleComponent
+    SectionTitleComponent,
+    SkillsParticlesComponent
 ],
     templateUrl: './skills.component.html',
     styleUrls: ['./skills.component.scss', './skills.responsive.component.scss']
