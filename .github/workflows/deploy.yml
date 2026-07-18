@@ -27,8 +27,8 @@ jobs:
         run: npm run build -- --configuration production
 
       - name: Deploy build output via rsync over SSH
-        uses: easingthemes/ssh-deploy@v5
-        env:
+        uses: easingthemes/ssh-deploy@v6
+        with:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           REMOTE_HOST: ${{ secrets.SSH_HOST }}
           REMOTE_USER: ${{ secrets.SSH_USER }}
