@@ -28,7 +28,20 @@
       "Read(//c/Users/Marc/AppData/Local/Temp/pwtest/**)",
       "Bash(cp \"C:\\\\Users\\\\Marc\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Marc-dev-portfolio\\\\c2016404-310c-4628-a5fc-7ef3446d934d\\\\scratchpad\\\\verify.js\" /tmp/pwtest/verify.js)",
       "Bash(git submodule *)",
-      "Bash(git config *)"
+      "Bash(git config *)",
+      "Read(//c/Users/Marc/.claude/skills/angular-developer/references/**)",
+      "Read(//c/Users/Marc/.agents/skills/angular-developer/references/**)",
+      "Bash(npm --version)",
+      "Bash(echo \"EXIT CODE: $?\")",
+      "Read(//c/Users/Marc/AppData/Local/Temp/claude/**)",
+      "Read(//c/Users/Marc/AppData/Local/Temp/claude/c--Users-Marc-dev-portfolio/4e0427d6-b9d0-4c85-877e-a1d23cc248f6/scratchpad/orig-check/**)",
+      "Bash(git worktree *)",
+      "Bash(mkdir -p /c/Users/Marc/AppData/Local/Temp/claude/empty_dir)",
+      "Bash(cmd.exe /c \"robocopy \\\\\"C:\\\\Users\\\\Marc\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\empty_dir\\\\\" \\\\\"C:\\\\Users\\\\Marc\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Marc-dev-portfolio\\\\4e0427d6-b9d0-4c85-877e-a1d23cc248f6\\\\scratchpad\\\\orig-check\\\\node_modules\\\\\" /MIR\")",
+      "Bash(git restore *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(echo \"EXIT: $?\")"
     ],
     "additionalDirectories": [
       "\\tmp\\pwtest"
