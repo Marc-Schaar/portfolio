@@ -1,4 +1,4 @@
-<main>
+<section>
   <div class="line"></div>
   <app-section-title variant="contact">{{
     "contact.title" | translate
@@ -15,59 +15,89 @@
 
     <section>
       <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-        <app-input
-          type="text"
-          formControlName="name"
-          placeholder="{{ 'contact.form.placeholders.name' | translate }}"
-          [invalid]="!!name?.invalid && !!(name?.dirty || name?.touched)"
-          [valid]="!!name?.valid"
-          [showValidationIcon]="true"
-          autocomplete="given-name"
-        ></app-input>
+        <div class="field">
+          <label for="name">
+            {{ "contact.form.labels.name" | translate }}
+            <span class="required-indicator" aria-hidden="true">*</span>
+            <span class="visually-hidden">({{ "contact.form.requiredIndicator" | translate }})</span>
+          </label>
+          <app-input
+            inputId="name"
+            type="text"
+            formControlName="name"
+            placeholder="{{ 'contact.form.placeholders.name' | translate }}"
+            [invalid]="!!name?.invalid && !!(name?.dirty || name?.touched)"
+            [valid]="!!name?.valid"
+            [showValidationIcon]="true"
+            [required]="true"
+            [ariaDescribedBy]="(name?.invalid && (name?.dirty || name?.touched)) ? 'name-error' : null"
+            autocomplete="given-name"
+          ></app-input>
+          <app-field-error
+            errorId="name-error"
+            [control]="name"
+            [messages]="{
+              required: ['contact.form.validation.nameRequired'],
+              minlength: ['contact.form.validation.nameMinLength']
+            }"
+          ></app-field-error>
+        </div>
 
-        <app-field-error
-          [control]="name"
-          [messages]="{
-            required: ['contact.form.validation.nameRequired'],
-            minlength: ['contact.form.validation.nameMinLength']
-          }"
-        ></app-field-error>
+        <div class="field">
+          <label for="email">
+            {{ "contact.form.labels.email" | translate }}
+            <span class="required-indicator" aria-hidden="true">*</span>
+            <span class="visually-hidden">({{ "contact.form.requiredIndicator" | translate }})</span>
+          </label>
+          <app-input
+            inputId="email"
+            type="email"
+            formControlName="email"
+            placeholder="{{ 'contact.form.placeholders.email' | translate }}"
+            [invalid]="!!email?.invalid && !!(email?.dirty || email?.touched)"
+            [valid]="!!email?.valid"
+            [showValidationIcon]="true"
+            [required]="true"
+            [ariaDescribedBy]="(email?.invalid && (email?.dirty || email?.touched)) ? 'email-error' : null"
+            autocomplete="email"
+          ></app-input>
+          <app-field-error
+            errorId="email-error"
+            [control]="email"
+            [messages]="{
+              required: ['contact.form.validation.emailRequired'],
+              pattern: [
+                'contact.form.validation.emailPattern',
+                'contact.form.validation.emailPatternExample'
+              ]
+            }"
+          ></app-field-error>
+        </div>
 
-        <app-input
-          type="email"
-          formControlName="email"
-          placeholder="{{ 'contact.form.placeholders.email' | translate }}"
-          [invalid]="!!email?.invalid && !!(email?.dirty || email?.touched)"
-          [valid]="!!email?.valid"
-          [showValidationIcon]="true"
-          autocomplete="on"
-        ></app-input>
-
-        <app-field-error
-          [control]="email"
-          [messages]="{
-            required: ['contact.form.validation.emailRequired'],
-            pattern: [
-              'contact.form.validation.emailPattern',
-              'contact.form.validation.emailPatternExample'
-            ]
-          }"
-        ></app-field-error>
-
-        <app-textarea
-          formControlName="message"
-          placeholder="{{ 'contact.form.placeholders.message' | translate }}"
-          [invalid]="!!message?.invalid && !!(message?.dirty || message?.touched)"
-          [valid]="!!message?.valid"
-          [showValidationIcon]="true"
-        ></app-textarea>
-
-        <app-field-error
-          [control]="message"
-          [messages]="{
-            required: ['contact.form.validation.messageRequired']
-          }"
-        ></app-field-error>
+        <div class="field">
+          <label for="message">
+            {{ "contact.form.labels.message" | translate }}
+            <span class="required-indicator" aria-hidden="true">*</span>
+            <span class="visually-hidden">({{ "contact.form.requiredIndicator" | translate }})</span>
+          </label>
+          <app-textarea
+            inputId="message"
+            formControlName="message"
+            placeholder="{{ 'contact.form.placeholders.message' | translate }}"
+            [invalid]="!!message?.invalid && !!(message?.dirty || message?.touched)"
+            [valid]="!!message?.valid"
+            [showValidationIcon]="true"
+            [required]="true"
+            [ariaDescribedBy]="(message?.invalid && (message?.dirty || message?.touched)) ? 'message-error' : null"
+          ></app-textarea>
+          <app-field-error
+            errorId="message-error"
+            [control]="message"
+            [messages]="{
+              required: ['contact.form.validation.messageRequired']
+            }"
+          ></app-field-error>
+        </div>
 
         <div class="row">
           <div class="checkbox">
@@ -75,10 +105,12 @@
               id="checkbox"
               type="checkbox"
               formControlName="privacy"
+              aria-labelledby="privacy-consent-text"
+              [attr.aria-describedby]="(privacy?.invalid && (privacy?.dirty || privacy?.touched)) ? 'privacy-error' : null"
             />
             <label for="checkbox"></label>
           </div>
-          <span>
+          <span id="privacy-consent-text">
             {{ "contact.form.checkboxBeforLinkText" | translate }}
             <a [routerLink]="['/legal-notice']">{{
               "contact.form.privacyPolice" | translate
@@ -88,6 +120,7 @@
         </div>
 
         <app-field-error
+          errorId="privacy-error"
           [control]="privacy"
           [messages]="{
             required: ['contact.form.validation.privacyRequired']
@@ -98,7 +131,7 @@
           {{ "contact.form.button" | translate }}
         </app-button>
 
-        <span [ngClass]="{ show: mailSendSucess }" class="succesMsg"
+        <span [ngClass]="{ show: mailSendSucess }" class="succesMsg" role="status" aria-live="polite"
           >{{ "contact.succesMsg" | translate }}!</span
         >
       </form>
@@ -109,14 +142,11 @@
         [ariaLabel]="'contact.scrollButtonAlt' | translate"
         (clicked)="scroll()"
       >
-        <img
-          src="assets/icons/navigation/up.png"
-          alt="{{ 'contact.scrollButtonAlt' | translate }}"
-        />
+        <img src="assets/icons/navigation/up.png" alt="" />
       </app-button>
     </section>
   </div>
-</main>
+</section>
 <app-bg-decoration
   class="img-box"
   src="assets/img/background-objects/33. Purple shadow Footer.svg"

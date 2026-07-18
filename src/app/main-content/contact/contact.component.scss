@@ -1,4 +1,4 @@
-main {
+:host > section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -25,7 +25,7 @@ main {
   gap: 40px;
 }
 
-section {
+.container > section {
   display: flex;
   flex-direction: column;
   width: 40%;
@@ -41,6 +41,23 @@ form {
   align-items: center;
   gap: 20px;
   position: relative;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.required-indicator {
+  color: var(--warning);
+  margin-left: 2px;
 }
 
 .checkbox {
@@ -61,9 +78,14 @@ form {
       left: 8px;
       width: 6px;
       height: 12px;
-      border: solid var(--secundary);
+      border: solid var(--secundary-accessible);
       border-width: 0 2px 2px 0;
       transform: rotate(45deg);
+    }
+
+    &:focus-visible + label {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
     }
   }
 
@@ -71,7 +93,7 @@ form {
     display: inline-block;
     width: 24px;
     height: 24px;
-    outline: 2px solid var(--secundary);
+    border: 2px solid var(--secundary-accessible);
     background-color: var(--bg-color);
     border-radius: 4px;
     cursor: pointer;

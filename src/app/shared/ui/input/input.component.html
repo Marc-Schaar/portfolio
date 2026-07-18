@@ -1,9 +1,13 @@
 <input
+  [id]="inputId"
   [type]="type"
   [name]="name"
   [placeholder]="placeholder"
   [autocomplete]="autocomplete"
   [disabled]="disabled"
+  [required]="required"
+  [attr.aria-invalid]="invalid ? 'true' : null"
+  [attr.aria-describedby]="ariaDescribedBy"
   [value]="value"
   [class.invalid]="invalid"
   [class.valid]="valid"

@@ -17,10 +17,13 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   ],
 })
 export class InputComponent implements ControlValueAccessor {
+  @Input() inputId: string = '';
   @Input() type: string = 'text';
   @Input() name: string = '';
   @Input() placeholder: string = '';
   @Input() autocomplete: string = 'off';
+  @Input() required = false;
+  @Input() ariaDescribedBy: string | null = null;
   @Input() valid: boolean | null = false;
   @Input() invalid: boolean | null = false;
   @Input() showValidationIcon = false;

@@ -1,4 +1,4 @@
-<main>
+<section>
   <div class="container max-width">
     <section class="about-me-text gap-l column">
       <app-section-title
@@ -26,7 +26,7 @@
             *ngFor="let row of subDescriptionRows"
             [attr.id]="row.rowId"
           >
-            <img class="secundary-filter" [src]="row.icon" />
+            <img class="secundary-filter" [src]="row.icon" alt="" />
             <p data-aos="fade-up" [attr.data-aos-anchor]="row.anchor">
               {{ row.textKey | translate }}
             </p>
@@ -39,7 +39,7 @@
       <div class="box">
         <img
           src="assets/img/me/schaar-hero.png"
-          alt="Bild von Marc"
+          [attr.alt]="'aboutMe.photoAlt' | translate"
           data-aos="zoom-in"
           [attr.data-aos-anchor]="'#about-me-description2'"
         />
@@ -53,7 +53,7 @@
     data-aos-delay="250"
     [attr.data-aos-anchor]="'#about-me-description2'"
   ></div>
-</main>
+</section>
 
 <app-bg-decoration
   class="img-box"

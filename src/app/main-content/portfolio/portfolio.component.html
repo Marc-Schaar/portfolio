@@ -1,4 +1,4 @@
-<main>
+<section>
   <div class="line" data-aos="fade-left"></div>
   <app-section-title variant="portfolio" aosEffect="fade-left"
     >Portfolio</app-section-title
@@ -26,7 +26,7 @@
     >
       <img
         [src]="'assets/img/projects/' + projcet.image + '.png'"
-        [alt]="'Desktop Ansicht von ' + projcet.title"
+        [attr.alt]="'portfolio.projectImageAlt' | translate: { title: projcet.title }"
         [attr.data-aos]="aosEffects[i % aosEffects.length]"
         [attr.data-aos-delay]="baseDelay * i"
         [attr.data-aos-duration]="aosDuration"
@@ -62,7 +62,7 @@
       </div>
     </section>
   </ng-container>
-</main>
+</section>
 
 <app-bg-decoration
   class="img-box"

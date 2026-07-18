@@ -1,7 +1,7 @@
 <footer>
   <div class="container max-width">
     <div class="column">
-      <h1>Marc</h1>
+      <p class="brand">Marc</p>
       <a
         class="hover-underline"
         [routerLink]="['/legal-notice']"
@@ -19,10 +19,10 @@
     <span>© Marc Schaar 2025</span>
     <div class="social-links-container">
       <a href="https://github.com/FelixFeliices" target="_blank"
-        ><img class="icon" src="assets/icons/git.png" alt="Git Hub Link"
+        ><img class="icon" src="assets/icons/git.png" [attr.alt]="'social.githubAlt' | translate"
       /></a>
       <a href="mailto:kontakt@marc-schaar.com"
-        ><img class="icon" src="assets/icons/Mail.png" alt="Mail Link"
+        ><img class="icon" src="assets/icons/Mail.png" [attr.alt]="'social.mailAlt' | translate"
       /></a>
       <!-- <a href="https://linkedin.com/" target="_blank"><img class="icon" src="assets/icons/Linkedin.png"
                 alt="Linkedin Link"></a> -->

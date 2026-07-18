@@ -11,6 +11,7 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrls: ['./field-error.component.scss'],
 })
 export class FieldErrorComponent {
+  @Input() errorId: string = '';
   @Input() control!: AbstractControl | null;
   @Input() messages: { [errorKey: string]: string[] } = {};
 

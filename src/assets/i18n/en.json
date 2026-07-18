@@ -1,9 +1,25 @@
 {
+  "a11y": {
+    "skipToContent": "Skip to main content"
+  },
+  "header": {
+    "mainNavLabel": "Main navigation",
+    "mobileNavLabel": "Mobile navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchToGerman": "Switch to German",
+    "switchToEnglish": "Switch to English"
+  },
+  "social": {
+    "githubAlt": "GitHub profile (opens in a new tab)",
+    "mailAlt": "Send an email"
+  },
   "atf": {
     "label": "Let’s Talk!"
   },
   "aboutMe": {
     "title": "About Me",
+    "photoAlt": "Photo of Marc",
     "description": "Hi, I’m Marc, a fullstack developer based in Düsseldorf. Just as life’s diversity fascinates me, so does the world of IT. The boundless creativity and countless possibilities motivate me to build well-rounded applications – from the user interface all the way down to the server logic – that truly bring joy to people.",
     "subDescription1": "For me, programming is much more than just writing code – it’s the art of finding creative solutions and constantly developing new ideas that lead to success. I love transforming complex technical challenges into clear, intuitive solutions that not only work but also make life simpler and more enjoyable.",
     "subDescription2": "I am flexible and adapt effortlessly to different work environments – whether on-site in an inspiring office with colleagues or working remotely, I always work efficiently and with focus.",
@@ -21,6 +37,7 @@
   },
   "portfolio": {
     "subtitle": "Discover a curated collection of my projects - Engage with them to experience my skills firsthand.",
+    "projectImageAlt": "Desktop view of {{title}}",
     "joinDescription": "Task manager in the style of a Kanban board, built with Angular, Firestore, and Realtime Database. Tasks can be managed via drag and drop, with support for user and category assignments. Authentication is handled via a custom-built login system.",
 
     "elPolloLocoDescription": "Jump-and-run game featuring engaging gameplay and advanced game logic. Developed using object-oriented programming with a focus on performance and smooth animations.",
@@ -45,7 +62,12 @@
     "Antoine": "Working with Marc was a great pleasure for me; his positivity was an enrichment for the entire team.",
     "Hiroshi": "Marc always came up with great ideas that helped us achieve our goals together.",
     "Dimitri": "Marc impressed not only with his reliability but also by keeping a clear head and finding solutions in tricky situations.",
-    "Romina": "During our collaboration, Marc demonstrated that he could take the lead when needed and ensured good motivation!"
+    "Romina": "During our collaboration, Marc demonstrated that he could take the lead when needed and ensured good motivation!",
+    "previousLabel": "Previous testimonial",
+    "nextLabel": "Next testimonial",
+    "dotsLabel": "Choose testimonial",
+    "goToSlide": "Go to testimonial {{number}}",
+    "slideStatus": "Testimonial {{current}} of {{total}}: {{name}}"
   },
   "contact": {
     "title": "Get in Touch",
@@ -54,6 +76,12 @@
     "needDeveloper": "Looking for a Fullstack Developer?",
     "contactMe": "Let’s Connect!",
     "form": {
+      "labels": {
+        "name": "Name",
+        "email": "Email",
+        "message": "Message"
+      },
+      "requiredIndicator": "required",
       "placeholders": {
         "name": "Enter your name",
         "email": "Enter your email",

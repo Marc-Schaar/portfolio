@@ -5,7 +5,7 @@
 }
 
 @media screen and (max-width: 1000px) {
-  main {
+  :host > section {
     padding: 0 48px 32px;
     align-items: flex-start;
     height: unset;
@@ -15,7 +15,7 @@
     flex-direction: column;
     margin: 34px 0;
   }
-  section {
+  .container > section {
     width: 100%;
   }
 
@@ -33,7 +33,7 @@
 }
 
 @media screen and (max-width: 425px) {
-  main {
+  :host > section {
     padding: 0 16px 32px;
   }
 

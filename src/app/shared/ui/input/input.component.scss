@@ -15,13 +15,18 @@ input {
   font-family: inherit;
   width: 100%;
 
+  &:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 2px;
+  }
+
   &::placeholder {
     color: white;
     font-size: 1rem;
   }
 
   &.valid {
-    border-color: var(--secundary);
+    border-color: var(--secundary-accessible);
   }
 
   &.invalid {

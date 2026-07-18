@@ -3,6 +3,11 @@ import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { BgDecorationComponent } from '../../shared/ui/bg-decoration/bg-decoration.component';
 
+interface Reference {
+  name: string;
+  img: string;
+}
+
 @Component({
   selector: 'app-references',
   standalone: true,
@@ -14,7 +19,7 @@ import { BgDecorationComponent } from '../../shared/ui/bg-decoration/bg-decorati
   ],
 })
 export class ReferencesComponent {
-  references: any[] = [
+  references: Reference[] = [
     {
       name: 'Antoine',
       img: 'quelle',
@@ -43,5 +48,9 @@ export class ReferencesComponent {
 
   next() {
     this.currentIndex = (this.currentIndex + 1) % this.references.length;
+  }
+
+  goTo(i: number) {
+    this.currentIndex = i;
   }
 }

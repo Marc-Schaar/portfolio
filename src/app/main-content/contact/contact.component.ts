@@ -88,7 +88,7 @@ export class ContactComponent {
 
   post = {
     endPoint: 'https://marc-schaar.com/sendMail.php',
-    body: (payload: any) => JSON.stringify(payload),
+    body: (payload: Record<string, unknown>) => JSON.stringify(payload),
     options: {
       headers: {
         'Content-Type': 'text/plain',
@@ -128,6 +128,6 @@ export class ContactComponent {
     this.mailSendSucess = true;
     setTimeout(() => {
       this.mailSendSucess = false;
-    }, 2000);
+    }, 6000);
   }
 }

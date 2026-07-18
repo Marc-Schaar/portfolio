@@ -17,8 +17,11 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   ],
 })
 export class TextareaComponent implements ControlValueAccessor {
+  @Input() inputId: string = '';
   @Input() name: string = '';
   @Input() placeholder: string = '';
+  @Input() required = false;
+  @Input() ariaDescribedBy: string | null = null;
   @Input() valid: boolean | null = false;
   @Input() invalid: boolean | null = false;
   @Input() showValidationIcon = false;
