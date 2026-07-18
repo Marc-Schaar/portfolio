@@ -1,6 +1,7 @@
 import {
   Directive,
   ElementRef,
+  Input,
   NgZone,
   OnDestroy,
   OnInit,
@@ -25,6 +26,12 @@ export class TiltDirective implements OnInit, OnDestroy {
   private readonly ngZone = inject(NgZone);
   private readonly reducedMotion = inject(ReducedMotionService);
 
+  /**
+   * Optional wider element (e.g. the whole project row) to listen for pointer
+   * events on, so hovering the text next to the image already moves it too.
+   */
+  @Input() tiltZone?: HTMLElement;
+
   private readonly cleanupFns: Array<() => void> = [];
   private rafId: number | null = null;
 
@@ -40,15 +47,16 @@ export class TiltDirective implements OnInit, OnDestroy {
     }
 
     const host = this.el.nativeElement;
+    const zone = this.tiltZone ?? host;
     this.renderer.setStyle(host, 'transition', 'transform 0.2s ease-out');
     this.renderer.setStyle(host, 'will-change', 'transform');
 
     this.ngZone.runOutsideAngular(() => {
       this.cleanupFns.push(
-        this.renderer.listen(host, 'pointermove', (event: PointerEvent) =>
-          this.onPointerMove(event)
+        this.renderer.listen(zone, 'pointermove', (event: PointerEvent) =>
+          this.onPointerMove(event, zone)
         ),
-        this.renderer.listen(host, 'pointerleave', () => this.onPointerLeave())
+        this.renderer.listen(zone, 'pointerleave', () => this.onPointerLeave())
       );
     });
   }
@@ -60,12 +68,12 @@ export class TiltDirective implements OnInit, OnDestroy {
     this.cleanupFns.forEach((cleanup) => cleanup());
   }
 
-  private onPointerMove(event: PointerEvent): void {
+  private onPointerMove(event: PointerEvent, zone: HTMLElement): void {
     if (this.rafId !== null) return;
     this.rafId = requestAnimationFrame(() => {
       this.rafId = null;
       const host = this.el.nativeElement;
-      const rect = host.getBoundingClientRect();
+      const rect = zone.getBoundingClientRect();
       const offsetX = (event.clientX - rect.left) / rect.width - 0.5;
       const offsetY = (event.clientY - rect.top) / rect.height - 0.5;
       const rotateY = offsetX * MAX_TILT_DEGREES * 2;
