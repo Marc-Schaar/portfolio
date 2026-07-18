@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { GlobalService } from '../global.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterLink } from '@angular/router';
@@ -16,8 +16,12 @@ export class HeaderComponent implements OnInit {
   constructor(private globalService: GlobalService) {}
   isOpen = false;
   currentLang = this.globalService.getCurrentLanguage();
+  languages = ['de', 'en'];
 
   resizeSubscription!: Subscription;
+
+  @ViewChild('menuToggle') menuToggle?: ElementRef<HTMLButtonElement>;
+  @ViewChild('mobileNav') mobileNav?: ElementRef<HTMLElement>;
 
   ngOnInit(): void {
     this.handleResize(); // Initial check
@@ -33,12 +37,31 @@ export class HeaderComponent implements OnInit {
 
   toggleMenu() {
     this.isOpen = !this.isOpen;
+    this.setBodyScroll();
 
     if (this.isOpen) {
-      document.body.style.overflow = 'hidden';
+      this.focusFirstNavLink();
     } else {
-      document.body.style.overflow = '';
+      this.menuToggle?.nativeElement.focus();
     }
+  }
+
+  closeMenu() {
+    this.isOpen = false;
+    this.setBodyScroll();
+  }
+
+  private setBodyScroll() {
+    document.body.style.overflow = this.isOpen ? 'hidden' : '';
+  }
+
+  private focusFirstNavLink() {
+    setTimeout(() => {
+      const firstLink = this.mobileNav?.nativeElement.querySelector(
+        'a'
+      ) as HTMLElement | null;
+      firstLink?.focus();
+    });
   }
 
   changeLanguage(lang: string): void {

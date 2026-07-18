@@ -36,10 +36,10 @@
   }
 
   .index-row {
-    > img {
+    .dot-btn img {
       width: 8px;
     }
-    > .active {
+    .dot-btn.active img {
       scale: 1.2;
     }
     > button {

@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { AtfComponent } from './atf/atf.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { SkillsComponent } from './skills/skills.component';
@@ -23,11 +23,16 @@ import * as AOS from 'aos';
 })
 export class MainContentComponent implements AfterViewInit {
   ngAfterViewInit(): void {
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+
     AOS.init({
       easing: 'ease-in-out',
-      once: false,
-      mirror: true,
+      once: prefersReducedMotion ? true : false,
+      mirror: !prefersReducedMotion,
       offset: 120,
+      disable: prefersReducedMotion,
     });
     const elements = document.querySelectorAll('.scroll-animation');
     const observer = new IntersectionObserver(
@@ -43,7 +48,7 @@ export class MainContentComponent implements AfterViewInit {
     elements.forEach((el) => observer.observe(el));
   }
 
-  toogleVisabilty(entry: any) {
+  toogleVisabilty(entry: IntersectionObserverEntry) {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
     } else {

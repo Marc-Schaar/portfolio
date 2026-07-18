@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({
@@ -7,13 +8,21 @@ import { TranslateService } from '@ngx-translate/core';
 export class GlobalService {
   private setLanguage: string = 'setLanguage';
 
-  constructor(private translate: TranslateService) {
-    let savedLang = localStorage.getItem(this.setLanguage);
-    let browserLang = this.translate.getBrowserLang();
-    let initialLang =
+  constructor(
+    private translate: TranslateService,
+    @Inject(DOCUMENT) private document: Document
+  ) {
+    const savedLang = localStorage.getItem(this.setLanguage);
+    const browserLang = this.translate.getBrowserLang();
+    const initialLang =
       savedLang || (browserLang?.match(/de/) ? browserLang : 'en');
 
     this.translate.use(initialLang);
+    this.document.documentElement.lang = initialLang;
+
+    this.translate.onLangChange.subscribe((event) => {
+      this.document.documentElement.lang = event.lang;
+    });
 
     if (!savedLang) {
       localStorage.setItem(this.setLanguage, initialLang);

@@ -1,0 +1,33 @@
+.alert {
+  align-self: baseline;
+  color: var(--warning);
+  animation: fade-in forwards, opacity forwards;
+  animation-duration: 0.125s;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  50% {
+    opacity: 0.2;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,14 +1,10 @@
 @media screen and (max-width: 1439px) {
-  main {
+  :host > section {
     padding: 0 64px;
   }
 }
 
 @media screen and (max-width: 1280px) {
-  h2 {
-    padding: 0 16px;
-  }
-
   .line {
     top: 33.5px;
     width: 95%;
@@ -16,11 +12,11 @@
 }
 
 @media screen and (max-width: 1000px) {
-  main {
+  :host > section {
     padding: 0 48px 64px;
   }
 
-  section {
+  .max-width {
     flex-direction: column !important;
     margin-top: 0;
     align-items: center;
@@ -51,13 +47,13 @@
 }
 
 @media screen and (max-width: 480px) {
-  section {
+  .max-width {
     max-height: 734px;
   }
 }
 
 @media screen and (max-width: 425px) {
-  main {
+  :host > section {
     padding: 0 16px;
   }
 
@@ -76,7 +72,7 @@
 }
 
 @media screen and (min-width: 1920px) {
-  section {
+  .max-width {
     justify-content: space-between;
   }
 }

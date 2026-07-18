@@ -1,12 +1,15 @@
-<main>
+<section>
   <div class="container max-width">
     <section class="skills-container" id="skills-entry-anchor">
+      <p class="group-label" data-aos="fade-up">
+        {{ "skills.groupFrontend" | translate }}
+      </p>
       <ng-container *ngFor="let skill of frontEndSkills; index as i">
         <div class="skill">
           <img
             class="skill-icon"
-            src="assets/icons/front_end_stack/{{ skill }}.png"
-            alt="{{ skill }}"
+            src="assets/icons/skills/{{ skill }}.svg"
+            alt=""
             data-aos="fade-up"
             [attr.data-aos-delay]="100 * i"
             id="skill-img-{{ i }}"
@@ -21,9 +24,32 @@
         </div>
       </ng-container>
 
+      <p class="group-label" data-aos="fade-up">
+        {{ "skills.groupBackend" | translate }}
+      </p>
+      <ng-container *ngFor="let skill of backEndSkills; index as j">
+        <div class="skill">
+          <img
+            class="skill-icon"
+            src="assets/icons/skills/{{ skill }}.svg"
+            alt=""
+            data-aos="fade-up"
+            [attr.data-aos-delay]="100 * j"
+            id="backend-skill-img-{{ j }}"
+          />
+          <p
+            data-aos="fade-in"
+            [attr.data-aos-anchor]="'#backend-skill-img-' + j"
+            [attr.data-aos-delay]="100 * j + 250"
+          >
+            {{ skill }}
+          </p>
+        </div>
+      </ng-container>
+
       <div
         data-aos="zoom-out"
-        [attr.data-aos-delay]="100 * frontEndSkills.length"
+        [attr.data-aos-delay]="100 * backEndSkills.length"
         class="wrapper"
       >
         <div class="skill highlight-primary learning-icon">
@@ -41,9 +67,13 @@
     </section>
 
     <section class="grid-headline-section">
-      <h2 data-aos="fade" [attr.data-aos-anchor]="'#skills-entry-anchor'">
+      <app-section-title
+        variant="skills"
+        aosEffect="fade"
+        aosAnchor="#skills-entry-anchor"
+      >
         {{ "skills.title" | translate }}
-      </h2>
+      </app-section-title>
       <p data-aos="fade-left" data-aos-delay="400">
         {{ "skills.experience" | translate }}
       </p>
@@ -67,12 +97,10 @@
   </div>
 
   <div class="line" data-aos="fade"></div>
-</main>
+</section>
 
-<div class="img-box" data-aos="fade" data-aos-delay="100">
-  <img
-    class="secundary-filter-blur"
-    src="assets/img/background-objects/31. Green shadow Skills Portfolio.svg"
-    alt=""
-  />
-</div>
+<app-bg-decoration
+  class="img-box"
+  filter="secundary"
+  src="assets/img/background-objects/31. Green shadow Skills Portfolio.svg"
+></app-bg-decoration>

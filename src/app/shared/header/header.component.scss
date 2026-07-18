@@ -18,6 +18,18 @@ header {
   }
 }
 
+.logo {
+  font-size: 5.625rem;
+  font-weight: 700;
+  z-index: 2;
+}
+
+@media screen and (max-width: 1280px) {
+  .logo {
+    font-size: 2.813rem;
+  }
+}
+
 .language-btns {
   display: flex;
   gap: 24px;
@@ -115,9 +127,17 @@ nav {
   height: 35px;
   cursor: pointer;
   display: none;
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+
+  &:hover {
+    scale: 1;
+  }
 }
 
-main {
+.mobile-nav-panel {
+  display: flex;
   flex-direction: column;
   position: fixed;
   top: 0;

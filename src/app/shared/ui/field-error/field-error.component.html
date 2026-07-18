@@ -1,0 +1,5 @@
+<div *ngIf="visible" class="alert" [id]="errorId" role="alert">
+  <div *ngFor="let messageKey of activeMessages">
+    {{ messageKey | translate }}
+  </div>
+</div>

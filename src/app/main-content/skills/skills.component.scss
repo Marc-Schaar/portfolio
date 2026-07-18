@@ -1,4 +1,4 @@
-main {
+:host > section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,6 +59,20 @@ button {
   &:hover {
     background-color: var(--primary) !important;
     transform: translateY(6px) translateX(-12px);
+  }
+}
+
+.group-label {
+  flex-basis: 100%;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--secundary-accessible);
+
+  &:not(:first-child) {
+    margin-top: 8px;
   }
 }
 

@@ -1,24 +1,43 @@
 {
+  "a11y": {
+    "skipToContent": "Skip to main content"
+  },
+  "header": {
+    "mainNavLabel": "Main navigation",
+    "mobileNavLabel": "Mobile navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchToGerman": "Switch to German",
+    "switchToEnglish": "Switch to English"
+  },
+  "social": {
+    "githubAlt": "GitHub profile (opens in a new tab)",
+    "mailAlt": "Send an email"
+  },
   "atf": {
     "label": "Let’s Talk!"
   },
   "aboutMe": {
     "title": "About Me",
-    "description": "Hi, I’m Marc and I live in Düsseldorf. Just as life’s diversity fascinates me, so does the world of IT. The boundless creativity and countless possibilities motivate me to develop visually appealing and user-friendly websites and applications that truly bring joy to people.",
+    "photoAlt": "Photo of Marc",
+    "description": "Hi, I’m Marc, a fullstack developer based in Düsseldorf. Just as life’s diversity fascinates me, so does the world of IT. The boundless creativity and countless possibilities motivate me to build well-rounded applications – from the user interface all the way down to the server logic – that truly bring joy to people.",
     "subDescription1": "For me, programming is much more than just writing code – it’s the art of finding creative solutions and constantly developing new ideas that lead to success. I love transforming complex technical challenges into clear, intuitive solutions that not only work but also make life simpler and more enjoyable.",
     "subDescription2": "I am flexible and adapt effortlessly to different work environments – whether on-site in an inspiring office with colleagues or working remotely, I always work efficiently and with focus.",
     "subDescription3": "I see good collaboration as a true enrichment and am always open to new challenges to further develop my knowledge and skills. As a team player, I view myself as part of the bigger picture – like a puzzle where every piece works perfectly together to achieve the common goal. I quickly integrate into teams, enjoy working with others, and adapt flexibly to varying requirements."
   },
   "skills": {
     "title": "My Skills",
-    "experience": "I have accumulated experience in developing projects using various frontend technologies and design concepts.",
+    "experience": "As a fullstack developer, I have experience building complete projects – from thoughtful frontend interfaces to robust backend architectures and design concepts.",
     "lookingFor": "Seeking",
     "additionalSkill": "an additional skill",
     "contactMessage": "Don't hesitate to get in touch. I'm excited to build on my existing expertise and learn more.",
-    "buttonText": "Get in touch"
+    "buttonText": "Get in touch",
+    "groupFrontend": "Frontend",
+    "groupBackend": "Backend"
   },
   "portfolio": {
     "subtitle": "Discover a curated collection of my projects - Engage with them to experience my skills firsthand.",
+    "projectImageAlt": "Desktop view of {{title}}",
     "joinDescription": "Task manager in the style of a Kanban board, built with Angular, Firestore, and Realtime Database. Tasks can be managed via drag and drop, with support for user and category assignments. Authentication is handled via a custom-built login system.",
 
     "elPolloLocoDescription": "Jump-and-run game featuring engaging gameplay and advanced game logic. Developed using object-oriented programming with a focus on performance and smooth animations.",
@@ -43,15 +62,26 @@
     "Antoine": "Working with Marc was a great pleasure for me; his positivity was an enrichment for the entire team.",
     "Hiroshi": "Marc always came up with great ideas that helped us achieve our goals together.",
     "Dimitri": "Marc impressed not only with his reliability but also by keeping a clear head and finding solutions in tricky situations.",
-    "Romina": "During our collaboration, Marc demonstrated that he could take the lead when needed and ensured good motivation!"
+    "Romina": "During our collaboration, Marc demonstrated that he could take the lead when needed and ensured good motivation!",
+    "previousLabel": "Previous testimonial",
+    "nextLabel": "Next testimonial",
+    "dotsLabel": "Choose testimonial",
+    "goToSlide": "Go to testimonial {{number}}",
+    "slideStatus": "Testimonial {{current}} of {{total}}: {{name}}"
   },
   "contact": {
     "title": "Get in Touch",
     "subtitle": "Have a challenge to discuss?",
     "description": "Feel free to reach out via this form. I’m eager to hear your ideas, collaborate on your projects, and help bring them to life.",
-    "needDeveloper": "Looking for a Frontend Developer?",
+    "needDeveloper": "Looking for a Fullstack Developer?",
     "contactMe": "Let’s Connect!",
     "form": {
+      "labels": {
+        "name": "Name",
+        "email": "Email",
+        "message": "Message"
+      },
+      "requiredIndicator": "required",
       "placeholders": {
         "name": "Enter your name",
         "email": "Enter your email",

@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import AOS from 'aos';
+import { BgDecorationComponent } from '../../shared/ui/bg-decoration/bg-decoration.component';
+import { SectionTitleComponent } from '../../shared/ui/section-title/section-title.component';
 
 export type ProjectCategory = 'frontend' | 'backend' | 'fullstack';
 export type ProjectFilter = 'all' | ProjectCategory;
@@ -9,7 +11,12 @@ export type ProjectFilter = 'all' | ProjectCategory;
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [TranslateModule, CommonModule],
+  imports: [
+    TranslateModule,
+    CommonModule,
+    BgDecorationComponent,
+    SectionTitleComponent,
+  ],
   templateUrl: './portfolio.component.html',
   styleUrls: [
     './portfolio.component.scss',
@@ -109,7 +116,12 @@ export class PortfolioComponent {
     },
   ];
 
-  public filters: ProjectFilter[] = ['all', 'frontend', 'backend', 'fullstack'];
+  public filters: ProjectFilter[] = [
+    'all',
+    ...(Array.from(
+      new Set(this.projects.map((p) => p.category)),
+    ) as ProjectCategory[]),
+  ];
   public activeFilter: ProjectFilter = 'all';
 
   get filteredProjects() {

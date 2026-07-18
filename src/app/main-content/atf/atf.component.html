@@ -1,5 +1,5 @@
 <div class="content">
-  <main id="anchor-atf">
+  <section id="anchor-atf">
     <section class="img-container" data-aos="fade" data-aos-delay="150">
       <img class="hero-img" src="assets/img/me/schaar-hero.png" alt="" />
       <div class="shadow-container">
@@ -22,15 +22,15 @@
       <div class="headline-text">
         <span class="rotate-90">I am</span>
         <div class="column">
-          <span class="headline">Marc Schaar</span>
-          <span class="highlight-primary">Frontend Developer</span>
+          <h1 class="headline">Marc Schaar</h1>
+          <span class="highlight-primary">Fullstack Developer</span>
         </div>
       </div>
       <button>
         <a href="#contact">{{ "atf.label" | translate }}</a>
       </button>
     </section>
-  </main>
+  </section>
 
   <aside class="social-links-container" id="anchor-aboutme">
     <div
@@ -42,10 +42,10 @@
       <div class="line"></div>
       <div class="row">
         <a href="https://github.com/Marc-Schaar" target="_blank"
-          ><img class="icon" src="assets/icons/git.png" alt="Git Hub Link"
+          ><img class="icon" src="assets/icons/git.png" [attr.alt]="'social.githubAlt' | translate"
         /></a>
         <a href="mailto:kontakt@marc-schaar.com"
-          ><img class="icon" src="assets/icons/Mail.png" alt="Mail Link"
+          ><img class="icon" src="assets/icons/Mail.png" [attr.alt]="'social.mailAlt' | translate"
         /></a>
         <!-- <a href="https://linkedin.com/" target="_blank"><img class="icon" src="assets/icons/Linkedin.png"
                     alt="Linkedin Link"></a> -->

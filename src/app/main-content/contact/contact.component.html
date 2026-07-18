@@ -1,6 +1,8 @@
-<main>
+<section>
   <div class="line"></div>
-  <h2>{{ "contact.title" | translate }}</h2>
+  <app-section-title variant="contact">{{
+    "contact.title" | translate
+  }}</app-section-title>
   <div data-aos="zoom-in-up" class="container max-width">
     <section>
       <h3>{{ "contact.subtitle" | translate }}</h3>
@@ -12,121 +14,89 @@
     </section>
 
     <section>
-      <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-        <div class="input-row">
-          <input
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <div class="field">
+          <label for="name">
+            {{ "contact.form.labels.name" | translate }}
+            <span class="required-indicator" aria-hidden="true">*</span>
+            <span class="visually-hidden">({{ "contact.form.requiredIndicator" | translate }})</span>
+          </label>
+          <app-input
+            inputId="name"
             type="text"
-            name="name"
-            [(ngModel)]="contactData.name"
+            formControlName="name"
             placeholder="{{ 'contact.form.placeholders.name' | translate }}"
-            required
-            minlength="2"
-            #name="ngModel"
-            [ngClass]="{
-              'red-border': name.invalid && (name.dirty || name.touched)
-            }"
+            [invalid]="!!name?.invalid && !!(name?.dirty || name?.touched)"
+            [valid]="!!name?.valid"
+            [showValidationIcon]="true"
+            [required]="true"
+            [ariaDescribedBy]="(name?.invalid && (name?.dirty || name?.touched)) ? 'name-error' : null"
             autocomplete="given-name"
-            pattern="[a-zA-Z0-9äöüÄÖÜß ,.!?@-]+"
-          />
-
-          <img
-            class="form-validation-icon"
-            *ngIf="name.valid"
-            src="assets/icons/form_validation/correct.png"
-            alt=""
-          />
-          <img
-            class="form-validation-icon"
-            *ngIf="name.invalid && (name.dirty || name.touched)"
-            src="assets/icons/form_validation/wrong.png"
-            alt=""
-          />
+          ></app-input>
+          <app-field-error
+            errorId="name-error"
+            [control]="name"
+            [messages]="{
+              required: ['contact.form.validation.nameRequired'],
+              minlength: ['contact.form.validation.nameMinLength']
+            }"
+          ></app-field-error>
         </div>
 
-        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
-          <div *ngIf="name.errors?.['required']">
-            {{ "contact.form.validation.nameRequired" | translate }}
-          </div>
-          <div *ngIf="name.errors?.['minlength']">
-            {{ "contact.form.validation.nameMinLength" | translate }}
-          </div>
-        </div>
-
-        <div class="input-row">
-          <input
+        <div class="field">
+          <label for="email">
+            {{ "contact.form.labels.email" | translate }}
+            <span class="required-indicator" aria-hidden="true">*</span>
+            <span class="visually-hidden">({{ "contact.form.requiredIndicator" | translate }})</span>
+          </label>
+          <app-input
+            inputId="email"
             type="email"
-            name="email"
-            [(ngModel)]="contactData.email"
+            formControlName="email"
             placeholder="{{ 'contact.form.placeholders.email' | translate }}"
-            required
-            #email="ngModel"
-            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-            [ngClass]="{
-              'red-border': email.invalid && (email.dirty || email.touched)
+            [invalid]="!!email?.invalid && !!(email?.dirty || email?.touched)"
+            [valid]="!!email?.valid"
+            [showValidationIcon]="true"
+            [required]="true"
+            [ariaDescribedBy]="(email?.invalid && (email?.dirty || email?.touched)) ? 'email-error' : null"
+            autocomplete="email"
+          ></app-input>
+          <app-field-error
+            errorId="email-error"
+            [control]="email"
+            [messages]="{
+              required: ['contact.form.validation.emailRequired'],
+              pattern: [
+                'contact.form.validation.emailPattern',
+                'contact.form.validation.emailPatternExample'
+              ]
             }"
-            autocomplete="on"
-          />
-
-          <img
-            class="form-validation-icon"
-            *ngIf="email.valid"
-            src="assets/icons/form_validation/correct.png"
-            alt=""
-          />
-          <img
-            class="form-validation-icon"
-            *ngIf="email.invalid && (email.dirty || email.touched)"
-            src="assets/icons/form_validation/wrong.png"
-            alt=""
-          />
+          ></app-field-error>
         </div>
 
-        <div
-          *ngIf="email.invalid && (email.dirty || email.touched)"
-          class="alert"
-        >
-          <div *ngIf="email.errors?.['required']">
-            {{ "contact.form.validation.emailRequired" | translate }}
-          </div>
-          <div *ngIf="email.errors?.['pattern']">
-            {{ "contact.form.validation.emailPattern" | translate }} <br />
-            {{ "contact.form.validation.emailPatternExample" | translate }}
-          </div>
-        </div>
-
-        <div class="input-row">
-          <textarea
-            name="message"
-            [(ngModel)]="contactData.message"
+        <div class="field">
+          <label for="message">
+            {{ "contact.form.labels.message" | translate }}
+            <span class="required-indicator" aria-hidden="true">*</span>
+            <span class="visually-hidden">({{ "contact.form.requiredIndicator" | translate }})</span>
+          </label>
+          <app-textarea
+            inputId="message"
+            formControlName="message"
             placeholder="{{ 'contact.form.placeholders.message' | translate }}"
-            required
-            #message="ngModel"
-            [ngClass]="{
-              'red-border':
-                message.invalid && (message.dirty || message.touched)
+            [invalid]="!!message?.invalid && !!(message?.dirty || message?.touched)"
+            [valid]="!!message?.valid"
+            [showValidationIcon]="true"
+            [required]="true"
+            [ariaDescribedBy]="(message?.invalid && (message?.dirty || message?.touched)) ? 'message-error' : null"
+          ></app-textarea>
+          <app-field-error
+            errorId="message-error"
+            [control]="message"
+            [messages]="{
+              required: ['contact.form.validation.messageRequired']
             }"
-          ></textarea>
-          <img
-            class="form-validation-icon"
-            *ngIf="message.valid"
-            src="assets/icons/form_validation/correct.png"
-            alt="Correct"
-          />
-          <img
-            class="form-validation-icon"
-            *ngIf="message.invalid && (message.dirty || message.touched)"
-            src="assets/icons/form_validation/wrong.png"
-            alt="False"
-          />
-        </div>
-
-        <div
-          *ngIf="message.invalid && (message.dirty || message.touched)"
-          class="alert"
-        >
-          <div *ngIf="message.errors?.['required']">
-            {{ "contact.form.validation.messageRequired" | translate }}
-          </div>
+          ></app-field-error>
         </div>
 
         <div class="row">
@@ -134,15 +104,13 @@
             <input
               id="checkbox"
               type="checkbox"
-              name="privacy"
-              ngModel
-              required
-              #checkbox="ngModel"
-              pattern="[a-zA-Z0-9äöüÄÖÜß ,.!?@-]+"
+              formControlName="privacy"
+              aria-labelledby="privacy-consent-text"
+              [attr.aria-describedby]="(privacy?.invalid && (privacy?.dirty || privacy?.touched)) ? 'privacy-error' : null"
             />
             <label for="checkbox"></label>
           </div>
-          <span>
+          <span id="privacy-consent-text">
             {{ "contact.form.checkboxBeforLinkText" | translate }}
             <a [routerLink]="['/legal-notice']">{{
               "contact.form.privacyPolice" | translate
@@ -151,37 +119,35 @@
           </span>
         </div>
 
-        <div
-          *ngIf="checkbox.invalid && (checkbox.dirty || checkbox.touched)"
-          class="alert"
-        >
-          <div *ngIf="checkbox?.errors?.['required']">
-            {{ "contact.form.validation.privacyRequired" | translate }}
-          </div>
-        </div>
+        <app-field-error
+          errorId="privacy-error"
+          [control]="privacy"
+          [messages]="{
+            required: ['contact.form.validation.privacyRequired']
+          }"
+        ></app-field-error>
 
-        <button type="submit" [disabled]="!contactForm.valid">
+        <app-button type="submit" [disabled]="contactForm.invalid">
           {{ "contact.form.button" | translate }}
-        </button>
+        </app-button>
 
-        <span [ngClass]="{ show: mailSendSucess }" class="succesMsg"
+        <span [ngClass]="{ show: mailSendSucess }" class="succesMsg" role="status" aria-live="polite"
           >{{ "contact.succesMsg" | translate }}!</span
         >
       </form>
 
-      <button (click)="scroll()" class="btn-up">
-        <img
-          src="assets/icons/navigation/up.png"
-          alt="{{ 'contact.scrollButtonAlt' | translate }}"
-        />
-      </button>
+      <app-button
+        variant="plain"
+        class="scroll-up-btn"
+        [ariaLabel]="'contact.scrollButtonAlt' | translate"
+        (clicked)="scroll()"
+      >
+        <img src="assets/icons/navigation/up.png" alt="" />
+      </app-button>
     </section>
   </div>
-</main>
-<div class="img-box" data-aos="fade" data-aos-delay="100">
-  <img
-    class="primary-filter-blur"
-    src="assets/img/background-objects/33. Purple shadow Footer.svg"
-    alt=""
-  />
-</div>
+</section>
+<app-bg-decoration
+  class="img-box"
+  src="assets/img/background-objects/33. Purple shadow Footer.svg"
+></app-bg-decoration>

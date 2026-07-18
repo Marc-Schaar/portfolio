@@ -1,9 +1,9 @@
-<main>
+<section>
   <div class="container column">
     <div class="row">
       <div class="row gap max-width" data-aos="fade-right">
         <section class="references">
-          <img class="primary-filter" src="assets/icons/quotation_mark.png" />
+          <img class="primary-filter" src="assets/icons/quotation_mark.png" alt="" />
           <p>{{ "references." + references[currentIndex].name | translate }}</p>
           <div class="row">
             <div class="line"></div>
@@ -21,21 +21,30 @@
     </div>
 
     <section id="index-row" class="index-row" data-aos="fade-up">
-      <button (click)="back()">
+      <button type="button" [attr.aria-label]="'references.previousLabel' | translate" (click)="back()">
         <img
           class="secundary-filter"
           src="assets/icons/navigation/arrow_back.png"
           alt=""
         />
       </button>
-      <img
-        *ngFor="let dot of references; let i = index"
-        id="dot-{{ i }}"
-        [class.active]="i === currentIndex"
-        class="primary-filter"
-        src="assets/icons/dot.png"
-      />
-      <button (click)="next()">
+
+      <div class="dots" role="group" [attr.aria-label]="'references.dotsLabel' | translate">
+        <button
+          *ngFor="let dot of references; let i = index"
+          type="button"
+          id="dot-{{ i }}"
+          class="dot-btn"
+          [class.active]="i === currentIndex"
+          [attr.aria-current]="i === currentIndex ? 'true' : null"
+          [attr.aria-label]="'references.goToSlide' | translate: { number: i + 1 }"
+          (click)="goTo(i)"
+        >
+          <img class="primary-filter" src="assets/icons/dot.png" alt="" />
+        </button>
+      </div>
+
+      <button type="button" [attr.aria-label]="'references.nextLabel' | translate" (click)="next()">
         <img
           class="secundary-filter"
           src="assets/icons/navigation/arrow_forward.png"
@@ -43,12 +52,14 @@
         />
       </button>
     </section>
+
+    <div class="visually-hidden" aria-live="polite">
+      {{ "references.slideStatus" | translate: { current: currentIndex + 1, total: references.length, name: references[currentIndex].name } }}
+    </div>
   </div>
-  <div class="img-box" data-aos="fade" data-aos-delay="100">
-    <img
-      class="secundary-filter-blur"
-      src="assets/img/background-objects/31. Green shadow Skills Portfolio.svg"
-      alt=""
-    />
-  </div>
-</main>
+  <app-bg-decoration
+    class="img-box"
+    filter="secundary"
+    src="assets/img/background-objects/31. Green shadow Skills Portfolio.svg"
+  ></app-bg-decoration>
+</section>
