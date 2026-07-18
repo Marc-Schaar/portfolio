@@ -5,11 +5,22 @@ import { GlobalService } from '../../shared/global.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { RouterLink } from '@angular/router';
+import { ButtonComponent } from '../../shared/ui/button/button.component';
+import { InputComponent } from '../../shared/ui/input/input.component';
+import { TextareaComponent } from '../../shared/ui/textarea/textarea.component';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslateModule, RouterLink],
+  imports: [
+    CommonModule,
+    FormsModule,
+    TranslateModule,
+    RouterLink,
+    ButtonComponent,
+    InputComponent,
+    TextareaComponent,
+  ],
   templateUrl: './contact.component.html',
   styleUrls: [
     './contact.component.scss',

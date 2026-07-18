@@ -1,0 +1,48 @@
+:host {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+input {
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  padding: 16px 24px;
+  color: white;
+  background: var(--bg-color);
+  outline: none;
+  font-size: 1rem;
+  font-family: inherit;
+  width: 100%;
+
+  &::placeholder {
+    color: white;
+    font-size: 1rem;
+  }
+
+  &.valid {
+    border-color: var(--secundary);
+  }
+
+  &.invalid {
+    border-color: var(--warning);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px var(--bg-color) inset;
+    box-shadow: 0 0 0px 1000px var(--bg-color) inset;
+    -webkit-text-fill-color: white;
+  }
+}
+
+.validation-icon {
+  position: absolute;
+  top: 12px;
+  right: 24px;
+  width: 24px;
+}

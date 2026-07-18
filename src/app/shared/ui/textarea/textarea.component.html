@@ -1,0 +1,23 @@
+<textarea
+  [name]="name"
+  [placeholder]="placeholder"
+  [disabled]="disabled"
+  [value]="value"
+  [class.invalid]="invalid"
+  [class.valid]="valid"
+  (input)="onInput($event)"
+  (blur)="onBlur()"
+></textarea>
+
+<img
+  class="validation-icon"
+  *ngIf="showValidationIcon && valid"
+  src="assets/icons/form_validation/correct.png"
+  alt=""
+/>
+<img
+  class="validation-icon"
+  *ngIf="showValidationIcon && invalid"
+  src="assets/icons/form_validation/wrong.png"
+  alt=""
+/>

@@ -1,0 +1,19 @@
+:host {
+  display: inline-block;
+}
+
+button.primary {
+  background-color: var(--primary);
+  padding: 16px 30px;
+}
+
+button.plain {
+  background: unset;
+  padding: 0;
+  box-shadow: none;
+
+  &:hover {
+    scale: 1;
+    filter: var(--filterPrimary);
+  }
+}
