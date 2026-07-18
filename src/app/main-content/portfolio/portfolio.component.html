@@ -21,11 +21,14 @@
 
     @for (projcet of filteredProjects; track projcet; let i = $index) {
       <section
+        #projectRow
         [id]="'project-' + i"
         class="max-width"
         [ngClass]="{ 'row-reverse': i % 2 === 0 }"
         >
         <img
+          appTilt
+          [tiltZone]="projectRow"
           [src]="'assets/img/projects/' + projcet.image + '.png'"
           [attr.alt]="'portfolio.projectImageAlt' | translate: { title: projcet.title }"
           [attr.data-aos]="aosEffects[i % aosEffects.length]"
@@ -65,7 +68,9 @@
       }
     </section>
 
-    <app-bg-decoration
-      class="img-box"
-      src="assets/img/background-objects/32 Purple shadow portfolio.svg"
-    ></app-bg-decoration>
+    @if (useStaticBackground) {
+      <app-bg-decoration
+        class="img-box"
+        src="assets/img/background-objects/32 Purple shadow portfolio.svg"
+      ></app-bg-decoration>
+    }

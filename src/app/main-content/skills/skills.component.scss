@@ -27,6 +27,14 @@
   flex-wrap: wrap;
   column-gap: 88px;
   row-gap: 24px;
+  position: relative;
+}
+
+.skills-particles-placeholder {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .grid-headline-section {

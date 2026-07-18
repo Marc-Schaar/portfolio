@@ -147,7 +147,9 @@
     </section>
   </div>
 </section>
-<app-bg-decoration
-  class="img-box"
-  src="assets/img/background-objects/33. Purple shadow Footer.svg"
-></app-bg-decoration>
+@if (useStaticBackground) {
+  <app-bg-decoration
+    class="img-box"
+    src="assets/img/background-objects/33. Purple shadow Footer.svg"
+  ></app-bg-decoration>
+}

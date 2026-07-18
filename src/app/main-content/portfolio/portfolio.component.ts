@@ -1,9 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import AOS from 'aos';
 import { BgDecorationComponent } from '../../shared/ui/bg-decoration/bg-decoration.component';
 import { SectionTitleComponent } from '../../shared/ui/section-title/section-title.component';
+import { TiltDirective } from '../../shared/ui/tilt/tilt.directive';
+import { ReducedMotionService } from '../../shared/three/reduced-motion.service';
+import { shouldUseStaticBackgroundFallback } from '../../shared/three/ambient-fallback';
 
 export type ProjectCategory = 'frontend' | 'backend' | 'fullstack';
 export type ProjectFilter = 'all' | ProjectCategory;
@@ -15,6 +18,7 @@ export type ProjectFilter = 'all' | ProjectCategory;
         CommonModule,
         BgDecorationComponent,
         SectionTitleComponent,
+        TiltDirective,
     ],
     templateUrl: './portfolio.component.html',
     styleUrls: [
@@ -23,6 +27,11 @@ export type ProjectFilter = 'all' | ProjectCategory;
     ]
 })
 export class PortfolioComponent {
+  private readonly reducedMotion = inject(ReducedMotionService);
+  readonly useStaticBackground = shouldUseStaticBackgroundFallback(
+    this.reducedMotion.prefersReducedMotion
+  );
+
   public projects: {
     title: string;
     description: string;

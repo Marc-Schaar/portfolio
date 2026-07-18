@@ -1,6 +1,12 @@
 <section>
   <div class="container max-width">
     <section class="skills-container" id="skills-entry-anchor">
+      @defer (on viewport) {
+        <app-skills-particles />
+      } @placeholder {
+        <div class="skills-particles-placeholder" aria-hidden="true"></div>
+      }
+
       <p class="group-label" data-aos="fade-up">
         {{ "skills.groupFrontend" | translate }}
       </p>
@@ -99,8 +105,10 @@
           <div class="line" data-aos="fade"></div>
         </section>
 
-        <app-bg-decoration
-          class="img-box"
-          filter="secundary"
-          src="assets/img/background-objects/31. Green shadow Skills Portfolio.svg"
-        ></app-bg-decoration>
+        @if (useStaticBackground) {
+          <app-bg-decoration
+            class="img-box"
+            filter="secundary"
+            src="assets/img/background-objects/31. Green shadow Skills Portfolio.svg"
+          ></app-bg-decoration>
+        }
