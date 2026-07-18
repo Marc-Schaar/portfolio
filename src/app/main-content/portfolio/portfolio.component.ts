@@ -4,6 +4,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import AOS from 'aos';
 import { BgDecorationComponent } from '../../shared/ui/bg-decoration/bg-decoration.component';
 import { SectionTitleComponent } from '../../shared/ui/section-title/section-title.component';
+import { TiltDirective } from '../../shared/ui/tilt/tilt.directive';
 
 export type ProjectCategory = 'frontend' | 'backend' | 'fullstack';
 export type ProjectFilter = 'all' | ProjectCategory;
@@ -15,6 +16,7 @@ export type ProjectFilter = 'all' | ProjectCategory;
         CommonModule,
         BgDecorationComponent,
         SectionTitleComponent,
+        TiltDirective,
     ],
     templateUrl: './portfolio.component.html',
     styleUrls: [

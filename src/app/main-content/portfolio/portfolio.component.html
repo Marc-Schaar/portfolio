@@ -26,6 +26,7 @@
         [ngClass]="{ 'row-reverse': i % 2 === 0 }"
         >
         <img
+          appTilt
           [src]="'assets/img/projects/' + projcet.image + '.png'"
           [attr.alt]="'portfolio.projectImageAlt' | translate: { title: projcet.title }"
           [attr.data-aos]="aosEffects[i % aosEffects.length]"

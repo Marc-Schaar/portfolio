@@ -43,7 +43,8 @@
       "Bash(git commit *)",
       "Bash(echo \"EXIT: $?\")",
       "Bash(node hero-reduced-motion-check.js)",
-      "Bash(netstat -ano)"
+      "Bash(netstat -ano)",
+      "Bash(node tilt-check.js)"
     ],
     "additionalDirectories": [
       "\\tmp\\pwtest"

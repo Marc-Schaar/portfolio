@@ -87,6 +87,9 @@ h3 {
   img {
     width: 100%;
     max-width: 620px;
+    /* global `img { pointer-events: none }` would swallow the tilt directive's
+       pointermove/pointerleave listeners -- re-enable them for this image only. */
+    pointer-events: auto;
   }
 }
 
