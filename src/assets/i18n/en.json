@@ -24,7 +24,20 @@
     "elPolloLocoDescription": "Jump-and-run game featuring engaging gameplay and advanced game logic. Developed using object-oriented programming with a focus on performance and smooth animations.",
 
     "pokedexDescription": "Interactive Pokédex app that fetches Pokémon data from a public API. Provides detailed information on each Pokémon, including stats, abilities, and evolutions.",
-    "daBubbleDescription": "DA-Bubble is a real-time chat messenger inspired by Slack, built with Angular and Firebase. Users can communicate via public channels or private direct messages. The app features a clean user interface, fast synchronization via Firestore, and secure authentication using Firebase Auth."
+    "daBubbleDescription": "DA-Bubble is a real-time chat messenger inspired by Slack, built with Angular and Firebase. Users can communicate via public channels or private direct messages. The app features a clean user interface, fast synchronization via Firestore, and secure authentication using Firebase Auth.",
+    "kanMindDescription": "RESTful API backend for KanMind, a collaborative Kanban board application. Built with Django and Django REST Framework, featuring token-based authentication and role-based permissions for boards, tasks, and comments. Deployed to production with PostgreSQL, Gunicorn, and Nginx, secured via Let's Encrypt.",
+    "coderrDescription": "RESTful API backend for Coderr, a service marketplace connecting freelance developers with clients. Built with Django and Django REST Framework, handling offers, orders, reviews, and fine-grained permissions. Runs containerized with Docker and ships through a fully automated CI/CD pipeline with GitHub Actions.",
+    "filters": {
+      "all": "All",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "fullstack": "Fullstack"
+    },
+    "category": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "fullstack": "Fullstack"
+    }
   },
   "references": {
     "Antoine": "Working with Marc was a great pleasure for me; his positivity was an enrichment for the entire team.",

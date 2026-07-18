@@ -5,7 +5,18 @@
     {{ "portfolio.subtitle" | translate }}
   </p>
 
-  <ng-container *ngFor="let projcet of projects; let i = index">
+  <div class="filters" data-aos="fade" data-aos-delay="250">
+    <button
+      *ngFor="let filter of filters"
+      class="filter-btn"
+      [class.active]="activeFilter === filter"
+      (click)="setFilter(filter)"
+    >
+      {{ "portfolio.filters." + filter | translate }}
+    </button>
+  </div>
+
+  <ng-container *ngFor="let projcet of filteredProjects; let i = index">
     <section
       [id]="'project-' + i"
       class="max-width"
@@ -28,25 +39,22 @@
         [attr.data-aos-anchor]="'#project-' + i"
         [attr.data-aos-anchor-offset]="aosAnchorOffset"
       >
-        <h3>{{ projcet.title }}</h3>
+        <div class="title-row">
+          <h3>{{ projcet.title }}</h3>
+          <span class="badge" [ngClass]="projcet.category">
+            {{ "portfolio.category." + projcet.category | translate }}
+          </span>
+        </div>
         <p class="sub-title">
           {{ projcet.skills.join(" | ") }}
         </p>
         <p>{{ "portfolio." + projcet.description | translate }}</p>
         <div class="row">
           <button class="primary hover-secundary">
-            <a
-              [href]="'https://' + projcet.image + '.marc-schaar.com'"
-              target="_blank"
-              >Live Test</a
-            >
+            <a [href]="projcet.liveUrl" target="_blank">Live Test</a>
           </button>
           <button class="secundary-border hover-secundary">
-            <a
-              [href]="'https://github.com/Marc-Schaar/' + projcet.image"
-              target="_blank"
-              >Git Hub</a
-            >
+            <a [href]="projcet.githubUrl" target="_blank">Git Hub</a>
           </button>
         </div>
       </div>

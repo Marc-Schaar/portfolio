@@ -25,6 +25,62 @@ h3 {
   color: var(--primary);
 }
 
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+  z-index: 2;
+}
+
+.filter-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  outline: 2px solid var(--secundary);
+  background-color: transparent;
+
+  &.active {
+    background-color: var(--secundary);
+  }
+
+  &:hover:not(.active) {
+    background-color: var(--secundary);
+  }
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+
+  &.frontend {
+    background-color: var(--primary);
+    color: var(--bg-color);
+  }
+
+  &.backend {
+    background-color: var(--secundary);
+    color: white;
+  }
+
+  &.fullstack {
+    background: linear-gradient(90deg, var(--primary), var(--secundary));
+    color: white;
+  }
+}
+
 section {
   display: flex;
   align-items: flex-end;
