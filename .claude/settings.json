@@ -13,7 +13,23 @@
       "Bash(npm init *)",
       "Bash(npm install *)",
       "Bash(node check.js)",
-      "Bash(powershell -Command 'Get-NetTCPConnection -LocalPort 4300 -State Listen | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force }')"
+      "Bash(powershell -Command 'Get-NetTCPConnection -LocalPort 4300 -State Listen | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force }')",
+      "Bash(tail -50 \"C:\\\\Users\\\\Marc\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Marc-dev-portfolio\\\\c2016404-310c-4628-a5fc-7ef3446d934d\\\\tasks\\\\b95weqy1v.output\" 2>/dev/null; echo \"---nohup log---\"; cat /tmp/ng-serve.log 2>/dev/null | tail -80)",
+      "Read(//tmp/**)",
+      "Read(//usr/local/**)",
+      "Bash(npm ls *)",
+      "Read(//c//**)",
+      "Bash(npx --yes playwright screenshot --wait-for-timeout=2000 --full-page http://localhost:4300 /tmp/home.png)",
+      "Read(//c/Users/Marc/AppData/Local/Temp/**)",
+      "Bash(mkdir -p /tmp/pwtest)",
+      "Bash(npx playwright *)",
+      "Bash(node verify.js)",
+      "Bash(ls -la /tmp/pwtest/ 2>&1; echo \"---\"; ls -la \"C:\\\\Users\\\\Marc\\\\AppData\\\\Local\\\\Temp\\\\pwtest\" 2>&1)",
+      "Read(//c/Users/Marc/AppData/Local/Temp/pwtest/**)",
+      "Bash(cp \"C:\\\\Users\\\\Marc\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Marc-dev-portfolio\\\\c2016404-310c-4628-a5fc-7ef3446d934d\\\\scratchpad\\\\verify.js\" /tmp/pwtest/verify.js)"
+    ],
+    "additionalDirectories": [
+      "\\tmp\\pwtest"
     ]
   }
 }

@@ -1,6 +1,8 @@
 <main>
   <div class="line"></div>
-  <h2>{{ "contact.title" | translate }}</h2>
+  <app-section-title variant="contact">{{
+    "contact.title" | translate
+  }}</app-section-title>
   <div data-aos="zoom-in-up" class="container max-width">
     <section>
       <h3>{{ "contact.subtitle" | translate }}</h3>
@@ -28,14 +30,13 @@
           pattern="[a-zA-Z0-9äöüÄÖÜß ,.!?@-]+"
         ></app-input>
 
-        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
-          <div *ngIf="name.errors?.['required']">
-            {{ "contact.form.validation.nameRequired" | translate }}
-          </div>
-          <div *ngIf="name.errors?.['minlength']">
-            {{ "contact.form.validation.nameMinLength" | translate }}
-          </div>
-        </div>
+        <app-field-error
+          [control]="name"
+          [messages]="{
+            required: ['contact.form.validation.nameRequired'],
+            minlength: ['contact.form.validation.nameMinLength']
+          }"
+        ></app-field-error>
 
         <app-input
           type="email"
@@ -51,18 +52,16 @@
           autocomplete="on"
         ></app-input>
 
-        <div
-          *ngIf="email.invalid && (email.dirty || email.touched)"
-          class="alert"
-        >
-          <div *ngIf="email.errors?.['required']">
-            {{ "contact.form.validation.emailRequired" | translate }}
-          </div>
-          <div *ngIf="email.errors?.['pattern']">
-            {{ "contact.form.validation.emailPattern" | translate }} <br />
-            {{ "contact.form.validation.emailPatternExample" | translate }}
-          </div>
-        </div>
+        <app-field-error
+          [control]="email"
+          [messages]="{
+            required: ['contact.form.validation.emailRequired'],
+            pattern: [
+              'contact.form.validation.emailPattern',
+              'contact.form.validation.emailPatternExample'
+            ]
+          }"
+        ></app-field-error>
 
         <app-textarea
           name="message"
@@ -75,14 +74,12 @@
           [showValidationIcon]="true"
         ></app-textarea>
 
-        <div
-          *ngIf="message.invalid && (message.dirty || message.touched)"
-          class="alert"
-        >
-          <div *ngIf="message.errors?.['required']">
-            {{ "contact.form.validation.messageRequired" | translate }}
-          </div>
-        </div>
+        <app-field-error
+          [control]="message"
+          [messages]="{
+            required: ['contact.form.validation.messageRequired']
+          }"
+        ></app-field-error>
 
         <div class="row">
           <div class="checkbox">
@@ -106,14 +103,12 @@
           </span>
         </div>
 
-        <div
-          *ngIf="checkbox.invalid && (checkbox.dirty || checkbox.touched)"
-          class="alert"
-        >
-          <div *ngIf="checkbox?.errors?.['required']">
-            {{ "contact.form.validation.privacyRequired" | translate }}
-          </div>
-        </div>
+        <app-field-error
+          [control]="checkbox"
+          [messages]="{
+            required: ['contact.form.validation.privacyRequired']
+          }"
+        ></app-field-error>
 
         <app-button type="submit" [disabled]="!contactForm.valid">
           {{ "contact.form.button" | translate }}
@@ -138,10 +133,7 @@
     </section>
   </div>
 </main>
-<div class="img-box" data-aos="fade" data-aos-delay="100">
-  <img
-    class="primary-filter-blur"
-    src="assets/img/background-objects/33. Purple shadow Footer.svg"
-    alt=""
-  />
-</div>
+<app-bg-decoration
+  class="img-box"
+  src="assets/img/background-objects/33. Purple shadow Footer.svg"
+></app-bg-decoration>

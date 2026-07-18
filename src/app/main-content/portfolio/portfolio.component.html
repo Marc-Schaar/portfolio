@@ -1,6 +1,8 @@
 <main>
   <div class="line" data-aos="fade-left"></div>
-  <h2 data-aos="fade-left">Portfolio</h2>
+  <app-section-title variant="portfolio" aosEffect="fade-left"
+    >Portfolio</app-section-title
+  >
   <p data-aos="fade" data-aos-delay="250">
     {{ "portfolio.subtitle" | translate }}
   </p>
@@ -62,10 +64,7 @@
   </ng-container>
 </main>
 
-<div class="img-box" data-aos="fade" data-aos-delay="100">
-  <img
-    class="bg-object primary-filter-blur"
-    src="assets/img/background-objects/32 Purple shadow portfolio.svg"
-    alt=""
-  />
-</div>
+<app-bg-decoration
+  class="img-box"
+  src="assets/img/background-objects/32 Purple shadow portfolio.svg"
+></app-bg-decoration>

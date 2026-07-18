@@ -8,6 +8,9 @@ import { RouterLink } from '@angular/router';
 import { ButtonComponent } from '../../shared/ui/button/button.component';
 import { InputComponent } from '../../shared/ui/input/input.component';
 import { TextareaComponent } from '../../shared/ui/textarea/textarea.component';
+import { BgDecorationComponent } from '../../shared/ui/bg-decoration/bg-decoration.component';
+import { SectionTitleComponent } from '../../shared/ui/section-title/section-title.component';
+import { FieldErrorComponent } from '../../shared/ui/field-error/field-error.component';
 
 @Component({
   selector: 'app-contact',
@@ -20,6 +23,9 @@ import { TextareaComponent } from '../../shared/ui/textarea/textarea.component';
     ButtonComponent,
     InputComponent,
     TextareaComponent,
+    BgDecorationComponent,
+    SectionTitleComponent,
+    FieldErrorComponent,
   ],
   templateUrl: './contact.component.html',
   styleUrls: [

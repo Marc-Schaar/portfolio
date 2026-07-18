@@ -9,11 +9,6 @@ main {
   padding: 0 64px 32px;
 }
 
-h2 {
-  background-color: var(--bg-color);
-  padding: 0 32px;
-}
-
 .line {
   position: absolute;
   top: 67.5px;
@@ -87,13 +82,6 @@ a {
   color: var(--primary);
 }
 
-.alert {
-  align-self: baseline;
-  color: var(--warning);
-  animation: fade-in forwards, opacity forwards;
-  animation-duration: 0.125s;
-}
-
 .img-box {
   position: absolute;
   display: flex;
@@ -124,31 +112,4 @@ a {
 .scroll-up-btn {
   margin-top: 64px;
   align-self: flex-end;
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: translateY(-40px);
-  }
-  50% {
-    opacity: 0.2;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(-12px);
-  }
-}
-
-@keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 1;
-  }
 }

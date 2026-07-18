@@ -1,13 +1,14 @@
 <main>
   <div class="container max-width">
     <section class="about-me-text gap-l column">
-      <h2
-        data-aos="flip-up"
-        data-aos-delay="150"
-        [attr.data-aos-anchor]="'#anchor-aboutme'"
+      <app-section-title
+        variant="about-me"
+        aosEffect="flip-up"
+        [aosDelay]="150"
+        aosAnchor="#anchor-aboutme"
       >
         {{ "aboutMe.title" | translate }}
-      </h2>
+      </app-section-title>
 
       <div class="gap-m column">
         <p
@@ -20,42 +21,14 @@
         </p>
 
         <div class="gap-s column">
-          <div class="row" id="about-me-description2">
-            <img
-              class="secundary-filter"
-              src="assets/icons/Property 1=default (1).svg"
-            />
-            <p
-              data-aos="fade-up"
-              [attr.data-aos-anchor]="'#about-me-description1'"
-            >
-              {{ "aboutMe.subDescription1" | translate }}
-            </p>
-          </div>
-
-          <div class="row" id="about-me-description3">
-            <img
-              class="secundary-filter"
-              src="assets/icons/Property 1=Default.svg"
-            />
-            <p
-              data-aos="fade-up"
-              [attr.data-aos-anchor]="'#about-me-description2'"
-            >
-              {{ "aboutMe.subDescription2" | translate }}
-            </p>
-          </div>
-
-          <div class="row">
-            <img
-              class="secundary-filter"
-              src="assets/icons/Property 1=Defauñt.svg"
-            />
-            <p
-              data-aos="fade-up"
-              [attr.data-aos-anchor]="'#about-me-description3'"
-            >
-              {{ "aboutMe.subDescription3" | translate }}
+          <div
+            class="row"
+            *ngFor="let row of subDescriptionRows"
+            [attr.id]="row.rowId"
+          >
+            <img class="secundary-filter" [src]="row.icon" />
+            <p data-aos="fade-up" [attr.data-aos-anchor]="row.anchor">
+              {{ row.textKey | translate }}
             </p>
           </div>
         </div>
@@ -82,10 +55,7 @@
   ></div>
 </main>
 
-<div class="img-box" data-aos="fade" data-aos-delay="100">
-  <img
-    class="primary-filter-blur"
-    src="assets/img/background-objects/30. Purple shadow about me.svg"
-    alt=""
-  />
-</div>
+<app-bg-decoration
+  class="img-box"
+  src="assets/img/background-objects/30. Purple shadow about me.svg"
+></app-bg-decoration>

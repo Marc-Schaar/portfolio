@@ -67,9 +67,13 @@
     </section>
 
     <section class="grid-headline-section">
-      <h2 data-aos="fade" [attr.data-aos-anchor]="'#skills-entry-anchor'">
+      <app-section-title
+        variant="skills"
+        aosEffect="fade"
+        aosAnchor="#skills-entry-anchor"
+      >
         {{ "skills.title" | translate }}
-      </h2>
+      </app-section-title>
       <p data-aos="fade-left" data-aos-delay="400">
         {{ "skills.experience" | translate }}
       </p>
@@ -95,10 +99,8 @@
   <div class="line" data-aos="fade"></div>
 </main>
 
-<div class="img-box" data-aos="fade" data-aos-delay="100">
-  <img
-    class="secundary-filter-blur"
-    src="assets/img/background-objects/31. Green shadow Skills Portfolio.svg"
-    alt=""
-  />
-</div>
+<app-bg-decoration
+  class="img-box"
+  filter="secundary"
+  src="assets/img/background-objects/31. Green shadow Skills Portfolio.svg"
+></app-bg-decoration>

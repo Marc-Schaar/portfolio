@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { BgDecorationComponent } from '../../shared/ui/bg-decoration/bg-decoration.component';
 
 @Component({
   selector: 'app-references',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule, BgDecorationComponent],
   templateUrl: './references.component.html',
   styleUrls: [
     './references.component.scss',

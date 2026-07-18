@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
   constructor(private globalService: GlobalService) {}
   isOpen = false;
   currentLang = this.globalService.getCurrentLanguage();
+  languages = ['de', 'en'];
 
   resizeSubscription!: Subscription;
 

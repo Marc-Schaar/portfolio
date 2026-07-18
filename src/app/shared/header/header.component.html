@@ -9,19 +9,15 @@
       <a href="#skills">{{ "skills.title" | translate }}</a>
       <a href="#portfolio">Portfolio</a>
       <div class="row">
-        <button
-          [class.underline]="currentLang == 'de'"
-          (click)="changeLanguage('de')"
-        >
-          de
-        </button>
-        <div class="divider"></div>
-        <button
-          [class.underline]="currentLang == 'en'"
-          (click)="changeLanguage('en')"
-        >
-          en
-        </button>
+        <ng-container *ngFor="let lang of languages; let last = last">
+          <button
+            [class.underline]="currentLang === lang"
+            (click)="changeLanguage(lang)"
+          >
+            {{ lang }}
+          </button>
+          <div class="divider" *ngIf="!last"></div>
+        </ng-container>
       </div>
     </nav>
 
@@ -51,19 +47,15 @@
     }}</a>
     <a (click)="toggleMenu()" href="#portfolio">Portfolio</a>
     <div class="language-btns">
-      <button
-        [class.underline]="currentLang == 'de'"
-        (click)="changeLanguage('de'); toggleMenu()"
-      >
-        de
-      </button>
-      <div class="divider"></div>
-      <button
-        [class.underline]="currentLang == 'en'"
-        (click)="changeLanguage('en'); toggleMenu()"
-      >
-        en
-      </button>
+      <ng-container *ngFor="let lang of languages; let last = last">
+        <button
+          [class.underline]="currentLang === lang"
+          (click)="changeLanguage(lang); toggleMenu()"
+        >
+          {{ lang }}
+        </button>
+        <div class="divider" *ngIf="!last"></div>
+      </ng-container>
     </div>
   </nav>
 </main>
