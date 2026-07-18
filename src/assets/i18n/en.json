@@ -4,14 +4,14 @@
   },
   "aboutMe": {
     "title": "About Me",
-    "description": "Hi, I’m Marc and I live in Düsseldorf. Just as life’s diversity fascinates me, so does the world of IT. The boundless creativity and countless possibilities motivate me to develop visually appealing and user-friendly websites and applications that truly bring joy to people.",
+    "description": "Hi, I’m Marc, a fullstack developer based in Düsseldorf. Just as life’s diversity fascinates me, so does the world of IT. The boundless creativity and countless possibilities motivate me to build well-rounded applications – from the user interface all the way down to the server logic – that truly bring joy to people.",
     "subDescription1": "For me, programming is much more than just writing code – it’s the art of finding creative solutions and constantly developing new ideas that lead to success. I love transforming complex technical challenges into clear, intuitive solutions that not only work but also make life simpler and more enjoyable.",
     "subDescription2": "I am flexible and adapt effortlessly to different work environments – whether on-site in an inspiring office with colleagues or working remotely, I always work efficiently and with focus.",
     "subDescription3": "I see good collaboration as a true enrichment and am always open to new challenges to further develop my knowledge and skills. As a team player, I view myself as part of the bigger picture – like a puzzle where every piece works perfectly together to achieve the common goal. I quickly integrate into teams, enjoy working with others, and adapt flexibly to varying requirements."
   },
   "skills": {
     "title": "My Skills",
-    "experience": "I have accumulated experience in developing projects using various frontend and backend technologies and design concepts.",
+    "experience": "As a fullstack developer, I have experience building complete projects – from thoughtful frontend interfaces to robust backend architectures and design concepts.",
     "lookingFor": "Seeking",
     "additionalSkill": "an additional skill",
     "contactMessage": "Don't hesitate to get in touch. I'm excited to build on my existing expertise and learn more.",
@@ -51,7 +51,7 @@
     "title": "Get in Touch",
     "subtitle": "Have a challenge to discuss?",
     "description": "Feel free to reach out via this form. I’m eager to hear your ideas, collaborate on your projects, and help bring them to life.",
-    "needDeveloper": "Looking for a Frontend Developer?",
+    "needDeveloper": "Looking for a Fullstack Developer?",
     "contactMe": "Let’s Connect!",
     "form": {
       "placeholders": {

@@ -109,7 +109,12 @@ export class PortfolioComponent {
     },
   ];
 
-  public filters: ProjectFilter[] = ['all', 'frontend', 'backend', 'fullstack'];
+  public filters: ProjectFilter[] = [
+    'all',
+    ...(Array.from(
+      new Set(this.projects.map((p) => p.category)),
+    ) as ProjectCategory[]),
+  ];
   public activeFilter: ProjectFilter = 'all';
 
   get filteredProjects() {
