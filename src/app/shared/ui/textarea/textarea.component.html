@@ -13,15 +13,17 @@
   (blur)="onBlur()"
 ></textarea>
 
-<img
-  class="validation-icon"
-  *ngIf="showValidationIcon && valid"
-  src="assets/icons/form_validation/correct.png"
-  alt=""
-/>
-<img
-  class="validation-icon"
-  *ngIf="showValidationIcon && invalid"
-  src="assets/icons/form_validation/wrong.png"
-  alt=""
-/>
+@if (showValidationIcon && valid) {
+  <img
+    class="validation-icon"
+    src="assets/icons/form_validation/correct.png"
+    alt=""
+    />
+}
+@if (showValidationIcon && invalid) {
+  <img
+    class="validation-icon"
+    src="assets/icons/form_validation/wrong.png"
+    alt=""
+    />
+}

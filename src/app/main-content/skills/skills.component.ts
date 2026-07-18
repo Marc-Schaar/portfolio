@@ -1,20 +1,18 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { BgDecorationComponent } from '../../shared/ui/bg-decoration/bg-decoration.component';
 import { SectionTitleComponent } from '../../shared/ui/section-title/section-title.component';
 
 @Component({
-  selector: 'app-skills',
-  standalone: true,
-  imports: [
-    CommonModule,
+    selector: 'app-skills',
+    imports: [
     TranslateModule,
     BgDecorationComponent,
-    SectionTitleComponent,
-  ],
-  templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.scss', './skills.responsive.component.scss'],
+    SectionTitleComponent
+],
+    templateUrl: './skills.component.html',
+    styleUrls: ['./skills.component.scss', './skills.responsive.component.scss']
 })
 export class SkillsComponent {
   frontEndSkills: string[] = [

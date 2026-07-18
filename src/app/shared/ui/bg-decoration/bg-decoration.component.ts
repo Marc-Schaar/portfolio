@@ -1,10 +1,9 @@
 import { Component, HostBinding, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-bg-decoration',
-  standalone: true,
-  imports: [],
-  templateUrl: './bg-decoration.component.html',
+    selector: 'app-bg-decoration',
+    imports: [],
+    templateUrl: './bg-decoration.component.html'
 })
 export class BgDecorationComponent {
   @Input() src = '';

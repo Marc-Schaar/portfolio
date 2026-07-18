@@ -2,69 +2,70 @@
   <div class="line" data-aos="fade-left"></div>
   <app-section-title variant="portfolio" aosEffect="fade-left"
     >Portfolio</app-section-title
-  >
-  <p data-aos="fade" data-aos-delay="250">
-    {{ "portfolio.subtitle" | translate }}
-  </p>
-
-  <div class="filters" data-aos="fade" data-aos-delay="250">
-    <button
-      *ngFor="let filter of filters"
-      class="filter-btn"
-      [class.active]="activeFilter === filter"
-      (click)="setFilter(filter)"
     >
-      {{ "portfolio.filters." + filter | translate }}
-    </button>
-  </div>
+    <p data-aos="fade" data-aos-delay="250">
+      {{ "portfolio.subtitle" | translate }}
+    </p>
 
-  <ng-container *ngFor="let projcet of filteredProjects; let i = index">
-    <section
-      [id]="'project-' + i"
-      class="max-width"
-      [ngClass]="{ 'row-reverse': i % 2 === 0 }"
-    >
-      <img
-        [src]="'assets/img/projects/' + projcet.image + '.png'"
-        [attr.alt]="'portfolio.projectImageAlt' | translate: { title: projcet.title }"
-        [attr.data-aos]="aosEffects[i % aosEffects.length]"
-        [attr.data-aos-delay]="baseDelay * i"
-        [attr.data-aos-duration]="aosDuration"
-        [attr.data-aos-anchor]="'#project-' + i"
-        [attr.data-aos-anchor-offset]="aosAnchorOffset"
-      />
-      <div
-        class="box"
-        [attr.data-aos]="aosEffects[(i + 1) % aosEffects.length]"
-        [attr.data-aos-delay]="baseDelay * i"
-        [attr.data-aos-duration]="aosDuration"
-        [attr.data-aos-anchor]="'#project-' + i"
-        [attr.data-aos-anchor-offset]="aosAnchorOffset"
-      >
-        <div class="title-row">
-          <h3>{{ projcet.title }}</h3>
-          <span class="badge" [ngClass]="projcet.category">
-            {{ "portfolio.category." + projcet.category | translate }}
-          </span>
-        </div>
-        <p class="sub-title">
-          {{ projcet.skills.join(" | ") }}
-        </p>
-        <p>{{ "portfolio." + projcet.description | translate }}</p>
-        <div class="row">
-          <button class="primary hover-secundary">
-            <a [href]="projcet.liveUrl" target="_blank">Live Test</a>
-          </button>
-          <button class="secundary-border hover-secundary">
-            <a [href]="projcet.githubUrl" target="_blank">Git Hub</a>
-          </button>
-        </div>
-      </div>
+    <div class="filters" data-aos="fade" data-aos-delay="250">
+      @for (filter of filters; track filter) {
+        <button
+          class="filter-btn"
+          [class.active]="activeFilter === filter"
+          (click)="setFilter(filter)"
+          >
+          {{ "portfolio.filters." + filter | translate }}
+        </button>
+      }
+    </div>
+
+    @for (projcet of filteredProjects; track projcet; let i = $index) {
+      <section
+        [id]="'project-' + i"
+        class="max-width"
+        [ngClass]="{ 'row-reverse': i % 2 === 0 }"
+        >
+        <img
+          [src]="'assets/img/projects/' + projcet.image + '.png'"
+          [attr.alt]="'portfolio.projectImageAlt' | translate: { title: projcet.title }"
+          [attr.data-aos]="aosEffects[i % aosEffects.length]"
+          [attr.data-aos-delay]="baseDelay * i"
+          [attr.data-aos-duration]="aosDuration"
+          [attr.data-aos-anchor]="'#project-' + i"
+          [attr.data-aos-anchor-offset]="aosAnchorOffset"
+          />
+          <div
+            class="box"
+            [attr.data-aos]="aosEffects[(i + 1) % aosEffects.length]"
+            [attr.data-aos-delay]="baseDelay * i"
+            [attr.data-aos-duration]="aosDuration"
+            [attr.data-aos-anchor]="'#project-' + i"
+            [attr.data-aos-anchor-offset]="aosAnchorOffset"
+            >
+            <div class="title-row">
+              <h3>{{ projcet.title }}</h3>
+              <span class="badge" [ngClass]="projcet.category">
+                {{ "portfolio.category." + projcet.category | translate }}
+              </span>
+            </div>
+            <p class="sub-title">
+              {{ projcet.skills.join(" | ") }}
+            </p>
+            <p>{{ "portfolio." + projcet.description | translate }}</p>
+            <div class="row">
+              <button class="primary hover-secundary">
+                <a [href]="projcet.liveUrl" target="_blank">Live Test</a>
+              </button>
+              <button class="secundary-border hover-secundary">
+                <a [href]="projcet.githubUrl" target="_blank">Git Hub</a>
+              </button>
+            </div>
+          </div>
+        </section>
+      }
     </section>
-  </ng-container>
-</section>
 
-<app-bg-decoration
-  class="img-box"
-  src="assets/img/background-objects/32 Purple shadow portfolio.svg"
-></app-bg-decoration>
+    <app-bg-decoration
+      class="img-box"
+      src="assets/img/background-objects/32 Purple shadow portfolio.svg"
+    ></app-bg-decoration>

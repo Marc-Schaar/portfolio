@@ -18,25 +18,24 @@ import { SectionTitleComponent } from '../../shared/ui/section-title/section-tit
 import { FieldErrorComponent } from '../../shared/ui/field-error/field-error.component';
 
 @Component({
-  selector: 'app-contact',
-  standalone: true,
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    TranslateModule,
-    RouterLink,
-    ButtonComponent,
-    InputComponent,
-    TextareaComponent,
-    BgDecorationComponent,
-    SectionTitleComponent,
-    FieldErrorComponent,
-  ],
-  templateUrl: './contact.component.html',
-  styleUrls: [
-    './contact.component.scss',
-    './contact.responsive.component.scss',
-  ],
+    selector: 'app-contact',
+    imports: [
+        CommonModule,
+        ReactiveFormsModule,
+        TranslateModule,
+        RouterLink,
+        ButtonComponent,
+        InputComponent,
+        TextareaComponent,
+        BgDecorationComponent,
+        SectionTitleComponent,
+        FieldErrorComponent,
+    ],
+    templateUrl: './contact.component.html',
+    styleUrls: [
+        './contact.component.scss',
+        './contact.responsive.component.scss',
+    ]
 })
 export class ContactComponent {
   globalService = inject(GlobalService);

@@ -6,11 +6,10 @@ import { CommonModule } from '@angular/common';
 import { fromEvent, Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [TranslateModule, RouterLink, CommonModule],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.scss',
+    selector: 'app-header',
+    imports: [TranslateModule, RouterLink, CommonModule],
+    templateUrl: './header.component.html',
+    styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit {
   constructor(private globalService: GlobalService) {}

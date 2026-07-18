@@ -7,7 +7,7 @@
       <a href="#skills">{{ "skills.title" | translate }}</a>
       <a href="#portfolio">Portfolio</a>
       <div class="row">
-        <ng-container *ngFor="let lang of languages; let last = last">
+        @for (lang of languages; track lang; let last = $last) {
           <button
             type="button"
             [class.underline]="currentLang === lang"
@@ -16,11 +16,13 @@
               (lang === 'de' ? 'header.switchToGerman' : 'header.switchToEnglish') | translate
             "
             (click)="changeLanguage(lang)"
-          >
+            >
             {{ lang }}
           </button>
-          <div class="divider" *ngIf="!last"></div>
-        </ng-container>
+          @if (!last) {
+            <div class="divider"></div>
+          }
+        }
       </div>
     </nav>
 
@@ -33,7 +35,7 @@
       [attr.aria-label]="(isOpen ? 'header.closeMenu' : 'header.openMenu') | translate"
       (click)="toggleMenu()"
       #menuToggle
-    >
+      >
       <svg
         width="40"
         height="30"
@@ -41,7 +43,7 @@
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
         focusable="false"
-      >
+        >
         <line x1="5" y1="7" x2="35" y2="7" class="line top"></line>
         <line x1="5" y1="15" x2="35" y2="15" class="line middle"></line>
         <line x1="5" y1="23" x2="35" y2="23" class="line bottom"></line>
@@ -59,7 +61,7 @@
     [attr.aria-label]="'header.mobileNavLabel' | translate"
     [attr.inert]="!isOpen ? '' : null"
     (keydown.escape)="toggleMenu()"
-  >
+    >
     <a (click)="closeMenu()" href="#about-me">{{
       "aboutMe.title" | translate
     }}</a>
@@ -68,7 +70,7 @@
     }}</a>
     <a (click)="closeMenu()" href="#portfolio">Portfolio</a>
     <div class="language-btns">
-      <ng-container *ngFor="let lang of languages; let last = last">
+      @for (lang of languages; track lang; let last = $last) {
         <button
           type="button"
           [class.underline]="currentLang === lang"
@@ -77,11 +79,13 @@
             (lang === 'de' ? 'header.switchToGerman' : 'header.switchToEnglish') | translate
           "
           (click)="changeLanguage(lang); closeMenu()"
-        >
+          >
           {{ lang }}
         </button>
-        <div class="divider" *ngIf="!last"></div>
-      </ng-container>
+        @if (!last) {
+          <div class="divider"></div>
+        }
+      }
     </div>
   </nav>
 </div>

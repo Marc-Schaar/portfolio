@@ -1,5 +1,9 @@
-<div *ngIf="visible" class="alert" [id]="errorId" role="alert">
-  <div *ngFor="let messageKey of activeMessages">
-    {{ messageKey | translate }}
+@if (visible) {
+  <div class="alert" [id]="errorId" role="alert">
+    @for (messageKey of activeMessages; track messageKey) {
+      <div>
+        {{ messageKey | translate }}
+      </div>
+    }
   </div>
-</div>
+}

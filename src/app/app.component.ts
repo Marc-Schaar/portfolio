@@ -1,22 +1,20 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { RouterOutlet } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [
-    CommonModule,
+    selector: 'app-root',
+    imports: [
     RouterOutlet,
     HeaderComponent,
     FooterComponent,
-    TranslateModule,
-  ],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+    TranslateModule
+],
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'Marc Schaar - Portfolio';

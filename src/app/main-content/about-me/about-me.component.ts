@@ -1,23 +1,21 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { BgDecorationComponent } from '../../shared/ui/bg-decoration/bg-decoration.component';
 import { SectionTitleComponent } from '../../shared/ui/section-title/section-title.component';
 
 @Component({
-  selector: 'app-about-me',
-  standalone: true,
-  imports: [
-    CommonModule,
+    selector: 'app-about-me',
+    imports: [
     TranslateModule,
     BgDecorationComponent,
-    SectionTitleComponent,
-  ],
-  templateUrl: './about-me.component.html',
-  styleUrls: [
-    './about-me.component.scss',
-    './about-me.responsive.component.scss',
-  ],
+    SectionTitleComponent
+],
+    templateUrl: './about-me.component.html',
+    styleUrls: [
+        './about-me.component.scss',
+        './about-me.responsive.component.scss',
+    ]
 })
 export class AboutMeComponent {
   subDescriptionRows: { icon: string; textKey: string; rowId?: string; anchor: string }[] = [
