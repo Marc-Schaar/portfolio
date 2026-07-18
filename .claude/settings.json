@@ -41,8 +41,12 @@
       "Bash(git restore *)",
       "Bash(git add *)",
       "Bash(git commit *)",
-      "Bash(echo \"EXIT: $?\")"
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(node hero-reduced-motion-check.js)",
+      "Bash(netstat -ano)"
     ],
-    "additionalDirectories": ["\\tmp\\pwtest"]
+    "additionalDirectories": [
+      "\\tmp\\pwtest"
+    ]
   }
 }
