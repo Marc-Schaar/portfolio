@@ -1,13 +1,12 @@
-
 import { Component, Input } from '@angular/core';
 import { AbstractControl } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-    selector: 'app-field-error',
-    imports: [TranslateModule],
-    templateUrl: './field-error.component.html',
-    styleUrls: ['./field-error.component.scss']
+  selector: 'app-field-error',
+  imports: [TranslateModule],
+  templateUrl: './field-error.component.html',
+  styleUrls: ['./field-error.component.scss'],
 })
 export class FieldErrorComponent {
   @Input() errorId: string = '';
@@ -29,6 +28,9 @@ export class FieldErrorComponent {
     }
     return Object.keys(errors)
       .filter((key: string) => this.messages[key])
-      .reduce<string[]>((acc, key: string) => acc.concat(this.messages[key]), []);
+      .reduce<string[]>(
+        (acc, key: string) => acc.concat(this.messages[key]),
+        [],
+      );
   }
 }

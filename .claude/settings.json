@@ -43,8 +43,6 @@
       "Bash(git commit *)",
       "Bash(echo \"EXIT: $?\")"
     ],
-    "additionalDirectories": [
-      "\\tmp\\pwtest"
-    ]
+    "additionalDirectories": ["\\tmp\\pwtest"]
   }
 }
