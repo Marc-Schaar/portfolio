@@ -8,18 +8,17 @@ import { ContactComponent } from './contact/contact.component';
 import * as AOS from 'aos';
 
 @Component({
-  selector: 'app-main-content',
-  standalone: true,
-  imports: [
-    AtfComponent,
-    AboutMeComponent,
-    SkillsComponent,
-    PortfolioComponent,
-    ReferencesComponent,
-    ContactComponent,
-  ],
-  templateUrl: './main-content.component.html',
-  styleUrl: './main-content.component.scss',
+    selector: 'app-main-content',
+    imports: [
+        AtfComponent,
+        AboutMeComponent,
+        SkillsComponent,
+        PortfolioComponent,
+        ReferencesComponent,
+        ContactComponent,
+    ],
+    templateUrl: './main-content.component.html',
+    styleUrl: './main-content.component.scss'
 })
 export class MainContentComponent implements AfterViewInit {
   ngAfterViewInit(): void {

@@ -28,7 +28,10 @@
       "Read(//c/Users/Marc/AppData/Local/Temp/pwtest/**)",
       "Bash(cp \"C:\\\\Users\\\\Marc\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Marc-dev-portfolio\\\\c2016404-310c-4628-a5fc-7ef3446d934d\\\\scratchpad\\\\verify.js\" /tmp/pwtest/verify.js)",
       "Bash(git submodule *)",
-      "Bash(git config *)"
+      "Bash(git config *)",
+      "Read(//c/Users/Marc/.claude/skills/angular-developer/references/**)",
+      "Read(//c/Users/Marc/.agents/skills/angular-developer/references/**)",
+      "Bash(npm --version)"
     ],
     "additionalDirectories": [
       "\\tmp\\pwtest"

@@ -9,19 +9,18 @@ export type ProjectCategory = 'frontend' | 'backend' | 'fullstack';
 export type ProjectFilter = 'all' | ProjectCategory;
 
 @Component({
-  selector: 'app-portfolio',
-  standalone: true,
-  imports: [
-    TranslateModule,
-    CommonModule,
-    BgDecorationComponent,
-    SectionTitleComponent,
-  ],
-  templateUrl: './portfolio.component.html',
-  styleUrls: [
-    './portfolio.component.scss',
-    './portfolio.responsive.component.scss',
-  ],
+    selector: 'app-portfolio',
+    imports: [
+        TranslateModule,
+        CommonModule,
+        BgDecorationComponent,
+        SectionTitleComponent,
+    ],
+    templateUrl: './portfolio.component.html',
+    styleUrls: [
+        './portfolio.component.scss',
+        './portfolio.responsive.component.scss',
+    ]
 })
 export class PortfolioComponent {
   public projects: {

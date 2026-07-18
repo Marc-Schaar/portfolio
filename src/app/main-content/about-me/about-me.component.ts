@@ -5,19 +5,18 @@ import { BgDecorationComponent } from '../../shared/ui/bg-decoration/bg-decorati
 import { SectionTitleComponent } from '../../shared/ui/section-title/section-title.component';
 
 @Component({
-  selector: 'app-about-me',
-  standalone: true,
-  imports: [
-    CommonModule,
-    TranslateModule,
-    BgDecorationComponent,
-    SectionTitleComponent,
-  ],
-  templateUrl: './about-me.component.html',
-  styleUrls: [
-    './about-me.component.scss',
-    './about-me.responsive.component.scss',
-  ],
+    selector: 'app-about-me',
+    imports: [
+        CommonModule,
+        TranslateModule,
+        BgDecorationComponent,
+        SectionTitleComponent,
+    ],
+    templateUrl: './about-me.component.html',
+    styleUrls: [
+        './about-me.component.scss',
+        './about-me.responsive.component.scss',
+    ]
 })
 export class AboutMeComponent {
   subDescriptionRows: { icon: string; textKey: string; rowId?: string; anchor: string }[] = [

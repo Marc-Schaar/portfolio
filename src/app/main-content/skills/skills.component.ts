@@ -5,16 +5,15 @@ import { BgDecorationComponent } from '../../shared/ui/bg-decoration/bg-decorati
 import { SectionTitleComponent } from '../../shared/ui/section-title/section-title.component';
 
 @Component({
-  selector: 'app-skills',
-  standalone: true,
-  imports: [
-    CommonModule,
-    TranslateModule,
-    BgDecorationComponent,
-    SectionTitleComponent,
-  ],
-  templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.scss', './skills.responsive.component.scss'],
+    selector: 'app-skills',
+    imports: [
+        CommonModule,
+        TranslateModule,
+        BgDecorationComponent,
+        SectionTitleComponent,
+    ],
+    templateUrl: './skills.component.html',
+    styleUrls: ['./skills.component.scss', './skills.responsive.component.scss']
 })
 export class SkillsComponent {
   frontEndSkills: string[] = [

@@ -9,14 +9,13 @@ interface Reference {
 }
 
 @Component({
-  selector: 'app-references',
-  standalone: true,
-  imports: [CommonModule, TranslateModule, BgDecorationComponent],
-  templateUrl: './references.component.html',
-  styleUrls: [
-    './references.component.scss',
-    './references.responsive.component.scss',
-  ],
+    selector: 'app-references',
+    imports: [CommonModule, TranslateModule, BgDecorationComponent],
+    templateUrl: './references.component.html',
+    styleUrls: [
+        './references.component.scss',
+        './references.responsive.component.scss',
+    ]
 })
 export class ReferencesComponent {
   references: Reference[] = [

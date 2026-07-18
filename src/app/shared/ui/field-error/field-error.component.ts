@@ -4,11 +4,10 @@ import { AbstractControl } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-field-error',
-  standalone: true,
-  imports: [CommonModule, TranslateModule],
-  templateUrl: './field-error.component.html',
-  styleUrls: ['./field-error.component.scss'],
+    selector: 'app-field-error',
+    imports: [CommonModule, TranslateModule],
+    templateUrl: './field-error.component.html',
+    styleUrls: ['./field-error.component.scss']
 })
 export class FieldErrorComponent {
   @Input() errorId: string = '';
