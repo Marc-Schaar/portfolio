@@ -1,11 +1,14 @@
 <main>
   <div class="container max-width">
     <section class="skills-container" id="skills-entry-anchor">
+      <p class="group-label" data-aos="fade-up">
+        {{ "skills.groupFrontend" | translate }}
+      </p>
       <ng-container *ngFor="let skill of frontEndSkills; index as i">
         <div class="skill">
           <img
             class="skill-icon"
-            src="assets/icons/front_end_stack/{{ skill }}.png"
+            src="assets/icons/skills/{{ skill }}.svg"
             alt="{{ skill }}"
             data-aos="fade-up"
             [attr.data-aos-delay]="100 * i"
@@ -21,9 +24,32 @@
         </div>
       </ng-container>
 
+      <p class="group-label" data-aos="fade-up">
+        {{ "skills.groupBackend" | translate }}
+      </p>
+      <ng-container *ngFor="let skill of backEndSkills; index as j">
+        <div class="skill">
+          <img
+            class="skill-icon"
+            src="assets/icons/skills/{{ skill }}.svg"
+            alt="{{ skill }}"
+            data-aos="fade-up"
+            [attr.data-aos-delay]="100 * j"
+            id="backend-skill-img-{{ j }}"
+          />
+          <p
+            data-aos="fade-in"
+            [attr.data-aos-anchor]="'#backend-skill-img-' + j"
+            [attr.data-aos-delay]="100 * j + 250"
+          >
+            {{ skill }}
+          </p>
+        </div>
+      </ng-container>
+
       <div
         data-aos="zoom-out"
-        [attr.data-aos-delay]="100 * frontEndSkills.length"
+        [attr.data-aos-delay]="100 * backEndSkills.length"
         class="wrapper"
       >
         <div class="skill highlight-primary learning-icon">

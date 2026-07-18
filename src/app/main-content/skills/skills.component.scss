@@ -62,6 +62,20 @@ button {
   }
 }
 
+.group-label {
+  flex-basis: 100%;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--secundary);
+
+  &:not(:first-child) {
+    margin-top: 8px;
+  }
+}
+
 .skill {
   display: flex;
   flex-direction: column;

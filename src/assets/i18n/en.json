@@ -11,11 +11,13 @@
   },
   "skills": {
     "title": "My Skills",
-    "experience": "I have accumulated experience in developing projects using various frontend technologies and design concepts.",
+    "experience": "I have accumulated experience in developing projects using various frontend and backend technologies and design concepts.",
     "lookingFor": "Seeking",
     "additionalSkill": "an additional skill",
     "contactMessage": "Don't hesitate to get in touch. I'm excited to build on my existing expertise and learn more.",
-    "buttonText": "Get in touch"
+    "buttonText": "Get in touch",
+    "groupFrontend": "Frontend",
+    "groupBackend": "Backend"
   },
   "portfolio": {
     "subtitle": "Discover a curated collection of my projects - Engage with them to experience my skills firsthand.",

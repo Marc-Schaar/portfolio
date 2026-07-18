@@ -11,11 +11,13 @@
   },
   "skills": {
     "title": "Meine Fähigkeiten",
-    "experience": "Ich habe Erfahrungen gesammelt im Entwickeln von Projekten mit verschiedenen Frontend-Technologien und Design-Konzepten.",
+    "experience": "Ich habe Erfahrungen gesammelt im Entwickeln von Projekten mit verschiedenen Frontend- und Backend-Technologien und Design-Konzepten.",
     "lookingFor": "Auf der Suche nach",
     "additionalSkill": "weiteren Fähigkeiten",
     "contactMessage": "Zögern Sie nicht mich zu kontaktieren. Ich freue mich darauf, mein Wissen zu erweitern und Neues zu lernen.",
-    "buttonText": "Kontakt aufnehmen"
+    "buttonText": "Kontakt aufnehmen",
+    "groupFrontend": "Frontend",
+    "groupBackend": "Backend"
   },
   "portfolio": {
     "subtitle": "Entdecken Sie eine ausgewählte Sammlung meiner Projekte – Interagieren Sie mit ihnen, um meine Fähigkeiten hautnah zu erleben.",

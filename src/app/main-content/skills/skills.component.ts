@@ -16,10 +16,30 @@ export class SkillsComponent {
     'JavaScript',
     'TypeScript',
     'Angular',
+    'RxJs',
+    'React',
+    'Vue',
     'Firebase',
-    'Git',
+    'Supabase',
     'Rest Api',
+    'Git',
     'Scrum',
     'Material Design',
+    'Wordpress',
+  ];
+
+  backEndSkills: string[] = [
+    'Python',
+    'Django',
+    'DRF',
+    'Flask',
+    'PostgreSQL',
+    'SQL',
+    'Redis',
+    'Docker',
+    'Linux',
+    'Shell Scripting',
+    'Cloud',
+    'Heroku',
   ];
 }
