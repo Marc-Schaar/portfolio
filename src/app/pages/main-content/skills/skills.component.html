@@ -1,0 +1,114 @@
+<section>
+  <div class="container max-width">
+    <section class="skills-container" id="skills-entry-anchor">
+      @defer (on viewport) {
+        <app-skills-particles />
+      } @placeholder {
+        <div class="skills-particles-placeholder" aria-hidden="true"></div>
+      }
+
+      <p class="group-label" data-aos="fade-up">
+        {{ "skills.groupFrontend" | translate }}
+      </p>
+      @for (skill of frontEndSkills; track skill; let i = $index) {
+        <div class="skill">
+          <img
+            class="skill-icon"
+            src="assets/icons/skills/{{ skill }}.svg"
+            alt=""
+            data-aos="fade-up"
+            [attr.data-aos-delay]="100 * i"
+            id="skill-img-{{ i }}"
+            />
+            <p
+              data-aos="fade-in"
+              [attr.data-aos-anchor]="'#skill-img-' + i"
+              [attr.data-aos-delay]="100 * i + 250"
+              >
+              {{ skill }}
+            </p>
+          </div>
+        }
+
+        <p class="group-label" data-aos="fade-up">
+          {{ "skills.groupBackend" | translate }}
+        </p>
+        @for (skill of backEndSkills; track skill; let j = $index) {
+          <div class="skill">
+            <img
+              class="skill-icon"
+              src="assets/icons/skills/{{ skill }}.svg"
+              alt=""
+              data-aos="fade-up"
+              [attr.data-aos-delay]="100 * j"
+              id="backend-skill-img-{{ j }}"
+              />
+              <p
+                data-aos="fade-in"
+                [attr.data-aos-anchor]="'#backend-skill-img-' + j"
+                [attr.data-aos-delay]="100 * j + 250"
+                >
+                {{ skill }}
+              </p>
+            </div>
+          }
+
+          <div
+            data-aos="zoom-out"
+            [attr.data-aos-delay]="100 * backEndSkills.length"
+            class="wrapper"
+            >
+            <div class="skill highlight-primary learning-icon">
+              <img
+                id="learning-icon"
+                class="primary-filter"
+                src="assets/icons/learning.png"
+                alt=""
+                />
+                Continually <br />
+                learning
+              </div>
+              <img id="spech-bubble" src="assets/Group 18.png" alt="" />
+            </div>
+          </section>
+
+          <section class="grid-headline-section">
+            <app-section-title
+              variant="skills"
+              aosEffect="fade"
+              aosAnchor="#skills-entry-anchor"
+              >
+              {{ "skills.title" | translate }}
+            </app-section-title>
+            <p data-aos="fade-left" data-aos-delay="400">
+              {{ "skills.experience" | translate }}
+            </p>
+          </section>
+
+          <section class="grid-contact-section">
+            <h3 data-aos="fade-up" data-aos-delay="400">
+              {{ "skills.lookingFor" | translate }}
+              <span class="highlight-primary">{{
+                "skills.additionalSkill" | translate
+                }}</span
+                >?
+              </h3>
+              <p data-aos="fade-up" data-aos-delay="400">
+                {{ "skills.contactMessage" | translate }}
+              </p>
+              <button data-aos="zoom-in" data-aos-delay="400">
+                <a href="#contact">{{ "skills.buttonText" | translate }}</a>
+              </button>
+            </section>
+          </div>
+
+          <div class="line" data-aos="fade"></div>
+        </section>
+
+        @if (useStaticBackground) {
+          <app-bg-decoration
+            class="img-box"
+            filter="secundary"
+            src="assets/img/background-objects/31. Green shadow Skills Portfolio.svg"
+          ></app-bg-decoration>
+        }

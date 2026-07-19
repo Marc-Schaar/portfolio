@@ -1,0 +1,64 @@
+<section>
+  <div class="container max-width">
+    <section class="about-me-text gap-l column">
+      <app-section-title
+        variant="about-me"
+        aosEffect="flip-up"
+        [aosDelay]="150"
+        aosAnchor="#anchor-aboutme"
+        >
+        {{ "aboutMe.title" | translate }}
+      </app-section-title>
+
+      <div class="gap-m column">
+        <p
+          id="about-me-description1"
+          data-aos="fade"
+          data-aos-delay="150"
+          [attr.data-aos-anchor]="'#anchor-aboutme'"
+          >
+          {{ "aboutMe.description" | translate }}
+        </p>
+
+        <div class="gap-s column">
+          @for (row of subDescriptionRows; track row) {
+            <div
+              class="row"
+              [attr.id]="row.rowId"
+              >
+              <img class="secundary-filter" [src]="row.icon" alt="" />
+              <p data-aos="fade-up" [attr.data-aos-anchor]="row.anchor">
+                {{ row.textKey | translate }}
+              </p>
+            </div>
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="img-container">
+      <div class="box">
+        <img
+          src="assets/img/me/schaar-hero.png"
+          [attr.alt]="'aboutMe.photoAlt' | translate"
+          data-aos="zoom-in"
+          [attr.data-aos-anchor]="'#about-me-description2'"
+          />
+        </div>
+      </section>
+    </div>
+
+    <div
+      class="line"
+      data-aos="fade-right"
+      data-aos-delay="250"
+      [attr.data-aos-anchor]="'#about-me-description2'"
+    ></div>
+  </section>
+
+  @if (useStaticBackground) {
+    <app-bg-decoration
+      class="img-box"
+      src="assets/img/background-objects/30. Purple shadow about me.svg"
+    ></app-bg-decoration>
+  }

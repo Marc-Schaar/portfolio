@@ -1,0 +1,114 @@
+@media screen and (max-width: 1000px) {
+  .container {
+    position: relative;
+    > .row {
+      > .row {
+        flex-direction: column-reverse;
+        padding: 0 48px;
+      }
+      > .line {
+        // top: 72px;
+        width: 50%;
+        z-index: -1;
+      }
+    }
+  }
+
+  .references {
+    padding: 16px;
+    border-radius: 36px;
+    min-height: 200px;
+    width: 100%;
+
+    > img {
+      width: 68px;
+      left: -12px;
+    }
+    .row {
+      flex-direction: column;
+      align-items: flex-start;
+      width: fit-content;
+      > .line {
+        width: 20%;
+        flex: unset;
+      }
+    }
+  }
+
+  .index-row {
+    .dot-btn img {
+      width: 8px;
+    }
+    .dot-btn.active img {
+      scale: 1.2;
+    }
+    > button {
+      padding: 0;
+      > img {
+        width: 32px;
+      }
+    }
+  }
+  .img-container {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+
+    > img {
+      width: 144px;
+      z-index: 10;
+    }
+    > .line {
+      position: absolute;
+      right: -48px;
+      width: 50%;
+    }
+  }
+
+  .img-box {
+    width: 40vw;
+    z-index: -2;
+    > img {
+      width: 150%;
+      position: relative;
+      left: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .img-box {
+    margin-bottom: 356px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    > .row {
+      > .row {
+        padding: 0 16px;
+      }
+    }
+  }
+
+  .references {
+    min-height: 272px;
+  }
+
+  .img-container > .line {
+    right: -16px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .container {
+    > .row {
+      > .line {
+        position: absolute;
+        right: 0;
+        width: calc(50vw - 800px);
+        z-index: -1;
+      }
+    }
+  }
+}

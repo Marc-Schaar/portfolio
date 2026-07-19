@@ -1,0 +1,44 @@
+@media screen and (max-width: 1280px) {
+  .line {
+    top: 33.5px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  :host > section {
+    padding: 0 48px 32px;
+    align-items: flex-start;
+    height: unset;
+  }
+
+  .container {
+    flex-direction: column;
+    margin: 34px 0;
+  }
+  .container > section {
+    width: 100%;
+  }
+
+  .line {
+    width: 25%;
+  }
+
+  .img-box {
+    height: 48vh;
+    width: 62vw;
+    > img {
+      width: 200%;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  :host > section {
+    padding: 0 16px 32px;
+  }
+
+  .img-box {
+    height: 26vh;
+    width: 48vw;
+  }
+}
