@@ -27,19 +27,19 @@ export class AboutMeComponent {
 
   subDescriptionRows: { icon: string; textKey: string; rowId?: string; anchor: string }[] = [
     {
-      icon: 'assets/icons/Property 1=default (1).svg',
+      icon: 'assets/icons/lightbulb.svg',
       textKey: 'aboutMe.subDescription1',
       rowId: 'about-me-description2',
       anchor: '#about-me-description1',
     },
     {
-      icon: 'assets/icons/Property 1=Default.svg',
+      icon: 'assets/icons/location-pin.svg',
       textKey: 'aboutMe.subDescription2',
       rowId: 'about-me-description3',
       anchor: '#about-me-description2',
     },
     {
-      icon: 'assets/icons/Property 1=Defauñt.svg',
+      icon: 'assets/icons/puzzle-piece.svg',
       textKey: 'aboutMe.subDescription3',
       anchor: '#about-me-description3',
     },

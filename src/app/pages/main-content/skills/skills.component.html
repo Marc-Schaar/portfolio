@@ -14,7 +14,7 @@
         <div class="skill">
           <img
             class="skill-icon"
-            src="assets/icons/skills/{{ skill }}.svg"
+            src="assets/icons/skills/{{ skill.icon }}.svg"
             alt=""
             data-aos="fade-up"
             [attr.data-aos-delay]="100 * i"
@@ -25,7 +25,7 @@
               [attr.data-aos-anchor]="'#skill-img-' + i"
               [attr.data-aos-delay]="100 * i + 250"
               >
-              {{ skill }}
+              {{ skill.label }}
             </p>
           </div>
         }
@@ -37,7 +37,7 @@
           <div class="skill">
             <img
               class="skill-icon"
-              src="assets/icons/skills/{{ skill }}.svg"
+              src="assets/icons/skills/{{ skill.icon }}.svg"
               alt=""
               data-aos="fade-up"
               [attr.data-aos-delay]="100 * j"
@@ -48,7 +48,7 @@
                 [attr.data-aos-anchor]="'#backend-skill-img-' + j"
                 [attr.data-aos-delay]="100 * j + 250"
                 >
-                {{ skill }}
+                {{ skill.label }}
               </p>
             </div>
           }
@@ -68,7 +68,7 @@
                 Continually <br />
                 learning
               </div>
-              <img id="spech-bubble" src="assets/Group 18.png" alt="" />
+              <img id="spech-bubble" src="assets/icons/speech-bubble.png" alt="" />
             </div>
           </section>
 
@@ -109,6 +109,6 @@
           <app-bg-decoration
             class="img-box"
             filter="secundary"
-            src="assets/img/background-objects/31. Green shadow Skills Portfolio.svg"
+            src="assets/img/background-objects/skills-shadow-green.svg"
           ></app-bg-decoration>
         }
