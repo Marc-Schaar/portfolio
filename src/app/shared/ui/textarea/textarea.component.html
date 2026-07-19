@@ -1,26 +1,26 @@
 <textarea
-  [id]="inputId"
-  [name]="name"
-  [placeholder]="placeholder"
-  [disabled]="disabled"
-  [required]="required"
-  [attr.aria-invalid]="invalid ? 'true' : null"
-  [attr.aria-describedby]="ariaDescribedBy"
-  [value]="value"
-  [class.invalid]="invalid"
-  [class.valid]="valid"
+  [id]="inputId()"
+  [name]="name()"
+  [placeholder]="placeholder()"
+  [disabled]="disabled()"
+  [required]="required()"
+  [attr.aria-invalid]="invalid() ? 'true' : null"
+  [attr.aria-describedby]="ariaDescribedBy()"
+  [value]="value()"
+  [class.invalid]="invalid()"
+  [class.valid]="valid()"
   (input)="onInput($event)"
   (blur)="onBlur()"
 ></textarea>
 
-@if (showValidationIcon && valid) {
+@if (showValidationIcon() && valid()) {
   <img
     class="validation-icon"
     src="assets/icons/form_validation/correct.png"
     alt=""
     />
 }
-@if (showValidationIcon && invalid) {
+@if (showValidationIcon() && invalid()) {
   <img
     class="validation-icon"
     src="assets/icons/form_validation/wrong.png"

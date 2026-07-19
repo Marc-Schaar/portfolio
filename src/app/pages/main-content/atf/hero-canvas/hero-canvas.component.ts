@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import * as THREE from 'three';
 import { ThreeSceneComponent } from '../../../../shared/three/three-scene.base';
 
@@ -10,6 +10,7 @@ const INDIGO = 0x4b47ff;
   imports: [],
   templateUrl: './hero-canvas.component.html',
   styleUrl: './hero-canvas.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeroCanvasComponent extends ThreeSceneComponent {
   private readonly blobs: THREE.Mesh[] = [];

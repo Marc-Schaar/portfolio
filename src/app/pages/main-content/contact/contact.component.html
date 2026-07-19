@@ -131,7 +131,7 @@
           {{ "contact.form.button" | translate }}
         </app-button>
 
-        <span [ngClass]="{ show: mailSendSucess }" class="succesMsg" role="status" aria-live="polite"
+        <span [class.show]="mailSendSucess()" class="succesMsg" role="status" aria-live="polite"
           >{{ "contact.succesMsg" | translate }}!</span
         >
       </form>
@@ -151,7 +151,7 @@
     </section>
   </div>
 </section>
-@if (useStaticBackground) {
+@if (useStaticBackground()) {
   <app-bg-decoration
     class="img-box"
     src="assets/img/background-objects/footer-shadow-purple.svg"

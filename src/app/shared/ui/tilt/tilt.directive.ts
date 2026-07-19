@@ -1,12 +1,12 @@
 import {
   Directive,
   ElementRef,
-  Input,
   NgZone,
   OnDestroy,
   OnInit,
   Renderer2,
   inject,
+  input,
 } from '@angular/core';
 import { ReducedMotionService } from '../../three/reduced-motion.service';
 
@@ -30,7 +30,7 @@ export class TiltDirective implements OnInit, OnDestroy {
    * Optional wider element (e.g. the whole project row) to listen for pointer
    * events on, so hovering the text next to the image already moves it too.
    */
-  @Input() tiltZone?: HTMLElement;
+  readonly tiltZone = input<HTMLElement>();
 
   private readonly cleanupFns: Array<() => void> = [];
   private rafId: number | null = null;
@@ -39,7 +39,7 @@ export class TiltDirective implements OnInit, OnDestroy {
     const supportsHover = window.matchMedia('(hover: hover)').matches;
     const finePointer = window.matchMedia('(pointer: fine)').matches;
     if (
-      this.reducedMotion.prefersReducedMotion ||
+      this.reducedMotion.prefersReducedMotion() ||
       !supportsHover ||
       !finePointer
     ) {
@@ -47,7 +47,7 @@ export class TiltDirective implements OnInit, OnDestroy {
     }
 
     const host = this.el.nativeElement;
-    const zone = this.tiltZone ?? host;
+    const zone = this.tiltZone() ?? host;
     this.renderer.setStyle(host, 'transition', 'transform 0.2s ease-out');
     this.renderer.setStyle(host, 'will-change', 'transform');
 

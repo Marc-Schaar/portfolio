@@ -11,7 +11,7 @@
       @for (filter of filters; track filter) {
         <button
           class="filter-btn"
-          [class.active]="activeFilter === filter"
+          [class.active]="activeFilter() === filter"
           (click)="setFilter(filter)"
           >
           {{ "portfolio.filters." + filter | translate }}
@@ -19,12 +19,12 @@
       }
     </div>
 
-    @for (projcet of filteredProjects; track projcet; let i = $index) {
+    @for (projcet of filteredProjects(); track projcet; let i = $index) {
       <section
         #projectRow
         [id]="'project-' + i"
         class="max-width"
-        [ngClass]="{ 'row-reverse': i % 2 === 0 }"
+        [class.row-reverse]="i % 2 === 0"
         >
         <img
           appTilt
@@ -35,7 +35,7 @@
           [attr.data-aos-delay]="baseDelay * i"
           [attr.data-aos-duration]="aosDuration"
           [attr.data-aos-anchor]="'#project-' + i"
-          [attr.data-aos-anchor-offset]="aosAnchorOffset"
+          [attr.data-aos-anchor-offset]="aosAnchorOffset()"
           />
           <div
             class="box"
@@ -43,11 +43,11 @@
             [attr.data-aos-delay]="baseDelay * i"
             [attr.data-aos-duration]="aosDuration"
             [attr.data-aos-anchor]="'#project-' + i"
-            [attr.data-aos-anchor-offset]="aosAnchorOffset"
+            [attr.data-aos-anchor-offset]="aosAnchorOffset()"
             >
             <div class="title-row">
               <h3>{{ projcet.title }}</h3>
-              <span class="badge" [ngClass]="projcet.category">
+              <span class="badge" [class]="projcet.category">
                 {{ "portfolio.category." + projcet.category | translate }}
               </span>
             </div>
@@ -68,7 +68,7 @@
       }
     </section>
 
-    @if (useStaticBackground) {
+    @if (useStaticBackground()) {
       <app-bg-decoration
         class="img-box"
         src="assets/img/background-objects/portfolio-shadow-purple.svg"

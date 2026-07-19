@@ -1,4 +1,5 @@
-import { Component, inject } from '@angular/core';
+
+import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { BgDecorationComponent } from '../../../shared/ui/bg-decoration/bg-decoration.component';
 import { ReducedMotionService } from '../../../shared/three/reduced-motion.service';
@@ -17,11 +18,12 @@ interface Reference {
     './references.component.scss',
     './references.responsive.component.scss',
   ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ReferencesComponent {
   private readonly reducedMotion = inject(ReducedMotionService);
-  readonly useStaticBackground = shouldUseStaticBackgroundFallback(
-    this.reducedMotion.prefersReducedMotion
+  readonly useStaticBackground = computed(() =>
+    shouldUseStaticBackgroundFallback(this.reducedMotion.prefersReducedMotion())
   );
 
   references: Reference[] = [
@@ -43,19 +45,19 @@ export class ReferencesComponent {
     },
   ];
 
-  currentIndex: number = Math.floor(Math.random() * this.references.length);
-  isChanging: boolean = false;
+  readonly currentIndex = signal(Math.floor(Math.random() * this.references.length));
 
   back() {
-    this.currentIndex =
-      (this.currentIndex - 1 + this.references.length) % this.references.length;
+    this.currentIndex.update(
+      (i) => (i - 1 + this.references.length) % this.references.length
+    );
   }
 
   next() {
-    this.currentIndex = (this.currentIndex + 1) % this.references.length;
+    this.currentIndex.update((i) => (i + 1) % this.references.length);
   }
 
   goTo(i: number) {
-    this.currentIndex = i;
+    this.currentIndex.set(i);
   }
 }

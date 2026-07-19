@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import * as THREE from 'three';
 import { ThreeSceneComponent } from '../../../../shared/three/three-scene.base';
 
@@ -24,6 +24,7 @@ interface Cluster {
   imports: [],
   templateUrl: './skills-particles.component.html',
   styleUrl: './skills-particles.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SkillsParticlesComponent extends ThreeSceneComponent {
   protected override maxPixelRatio = 1.5;

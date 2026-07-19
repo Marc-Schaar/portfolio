@@ -1,5 +1,5 @@
 
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { BgDecorationComponent } from '../../../shared/ui/bg-decoration/bg-decoration.component';
 import { SectionTitleComponent } from '../../../shared/ui/section-title/section-title.component';
@@ -17,12 +17,13 @@ import { shouldUseStaticBackgroundFallback } from '../../../shared/three/ambient
     styleUrls: [
         './about-me.component.scss',
         './about-me.responsive.component.scss',
-    ]
+    ],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AboutMeComponent {
   private readonly reducedMotion = inject(ReducedMotionService);
-  readonly useStaticBackground = shouldUseStaticBackgroundFallback(
-    this.reducedMotion.prefersReducedMotion
+  readonly useStaticBackground = computed(() =>
+    shouldUseStaticBackgroundFallback(this.reducedMotion.prefersReducedMotion())
   );
 
   subDescriptionRows: { icon: string; textKey: string; rowId?: string; anchor: string }[] = [

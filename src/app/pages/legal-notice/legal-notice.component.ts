@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
 import { GlobalService } from '../../core/services/global.service';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -6,11 +6,10 @@ import { TranslateModule } from '@ngx-translate/core';
     selector: 'app-legal-notice',
     imports: [TranslateModule],
     templateUrl: './legal-notice.component.html',
-    styleUrl: './legal-notice.component.scss'
+    styleUrl: './legal-notice.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LegalNoticeComponent implements OnInit {
-  constructor() {}
-
   globalService = inject(GlobalService);
 
   ngOnInit(): void {

@@ -8,10 +8,10 @@
             style="mask-image: url(assets/icons/quotation_mark.png); -webkit-mask-image: url(assets/icons/quotation_mark.png)"
             aria-hidden="true"
           ></span>
-          <p>{{ "references." + references[currentIndex].name | translate }}</p>
+          <p>{{ "references." + references[currentIndex()].name | translate }}</p>
           <div class="row">
             <div class="line"></div>
-            <span>{{ references[currentIndex].name }} - Team Partner</span>
+            <span>{{ references[currentIndex()].name }} - Team Partner</span>
           </div>
         </section>
         <!-- <section class="img-container">
@@ -39,8 +39,8 @@
               type="button"
               id="dot-{{ i }}"
               class="dot-btn"
-              [class.active]="i === currentIndex"
-              [attr.aria-current]="i === currentIndex ? 'true' : null"
+              [class.active]="i === currentIndex()"
+              [attr.aria-current]="i === currentIndex() ? 'true' : null"
               [attr.aria-label]="'references.goToSlide' | translate: { number: i + 1 }"
               (click)="goTo(i)"
               >
@@ -63,10 +63,10 @@
         </section>
 
         <div class="visually-hidden" aria-live="polite">
-          {{ "references.slideStatus" | translate: { current: currentIndex + 1, total: references.length, name: references[currentIndex].name } }}
+          {{ "references.slideStatus" | translate: { current: currentIndex() + 1, total: references.length, name: references[currentIndex()].name } }}
         </div>
       </div>
-      @if (useStaticBackground) {
+      @if (useStaticBackground()) {
         <app-bg-decoration
           class="img-box"
           filter="secundary"

@@ -1,14 +1,15 @@
 import {
   AfterViewInit,
+  DestroyRef,
   Directive,
   ElementRef,
   NgZone,
   OnDestroy,
-  ViewChild,
   inject,
+  viewChild,
 } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import * as THREE from 'three';
-import { Subscription } from 'rxjs';
 import { ReducedMotionService } from './reduced-motion.service';
 import { ScrollProgressService } from './scroll-progress.service';
 import { isWebglAvailable } from './webgl-support';
@@ -25,12 +26,13 @@ import { getDeviceTier } from './device-tier';
  */
 @Directive()
 export abstract class ThreeSceneComponent implements AfterViewInit, OnDestroy {
-  @ViewChild('canvas', { static: true })
-  private canvasRef!: ElementRef<HTMLCanvasElement>;
+  private readonly canvasRef =
+    viewChild.required<ElementRef<HTMLCanvasElement>>('canvas');
 
   protected readonly ngZone = inject(NgZone);
   protected readonly reducedMotion = inject(ReducedMotionService);
   protected readonly scrollProgress = inject(ScrollProgressService);
+  protected readonly destroyRef = inject(DestroyRef);
 
   protected scene!: THREE.Scene;
   protected camera!: THREE.PerspectiveCamera;
@@ -40,13 +42,12 @@ export abstract class ThreeSceneComponent implements AfterViewInit, OnDestroy {
   protected maxPixelRatio = 2;
 
   private resizeObserver?: ResizeObserver;
-  private ratioSubscription?: Subscription;
   private readonly clock = new THREE.Clock();
   private running = false;
   private inViewport = true;
 
   ngAfterViewInit(): void {
-    if (this.reducedMotion.prefersReducedMotion || !isWebglAvailable()) {
+    if (this.reducedMotion.prefersReducedMotion() || !isWebglAvailable()) {
       return;
     }
     this.init();
@@ -55,7 +56,6 @@ export abstract class ThreeSceneComponent implements AfterViewInit, OnDestroy {
   ngOnDestroy(): void {
     this.resizeObserver?.disconnect();
     document.removeEventListener('visibilitychange', this.onVisibilityChange);
-    this.ratioSubscription?.unsubscribe();
 
     if (this.renderer) {
       this.renderer.setAnimationLoop(null);
@@ -76,7 +76,7 @@ export abstract class ThreeSceneComponent implements AfterViewInit, OnDestroy {
   protected onSectionRatio(_ratio: number): void {}
 
   private init(): void {
-    const canvas = this.canvasRef.nativeElement;
+    const canvas = this.canvasRef().nativeElement;
     const host = canvas.parentElement ?? canvas;
 
     this.scene = new THREE.Scene();
@@ -103,8 +103,9 @@ export abstract class ThreeSceneComponent implements AfterViewInit, OnDestroy {
 
     document.addEventListener('visibilitychange', this.onVisibilityChange);
 
-    this.ratioSubscription = this.scrollProgress
+    this.scrollProgress
       .observeRatio(host)
+      .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe((ratio) => {
         this.inViewport = ratio > 0;
         this.onSectionRatio(ratio);

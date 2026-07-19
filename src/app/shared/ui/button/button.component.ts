@@ -1,21 +1,22 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
 
 @Component({
-    selector: 'app-button',
-    imports: [],
-    templateUrl: './button.component.html',
-    styleUrls: ['./button.component.scss']
+  selector: 'app-button',
+  imports: [],
+  templateUrl: './button.component.html',
+  styleUrls: ['./button.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ButtonComponent {
-  @Input() type: 'button' | 'submit' | 'reset' = 'button';
-  @Input() variant: 'primary' | 'plain' = 'primary';
-  @Input() disabled = false;
-  @Input() ariaLabel = '';
+  readonly type = input<'button' | 'submit' | 'reset'>('button');
+  readonly variant = input<'primary' | 'plain'>('primary');
+  readonly disabled = input(false);
+  readonly ariaLabel = input('');
 
-  @Output() clicked = new EventEmitter<MouseEvent>();
+  readonly clicked = output<MouseEvent>();
 
   onClick(event: MouseEvent): void {
-    if (this.disabled) {
+    if (this.disabled()) {
       return;
     }
     this.clicked.emit(event);

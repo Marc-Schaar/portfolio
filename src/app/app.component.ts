@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 
 import { RouterOutlet } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
@@ -19,6 +19,7 @@ import { shouldUseStaticBackgroundFallback } from './shared/three/ambient-fallba
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
   title = 'Marc Schaar - Portfolio';
@@ -31,7 +32,10 @@ export class AppComponent {
    * global ambient canvas must honor the identical check -- otherwise both
    * layers render at once on phones, doubling up and muddying the tint.
    */
-  readonly useAmbientBackground = !shouldUseStaticBackgroundFallback(
-    this.reducedMotion.prefersReducedMotion
+  readonly useAmbientBackground = computed(
+    () =>
+      !shouldUseStaticBackgroundFallback(
+        this.reducedMotion.prefersReducedMotion()
+      )
   );
 }

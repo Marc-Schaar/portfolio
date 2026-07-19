@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import * as THREE from 'three';
-import { Subscription } from 'rxjs';
 import { ThreeSceneComponent } from '../../three/three-scene.base';
 
 interface AmbientPreset {
@@ -67,11 +67,11 @@ const CONNECT_DISTANCE = 4.5;
   imports: [],
   templateUrl: './ambient-background.component.html',
   styleUrl: './ambient-background.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AmbientBackgroundComponent extends ThreeSceneComponent {
   protected override maxPixelRatio = 1.5;
 
-  private readonly sectionSubscriptions = new Subscription();
   private readonly sectionRatios = new Map<string, number>();
 
   private blobs: THREE.Mesh[] = [];
@@ -108,12 +108,13 @@ export class AmbientBackgroundComponent extends ThreeSceneComponent {
     SECTION_IDS.forEach((id) => {
       const el = document.getElementById(id);
       if (!el) return; // e.g. legal-notice/imprint routes don't have these sections
-      this.sectionSubscriptions.add(
-        this.scrollProgress.observeRatio(el).subscribe((ratio) => {
+      this.scrollProgress
+        .observeRatio(el)
+        .pipe(takeUntilDestroyed(this.destroyRef))
+        .subscribe((ratio) => {
           this.sectionRatios.set(id, ratio);
           this.recomputeTarget();
-        })
-      );
+        });
     });
   }
 
@@ -149,11 +150,6 @@ export class AmbientBackgroundComponent extends ThreeSceneComponent {
 
     this.particles.rotation.y = elapsedSeconds * 0.01;
     this.network.rotation.y = this.particles.rotation.y;
-  }
-
-  override ngOnDestroy(): void {
-    this.sectionSubscriptions.unsubscribe();
-    super.ngOnDestroy();
   }
 
   private recomputeTarget(): void {

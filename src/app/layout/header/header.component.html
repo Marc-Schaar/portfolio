@@ -10,8 +10,8 @@
         @for (lang of languages; track lang; let last = $last) {
           <button
             type="button"
-            [class.underline]="currentLang === lang"
-            [attr.aria-current]="currentLang === lang ? 'true' : null"
+            [class.underline]="currentLang() === lang"
+            [attr.aria-current]="currentLang() === lang ? 'true' : null"
             [attr.aria-label]="
               (lang === 'de' ? 'header.switchToGerman' : 'header.switchToEnglish') | translate
             "
@@ -29,10 +29,10 @@
     <button
       type="button"
       class="menu-icon"
-      [class.open]="isOpen"
-      [attr.aria-expanded]="isOpen"
+      [class.open]="isOpen()"
+      [attr.aria-expanded]="isOpen()"
       aria-controls="mobile-nav"
-      [attr.aria-label]="(isOpen ? 'header.closeMenu' : 'header.openMenu') | translate"
+      [attr.aria-label]="(isOpen() ? 'header.closeMenu' : 'header.openMenu') | translate"
       (click)="toggleMenu()"
       #menuToggle
       >
@@ -52,14 +52,14 @@
   </div>
 </header>
 
-<div class="mobile-nav-panel" [ngClass]="{ 'full-height': isOpen }">
+<div class="mobile-nav-panel" [class.full-height]="isOpen()">
   <nav
     id="mobile-nav"
     #mobileNav
     tabindex="-1"
-    [class.open]="isOpen"
+    [class.open]="isOpen()"
     [attr.aria-label]="'header.mobileNavLabel' | translate"
-    [attr.inert]="!isOpen ? '' : null"
+    [attr.inert]="!isOpen() ? '' : null"
     (keydown.escape)="toggleMenu()"
     >
     <a (click)="closeMenu()" href="#about-me">{{
@@ -73,8 +73,8 @@
       @for (lang of languages; track lang; let last = $last) {
         <button
           type="button"
-          [class.underline]="currentLang === lang"
-          [attr.aria-current]="currentLang === lang ? 'true' : null"
+          [class.underline]="currentLang() === lang"
+          [attr.aria-current]="currentLang() === lang ? 'true' : null"
           [attr.aria-label]="
             (lang === 'de' ? 'header.switchToGerman' : 'header.switchToEnglish') | translate
           "

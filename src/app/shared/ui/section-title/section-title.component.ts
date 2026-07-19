@@ -1,19 +1,21 @@
-import { Component, HostBinding, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostBinding, input } from '@angular/core';
 
 @Component({
-    selector: 'app-section-title',
-    imports: [],
-    templateUrl: './section-title.component.html',
-    styleUrls: ['./section-title.component.scss']
+  selector: 'app-section-title',
+  imports: [],
+  templateUrl: './section-title.component.html',
+  styleUrls: ['./section-title.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SectionTitleComponent {
-  @Input() variant: 'about-me' | 'portfolio' | 'contact' | 'skills' =
-    'skills';
-  @Input() aosEffect?: string;
-  @Input() aosDelay?: number;
-  @Input() aosAnchor?: string;
+  readonly variant = input<'about-me' | 'portfolio' | 'contact' | 'skills'>(
+    'skills'
+  );
+  readonly aosEffect = input<string>();
+  readonly aosDelay = input<number>();
+  readonly aosAnchor = input<string>();
 
   @HostBinding('class') get hostClass(): string {
-    return this.variant;
+    return this.variant();
   }
 }

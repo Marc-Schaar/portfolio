@@ -1,6 +1,6 @@
-@if (visible) {
-  <div class="alert" [id]="errorId" role="alert">
-    @for (messageKey of activeMessages; track messageKey) {
+@if (visible()) {
+  <div class="alert" [id]="errorId()" role="alert">
+    @for (messageKey of activeMessages(); track messageKey) {
       <div>
         {{ messageKey | translate }}
       </div>

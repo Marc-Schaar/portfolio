@@ -1,5 +1,4 @@
-import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
@@ -22,7 +21,6 @@ import { shouldUseStaticBackgroundFallback } from '../../../shared/three/ambient
 @Component({
     selector: 'app-contact',
     imports: [
-        CommonModule,
         ReactiveFormsModule,
         TranslateModule,
         RouterLink,
@@ -37,19 +35,20 @@ import { shouldUseStaticBackgroundFallback } from '../../../shared/three/ambient
     styleUrls: [
         './contact.component.scss',
         './contact.responsive.component.scss',
-    ]
+    ],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ContactComponent {
   globalService = inject(GlobalService);
   http = inject(HttpClient);
   private fb = inject(FormBuilder);
   private readonly reducedMotion = inject(ReducedMotionService);
-  readonly useStaticBackground = shouldUseStaticBackgroundFallback(
-    this.reducedMotion.prefersReducedMotion
+  readonly useStaticBackground = computed(() =>
+    shouldUseStaticBackgroundFallback(this.reducedMotion.prefersReducedMotion())
   );
 
-  mailTest: boolean = false;
-  mailSendSucess: boolean = false;
+  mailTest = false;
+  readonly mailSendSucess = signal(false);
 
   contactForm: FormGroup = this.fb.group({
     name: [
@@ -130,9 +129,9 @@ export class ContactComponent {
   }
 
   showSuccesMsg() {
-    this.mailSendSucess = true;
+    this.mailSendSucess.set(true);
     setTimeout(() => {
-      this.mailSendSucess = false;
+      this.mailSendSucess.set(false);
     }, 6000);
   }
 }

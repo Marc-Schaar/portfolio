@@ -1,5 +1,11 @@
-import { CommonModule } from '@angular/common';
-import { Component, HostListener, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  HostListener,
+  computed,
+  inject,
+  signal,
+} from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import AOS from 'aos';
 import { BgDecorationComponent } from '../../../shared/ui/bg-decoration/bg-decoration.component';
@@ -15,7 +21,6 @@ export type ProjectFilter = 'all' | ProjectCategory;
   selector: 'app-portfolio',
   imports: [
     TranslateModule,
-    CommonModule,
     BgDecorationComponent,
     SectionTitleComponent,
     TiltDirective,
@@ -25,11 +30,12 @@ export type ProjectFilter = 'all' | ProjectCategory;
     './portfolio.component.scss',
     './portfolio.responsive.component.scss',
   ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PortfolioComponent {
   private readonly reducedMotion = inject(ReducedMotionService);
-  readonly useStaticBackground = shouldUseStaticBackgroundFallback(
-    this.reducedMotion.prefersReducedMotion,
+  readonly useStaticBackground = computed(() =>
+    shouldUseStaticBackgroundFallback(this.reducedMotion.prefersReducedMotion())
   );
 
   public projects: {
@@ -115,25 +121,26 @@ export class PortfolioComponent {
       new Set(this.projects.map((p) => p.category)),
     ) as ProjectCategory[]),
   ];
-  public activeFilter: ProjectFilter = 'all';
+  readonly activeFilter = signal<ProjectFilter>('all');
 
-  get filteredProjects() {
-    return this.activeFilter === 'all'
+  readonly filteredProjects = computed(() => {
+    const filter = this.activeFilter();
+    return filter === 'all'
       ? this.projects
-      : this.projects.filter((p) => p.category === this.activeFilter);
-  }
+      : this.projects.filter((p) => p.category === filter);
+  });
 
   setFilter(filter: ProjectFilter) {
-    if (this.activeFilter === filter) return;
-    this.activeFilter = filter;
+    if (this.activeFilter() === filter) return;
+    this.activeFilter.set(filter);
     setTimeout(() => AOS.refresh());
   }
 
   public aosEffects = ['fade-left', 'fade-right'];
   public baseDelay = 300;
   public aosDuration = 400;
-  public aosAnchorOffset = 600;
   private readonly DEFAULT_OFFSET = 600;
+  readonly aosAnchorOffset = signal(this.DEFAULT_OFFSET);
 
   @HostListener('window:resize', ['$event'])
   onResize(event: UIEvent) {
@@ -143,10 +150,8 @@ export class PortfolioComponent {
   }
 
   private updateAnchorOffset(width: number) {
-    width < 1000
-      ? (this.aosAnchorOffset = Math.round(
-          this.DEFAULT_OFFSET - this.DEFAULT_OFFSET,
-        ))
-      : (this.aosAnchorOffset = this.DEFAULT_OFFSET);
+    this.aosAnchorOffset.set(
+      width < 1000 ? Math.round(this.DEFAULT_OFFSET - this.DEFAULT_OFFSET) : this.DEFAULT_OFFSET
+    );
   }
 }

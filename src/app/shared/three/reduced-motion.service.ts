@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { Observable, fromEvent, map, startWith } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
@@ -7,8 +8,6 @@ export class ReducedMotionService {
     '(prefers-reduced-motion: reduce)'
   );
 
-  readonly prefersReducedMotion = this.mediaQuery.matches;
-
   readonly prefersReducedMotion$: Observable<boolean> = fromEvent<MediaQueryListEvent>(
     this.mediaQuery,
     'change'
@@ -16,4 +15,8 @@ export class ReducedMotionService {
     map((event) => event.matches),
     startWith(this.mediaQuery.matches)
   );
+
+  readonly prefersReducedMotion = toSignal(this.prefersReducedMotion$, {
+    initialValue: this.mediaQuery.matches,
+  });
 }

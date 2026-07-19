@@ -1,4 +1,10 @@
-import { Component, HostBinding, Input } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  HostBinding,
+  computed,
+  input,
+} from '@angular/core';
 
 // Intrinsic pixel size of each decoration SVG, used to reproduce the
 // natural sizing/aspect-ratio an <img> would have had before the switch
@@ -11,36 +17,31 @@ const INTRINSIC_SIZE: Record<string, { width: number; height: number }> = {
 };
 
 @Component({
-    selector: 'app-bg-decoration',
-    imports: [],
-    templateUrl: './bg-decoration.component.html'
+  selector: 'app-bg-decoration',
+  imports: [],
+  templateUrl: './bg-decoration.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BgDecorationComponent {
-  @Input() src = '';
-  @Input() filter: 'primary' | 'secundary' = 'primary';
+  readonly src = input('');
+  readonly filter = input<'primary' | 'secundary'>('primary');
 
   @HostBinding('attr.data-aos') aos = 'fade';
   @HostBinding('attr.data-aos-delay') aosDelay = '100';
 
-  get filterClass(): string {
-    return this.filter + '-filter-blur';
-  }
+  readonly filterClass = computed(() => `${this.filter()}-filter-blur`);
 
-  get maskImage(): string {
-    return `url(${this.src})`;
-  }
+  readonly maskImage = computed(() => `url(${this.src()})`);
 
-  private get intrinsicSize(): { width: number; height: number } {
-    const filename = this.src.split('/').pop() ?? '';
+  private readonly intrinsicSize = computed(() => {
+    const filename = this.src().split('/').pop() ?? '';
     return INTRINSIC_SIZE[filename] ?? { width: 1, height: 1 };
-  }
+  });
 
-  get intrinsicWidth(): number {
-    return this.intrinsicSize.width;
-  }
+  readonly intrinsicWidth = computed(() => this.intrinsicSize().width);
 
-  get aspectRatio(): string {
-    const { width, height } = this.intrinsicSize;
+  readonly aspectRatio = computed(() => {
+    const { width, height } = this.intrinsicSize();
     return `${width} / ${height}`;
-  }
+  });
 }

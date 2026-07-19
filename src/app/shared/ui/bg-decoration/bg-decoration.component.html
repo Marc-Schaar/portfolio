@@ -1,7 +1,7 @@
 <span
-  [class]="filterClass"
-  [style.width.px]="intrinsicWidth"
-  [style.aspect-ratio]="aspectRatio"
-  [style]="'mask-image: ' + maskImage + '; -webkit-mask-image: ' + maskImage"
+  [class]="filterClass()"
+  [style.width.px]="intrinsicWidth()"
+  [style.aspect-ratio]="aspectRatio()"
+  [style]="'mask-image: ' + maskImage() + '; -webkit-mask-image: ' + maskImage()"
   aria-hidden="true"
 ></span>
