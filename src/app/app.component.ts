@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 import { RouterOutlet } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
-import { HeaderComponent } from './shared/header/header.component';
-import { FooterComponent } from './shared/footer/footer.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { FooterComponent } from './layout/footer/footer.component';
 import { AmbientBackgroundComponent } from './shared/ui/ambient-background/ambient-background.component';
 
 @Component({
