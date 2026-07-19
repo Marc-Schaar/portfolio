@@ -12,24 +12,24 @@ export type ProjectCategory = 'frontend' | 'backend' | 'fullstack';
 export type ProjectFilter = 'all' | ProjectCategory;
 
 @Component({
-    selector: 'app-portfolio',
-    imports: [
-        TranslateModule,
-        CommonModule,
-        BgDecorationComponent,
-        SectionTitleComponent,
-        TiltDirective,
-    ],
-    templateUrl: './portfolio.component.html',
-    styleUrls: [
-        './portfolio.component.scss',
-        './portfolio.responsive.component.scss',
-    ]
+  selector: 'app-portfolio',
+  imports: [
+    TranslateModule,
+    CommonModule,
+    BgDecorationComponent,
+    SectionTitleComponent,
+    TiltDirective,
+  ],
+  templateUrl: './portfolio.component.html',
+  styleUrls: [
+    './portfolio.component.scss',
+    './portfolio.responsive.component.scss',
+  ],
 })
 export class PortfolioComponent {
   private readonly reducedMotion = inject(ReducedMotionService);
   readonly useStaticBackground = shouldUseStaticBackgroundFallback(
-    this.reducedMotion.prefersReducedMotion
+    this.reducedMotion.prefersReducedMotion,
   );
 
   public projects: {
@@ -76,18 +76,19 @@ export class PortfolioComponent {
       skills: ['JavaScript', 'OOP-Patterns', 'CSS3', 'HTML5'],
     },
     {
-      title: 'Pokedex',
-      description: 'pokedexDescription',
-      image: 'pokedex',
-      liveUrl: 'https://pokedex.marc-schaar.com',
-      githubUrl: 'https://github.com/Marc-Schaar/pokedex',
-      category: 'frontend',
+      title: 'Coderr',
+      description: 'coderrDescription',
+      image: 'coderr',
+      liveUrl: 'https://coderr.marc-schaar.com',
+      githubUrl: 'https://github.com/Marc-Schaar/coderr_backend',
+      category: 'backend',
       skills: [
-        'JavaScript',
-        'REST API (PokéAPI)',
-        'Bootstrap 5',
-        'CSS3',
-        'HTML5',
+        'Python',
+        'Django',
+        'Django REST Framework',
+        'PostgreSQL',
+        'Docker',
+        'GitHub Actions',
       ],
     },
     {
@@ -104,22 +105,6 @@ export class PortfolioComponent {
         'PostgreSQL',
         'Gunicorn',
         'Nginx',
-      ],
-    },
-    {
-      title: 'Coderr',
-      description: 'coderrDescription',
-      image: 'coderr',
-      liveUrl: 'https://coderr.marc-schaar.com',
-      githubUrl: 'https://github.com/Marc-Schaar/coderr_backend',
-      category: 'backend',
-      skills: [
-        'Python',
-        'Django',
-        'Django REST Framework',
-        'PostgreSQL',
-        'Docker',
-        'GitHub Actions',
       ],
     },
   ];

@@ -1,4 +1,3 @@
-
 import { Component, inject } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { BgDecorationComponent } from '../../shared/ui/bg-decoration/bg-decoration.component';
@@ -8,20 +7,20 @@ import { shouldUseStaticBackgroundFallback } from '../../shared/three/ambient-fa
 import { SkillsParticlesComponent } from './skills-particles/skills-particles.component';
 
 @Component({
-    selector: 'app-skills',
-    imports: [
+  selector: 'app-skills',
+  imports: [
     TranslateModule,
     BgDecorationComponent,
     SectionTitleComponent,
-    SkillsParticlesComponent
-],
-    templateUrl: './skills.component.html',
-    styleUrls: ['./skills.component.scss', './skills.responsive.component.scss']
+    SkillsParticlesComponent,
+  ],
+  templateUrl: './skills.component.html',
+  styleUrls: ['./skills.component.scss', './skills.responsive.component.scss'],
 })
 export class SkillsComponent {
   private readonly reducedMotion = inject(ReducedMotionService);
   readonly useStaticBackground = shouldUseStaticBackgroundFallback(
-    this.reducedMotion.prefersReducedMotion
+    this.reducedMotion.prefersReducedMotion,
   );
 
   frontEndSkills: string[] = [
@@ -31,8 +30,6 @@ export class SkillsComponent {
     'TypeScript',
     'Angular',
     'RxJs',
-    'React',
-    'Vue',
     'Firebase',
     'Supabase',
     'Rest Api',
@@ -46,7 +43,6 @@ export class SkillsComponent {
     'Python',
     'Django',
     'DRF',
-    'Flask',
     'PostgreSQL',
     'SQL',
     'Redis',
