@@ -57,10 +57,10 @@
             <p>{{ "portfolio." + projcet.description | translate }}</p>
             <div class="row">
               <button class="primary hover-secundary">
-                <a [href]="projcet.liveUrl" target="_blank">Live Test</a>
+                <a [href]="projcet.liveUrl" target="_blank">{{ "portfolio.liveTest" | translate }}</a>
               </button>
               <button class="secundary-border hover-secundary">
-                <a [href]="projcet.githubUrl" target="_blank">Git Hub</a>
+                <a [href]="projcet.githubUrl" target="_blank">{{ "portfolio.github" | translate }}</a>
               </button>
             </div>
           </div>

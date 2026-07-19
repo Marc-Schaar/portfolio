@@ -46,6 +46,8 @@
     "daBubbleDescription": "DA-Bubble is a real-time chat messenger inspired by Slack, built with Angular and Firebase. Users can communicate via public channels or private direct messages. The app features a clean user interface, fast synchronization via Firestore, and secure authentication using Firebase Auth.",
     "kanMindDescription": "RESTful API backend for KanMind, a collaborative Kanban board application. Built with Django and Django REST Framework, featuring token-based authentication and role-based permissions for boards, tasks, and comments. Deployed to production with PostgreSQL, Gunicorn, and Nginx, secured via Let's Encrypt.",
     "coderrDescription": "RESTful API backend for Coderr, a service marketplace connecting freelance developers with clients. Built with Django and Django REST Framework, handling offers, orders, reviews, and fine-grained permissions. Runs containerized with Docker and ships through a fully automated CI/CD pipeline with GitHub Actions.",
+    "liveTest": "Live Demo",
+    "github": "GitHub",
     "filters": {
       "all": "All",
       "frontend": "Frontend",

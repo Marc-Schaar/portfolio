@@ -44,6 +44,8 @@
     "daBubbleDescription": "DA-Bubble ist ein Echtzeit-Chat-Messenger, inspiriert von Slack, entwickelt mit Angular und Firebase. Nutzer können in öffentlichen Channels oder privaten Direktnachrichten kommunizieren. Die Anwendung bietet eine übersichtliche Benutzeroberfläche, schnelle Synchronisation über Firestore sowie eine sichere Authentifizierung über Firebase Auth.",
     "kanMindDescription": "RESTful API-Backend für KanMind, eine kollaborative Kanban-Board-Anwendung. Entwickelt mit Django und Django REST Framework, mit tokenbasierter Authentifizierung sowie rollenbasierten Berechtigungen für Boards, Aufgaben und Kommentare. Im produktiven Betrieb läuft die API mit PostgreSQL, Gunicorn und Nginx, abgesichert über Let's Encrypt.",
     "coderrDescription": "RESTful API-Backend für Coderr, einen Marktplatz, der freiberufliche Entwickler mit Kunden verbindet. Entwickelt mit Django und Django REST Framework, mit Angeboten, Bestellungen, Bewertungen und feingranularen Berechtigungen. Läuft containerisiert mit Docker und wird über eine vollautomatisierte CI/CD-Pipeline mit GitHub Actions getestet und deployed.",
+    "liveTest": "Live-Demo",
+    "github": "GitHub",
     "filters": {
       "all": "Alle",
       "frontend": "Frontend",
@@ -139,7 +141,7 @@
     },
     "section-5": {
       "title": "Welche Rechte haben Sie bezüglich Ihrer Daten?",
-      "content-p1": "Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empf#nger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese Einwilligung jederzeit für die Zukunft widerrufen. Außerdem haben Sie das Recht, unter bestimmten Umständen die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.",
+      "content-p1": "Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese Einwilligung jederzeit für die Zukunft widerrufen. Außerdem haben Sie das Recht, unter bestimmten Umständen die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.",
       "content-p2": "Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit an uns wenden."
     },
     "section-6": {
