@@ -142,7 +142,11 @@
         [ariaLabel]="'contact.scrollButtonAlt' | translate"
         (clicked)="scroll()"
       >
-        <img src="assets/icons/navigation/up.png" alt="" />
+        <span
+          class="icon-mask"
+          style="width: 39px; height: 39px; mask-image: url(assets/icons/navigation/up.png); -webkit-mask-image: url(assets/icons/navigation/up.png)"
+          aria-hidden="true"
+        ></span>
       </app-button>
     </section>
   </div>

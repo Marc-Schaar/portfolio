@@ -36,18 +36,20 @@
   top: 6%;
   left: 0;
 
-  > img {
+  > .shadow {
     height: 100%;
   }
 
   > #shadow-left {
     position: relative;
     left: 6vw;
+    aspect-ratio: 541 / 795;
   }
 
   > #shadow-right {
     position: relative;
     right: 6vw;
+    aspect-ratio: 598 / 690;
   }
 }
 

@@ -49,11 +49,12 @@
   opacity: 1;
   transition: all 1ms ease;
 
-  > img {
+  > .primary-filter {
     position: absolute;
     top: -42px;
     left: -69px;
     width: 96px;
+    aspect-ratio: 97 / 69;
   }
 
   > .row {
@@ -113,13 +114,13 @@
     padding: 4px;
     cursor: pointer;
 
-    img {
+    .primary-filter {
       transition: scale 0.125s ease-in-out;
     }
 
-    &.active img {
+    &.active .primary-filter {
       scale: 1.5;
-      filter: brightness(1.5) var(--filterSecundary) !important;
+      background-color: var(--secundary) !important;
     }
   }
 }
@@ -135,7 +136,7 @@
   right: 0;
   width: 240px;
 
-  > img {
+  > span {
     width: 250%;
     transform: scaleX(-1);
     rotate: -90deg;

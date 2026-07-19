@@ -3,7 +3,11 @@
     <div class="row">
       <div class="row gap max-width" data-aos="fade-right">
         <section class="references">
-          <img class="primary-filter" src="assets/icons/quotation_mark.png" alt="" />
+          <span
+            class="primary-filter"
+            style="mask-image: url(assets/icons/quotation_mark.png); -webkit-mask-image: url(assets/icons/quotation_mark.png)"
+            aria-hidden="true"
+          ></span>
           <p>{{ "references." + references[currentIndex].name | translate }}</p>
           <div class="row">
             <div class="line"></div>
@@ -22,11 +26,11 @@
 
     <section id="index-row" class="index-row" data-aos="fade-up">
       <button type="button" [attr.aria-label]="'references.previousLabel' | translate" (click)="back()">
-        <img
+        <span
           class="secundary-filter"
-          src="assets/icons/navigation/arrow_back.png"
-          alt=""
-          />
+          style="width: 32px; height: 32px; mask-image: url(assets/icons/navigation/arrow_back.png); -webkit-mask-image: url(assets/icons/navigation/arrow_back.png)"
+          aria-hidden="true"
+        ></span>
         </button>
 
         <div class="dots" role="group" [attr.aria-label]="'references.dotsLabel' | translate">
@@ -40,17 +44,21 @@
               [attr.aria-label]="'references.goToSlide' | translate: { number: i + 1 }"
               (click)="goTo(i)"
               >
-              <img class="primary-filter" src="assets/icons/dot.png" alt="" />
+              <span
+                class="primary-filter"
+                style="width: 9px; height: 8px; mask-image: url(assets/icons/dot.png); -webkit-mask-image: url(assets/icons/dot.png)"
+                aria-hidden="true"
+              ></span>
             </button>
           }
         </div>
 
         <button type="button" [attr.aria-label]="'references.nextLabel' | translate" (click)="next()">
-          <img
+          <span
             class="secundary-filter"
-            src="assets/icons/navigation/arrow_forward.png"
-            alt=""
-            />
+            style="width: 32px; height: 32px; mask-image: url(assets/icons/navigation/arrow_forward.png); -webkit-mask-image: url(assets/icons/navigation/arrow_forward.png)"
+            aria-hidden="true"
+          ></span>
           </button>
         </section>
 

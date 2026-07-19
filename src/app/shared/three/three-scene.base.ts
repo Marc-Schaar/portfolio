@@ -66,9 +66,12 @@ export abstract class ThreeSceneComponent implements AfterViewInit, OnDestroy {
 
   protected abstract setupScene(
     scene: THREE.Scene,
-    camera: THREE.PerspectiveCamera
+    camera: THREE.PerspectiveCamera,
   ): void;
-  protected abstract onFrame(elapsedSeconds: number, deltaSeconds: number): void;
+  protected abstract onFrame(
+    elapsedSeconds: number,
+    deltaSeconds: number,
+  ): void;
   protected onResize(_width: number, _height: number): void {}
   protected onSectionRatio(_ratio: number): void {}
 
@@ -85,7 +88,7 @@ export abstract class ThreeSceneComponent implements AfterViewInit, OnDestroy {
       antialias: getDeviceTier() !== 'low',
     });
     this.renderer.setPixelRatio(
-      Math.min(window.devicePixelRatio, this.maxPixelRatio)
+      Math.min(window.devicePixelRatio, this.maxPixelRatio),
     );
 
     this.setupScene(this.scene, this.camera);

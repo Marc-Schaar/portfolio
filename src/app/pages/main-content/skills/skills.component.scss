@@ -122,8 +122,10 @@ button {
   .learning-icon {
     &:hover {
       color: white;
-      filter: brightness(0) saturate(100%) invert(100%) sepia(0%)
-        saturate(6835%) hue-rotate(287deg) brightness(100%) contrast(116%);
+
+      #learning-icon {
+        background-color: white;
+      }
     }
 
     &:hover ~ #spech-bubble {

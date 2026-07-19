@@ -26,7 +26,12 @@
               class="row"
               [attr.id]="row.rowId"
               >
-              <img class="secundary-filter" [src]="row.icon" alt="" />
+              <span
+                class="secundary-filter"
+                style="width: 48px; height: 48px"
+                [style]="'mask-image: url(' + row.icon + '); -webkit-mask-image: url(' + row.icon + ')'"
+                aria-hidden="true"
+              ></span>
               <p data-aos="fade-up" [attr.data-aos-anchor]="row.anchor">
                 {{ row.textKey | translate }}
               </p>

@@ -24,7 +24,7 @@
   display: flex;
   align-items: center;
 
-  > img {
+  > span {
     transition: all 0.125s ease-in-out;
 
     &:hover {
@@ -98,7 +98,7 @@
   width: 280px;
   z-index: 40;
 
-  > img {
+  > span {
     position: relative;
     z-index: -1;
     width: 250%;
