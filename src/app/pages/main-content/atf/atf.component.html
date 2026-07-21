@@ -5,7 +5,17 @@
     }
 
     <section class="img-container" data-aos="fade" data-aos-delay="150">
-      <img class="hero-img" src="assets/img/me/portrait.png" alt="" />
+      <picture>
+        <source srcset="assets/img/me/portrait.webp" type="image/webp" />
+        <img
+          class="hero-img"
+          ngSrc="assets/img/me/portrait.png"
+          width="894"
+          height="1023"
+          priority
+          alt=""
+        />
+      </picture>
       <div class="shadow-container">
         <span
           id="shadow-left"
@@ -46,10 +56,10 @@
       <div class="line"></div>
       <div class="row">
         <a href="https://github.com/Marc-Schaar" target="_blank"
-          ><img class="icon" src="assets/icons/git.png" [attr.alt]="'social.githubAlt' | translate"
+          ><img class="icon" ngSrc="assets/icons/git.png" width="31" height="30" [attr.alt]="'social.githubAlt' | translate"
         /></a>
         <a href="mailto:kontakt@marc-schaar.com"
-          ><img class="icon" src="assets/icons/mail.png" [attr.alt]="'social.mailAlt' | translate"
+          ><img class="icon" ngSrc="assets/icons/mail.png" width="30" height="30" [attr.alt]="'social.mailAlt' | translate"
         /></a>
         <!-- <a href="https://linkedin.com/" target="_blank"><img class="icon" src="assets/icons/linkedin.png"
                     alt="Linkedin Link"></a> -->
@@ -57,10 +67,18 @@
       </div>
     </div>
 
-    <img
-      class="hero-bg"
-      src="assets/img/background-objects/hero-background.png"
-      alt=""
-    />
+    <picture>
+      <source
+        srcset="assets/img/background-objects/hero-background.webp"
+        type="image/webp"
+      />
+      <img
+        class="hero-bg"
+        ngSrc="assets/img/background-objects/hero-background.png"
+        width="1442"
+        height="1079"
+        alt=""
+      />
+    </picture>
   </aside>
 </div>

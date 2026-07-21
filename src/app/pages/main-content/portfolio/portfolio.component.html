@@ -26,17 +26,25 @@
         class="max-width"
         [class.row-reverse]="i % 2 === 0"
         >
-        <img
-          appTilt
-          [tiltZone]="projectRow"
-          [src]="'assets/img/projects/' + projcet.image + '.png'"
-          [attr.alt]="'portfolio.projectImageAlt' | translate: { title: projcet.title }"
-          [attr.data-aos]="aosEffects[i % aosEffects.length]"
-          [attr.data-aos-delay]="baseDelay * i"
-          [attr.data-aos-duration]="aosDuration"
-          [attr.data-aos-anchor]="'#project-' + i"
-          [attr.data-aos-anchor-offset]="aosAnchorOffset()"
+        <picture>
+          <source
+            [srcset]="'assets/img/projects/' + projcet.image + '.webp'"
+            type="image/webp"
           />
+          <img
+            appTilt
+            [tiltZone]="projectRow"
+            [ngSrc]="'assets/img/projects/' + projcet.image + '.png'"
+            width="620"
+            height="339"
+            [attr.alt]="'portfolio.projectImageAlt' | translate: { title: projcet.title }"
+            [attr.data-aos]="aosEffects[i % aosEffects.length]"
+            [attr.data-aos-delay]="baseDelay * i"
+            [attr.data-aos-duration]="aosDuration"
+            [attr.data-aos-anchor]="'#project-' + i"
+            [attr.data-aos-anchor-offset]="aosAnchorOffset()"
+            />
+        </picture>
           <div
             class="box"
             [attr.data-aos]="aosEffects[(i + 1) % aosEffects.length]"

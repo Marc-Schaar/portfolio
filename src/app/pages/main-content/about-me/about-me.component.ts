@@ -1,5 +1,6 @@
 
 import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { BgDecorationComponent } from '../../../shared/ui/bg-decoration/bg-decoration.component';
 import { SectionTitleComponent } from '../../../shared/ui/section-title/section-title.component';
@@ -11,7 +12,8 @@ import { shouldUseStaticBackgroundFallback } from '../../../shared/three/ambient
     imports: [
     TranslateModule,
     BgDecorationComponent,
-    SectionTitleComponent
+    SectionTitleComponent,
+    NgOptimizedImage
 ],
     templateUrl: './about-me.component.html',
     styleUrls: [

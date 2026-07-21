@@ -43,12 +43,17 @@
 
     <section class="img-container">
       <div class="box">
-        <img
-          src="assets/img/me/portrait.png"
-          [attr.alt]="'aboutMe.photoAlt' | translate"
-          data-aos="zoom-in"
-          [attr.data-aos-anchor]="'#about-me-description2'"
-          />
+        <picture>
+          <source srcset="assets/img/me/portrait.webp" type="image/webp" />
+          <img
+            ngSrc="assets/img/me/portrait.png"
+            width="894"
+            height="1023"
+            [attr.alt]="'aboutMe.photoAlt' | translate"
+            data-aos="zoom-in"
+            [attr.data-aos-anchor]="'#about-me-description2'"
+            />
+        </picture>
         </div>
       </section>
     </div>

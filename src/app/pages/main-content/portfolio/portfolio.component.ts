@@ -6,6 +6,7 @@ import {
   inject,
   signal,
 } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import AOS from 'aos';
 import { BgDecorationComponent } from '../../../shared/ui/bg-decoration/bg-decoration.component';
@@ -24,6 +25,7 @@ export type ProjectFilter = 'all' | ProjectCategory;
     BgDecorationComponent,
     SectionTitleComponent,
     TiltDirective,
+    NgOptimizedImage,
   ],
   templateUrl: './portfolio.component.html',
   styleUrls: [
