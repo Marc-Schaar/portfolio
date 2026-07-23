@@ -19,6 +19,15 @@ img {
   pointer-events: none;
 }
 
+// Keeps <picture> transparent in the layout tree so wrapping an <img> in a
+// <picture>/<source> (for WebP) doesn't change its sizing: without this,
+// browsers blockify the (default display:inline) <picture> into its own box
+// when it's a flex item, which breaks percentage width/height on the <img>
+// inside (e.g. the about-me portrait rendering uncropped/oversized).
+picture {
+  display: contents;
+}
+
 body {
   background-color: var(--bg-color);
   color: white;
