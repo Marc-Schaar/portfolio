@@ -115,6 +115,23 @@ export class PortfolioComponent {
         'Nginx',
       ],
     },
+    {
+      title: 'Videoflix',
+      description: 'videoflixDescription',
+      image: 'videoflix',
+      liveUrl: 'https://videoflix.marc-schaar.com',
+      githubUrl: 'https://github.com/Marc-Schaar/videoflix_backend',
+      category: 'backend',
+      skills: [
+        'Python',
+        'Django',
+        'Django REST Framework',
+        'PostgreSQL',
+        'Redis',
+        'Docker',
+        'GitHub Actions',
+      ],
+    },
   ];
 
   public filters: ProjectFilter[] = [
