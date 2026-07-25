@@ -37,7 +37,9 @@ export type ProjectFilter = 'all' | ProjectCategory;
 export class PortfolioComponent {
   private readonly reducedMotion = inject(ReducedMotionService);
   readonly useStaticBackground = computed(() =>
-    shouldUseStaticBackgroundFallback(this.reducedMotion.prefersReducedMotion())
+    shouldUseStaticBackgroundFallback(
+      this.reducedMotion.prefersReducedMotion(),
+    ),
   );
 
   public projects: {
@@ -84,6 +86,23 @@ export class PortfolioComponent {
       skills: ['JavaScript', 'OOP-Patterns', 'CSS3', 'HTML5'],
     },
     {
+      title: 'Videoflix',
+      description: 'videoflixDescription',
+      image: 'videoflix',
+      liveUrl: 'https://videoflix.marc-schaar.com',
+      githubUrl: 'https://github.com/Marc-Schaar/videoflix_backend',
+      category: 'backend',
+      skills: [
+        'Python',
+        'Django',
+        'Django REST Framework',
+        'PostgreSQL',
+        'Redis',
+        'Docker',
+        'GitHub Actions',
+      ],
+    },
+    {
       title: 'Coderr',
       description: 'coderrDescription',
       image: 'coderr',
@@ -113,23 +132,6 @@ export class PortfolioComponent {
         'PostgreSQL',
         'Gunicorn',
         'Nginx',
-      ],
-    },
-    {
-      title: 'Videoflix',
-      description: 'videoflixDescription',
-      image: 'videoflix',
-      liveUrl: 'https://videoflix.marc-schaar.com',
-      githubUrl: 'https://github.com/Marc-Schaar/videoflix_backend',
-      category: 'backend',
-      skills: [
-        'Python',
-        'Django',
-        'Django REST Framework',
-        'PostgreSQL',
-        'Redis',
-        'Docker',
-        'GitHub Actions',
       ],
     },
   ];
@@ -170,7 +172,9 @@ export class PortfolioComponent {
 
   private updateAnchorOffset(width: number) {
     this.aosAnchorOffset.set(
-      width < 1000 ? Math.round(this.DEFAULT_OFFSET - this.DEFAULT_OFFSET) : this.DEFAULT_OFFSET
+      width < 1000
+        ? Math.round(this.DEFAULT_OFFSET - this.DEFAULT_OFFSET)
+        : this.DEFAULT_OFFSET,
     );
   }
 }
