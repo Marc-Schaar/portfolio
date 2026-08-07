@@ -19,18 +19,24 @@
           <label for="name">
             {{ "contact.form.labels.name" | translate }}
             <span class="required-indicator" aria-hidden="true">*</span>
-            <span class="visually-hidden">({{ "contact.form.requiredIndicator" | translate }})</span>
+            <span class="visually-hidden"
+              >({{ "contact.form.requiredIndicator" | translate }})</span
+            >
           </label>
           <app-input
             inputId="name"
             type="text"
             formControlName="name"
             placeholder="{{ 'contact.form.placeholders.name' | translate }}"
-            [invalid]="!!name?.invalid && !!(name?.dirty || name?.touched)"
+            [invalid]="!!name?.invalid && !!(name.dirty || name.touched)"
             [valid]="!!name?.valid"
             [showValidationIcon]="true"
             [required]="true"
-            [ariaDescribedBy]="(name?.invalid && (name?.dirty || name?.touched)) ? 'name-error' : null"
+            [ariaDescribedBy]="
+              name?.invalid && (name.dirty || name.touched)
+                ? 'name-error'
+                : null
+            "
             autocomplete="given-name"
           ></app-input>
           <app-field-error
@@ -38,7 +44,7 @@
             [control]="name"
             [messages]="{
               required: ['contact.form.validation.nameRequired'],
-              minlength: ['contact.form.validation.nameMinLength']
+              minlength: ['contact.form.validation.nameMinLength'],
             }"
           ></app-field-error>
         </div>
@@ -47,18 +53,24 @@
           <label for="email">
             {{ "contact.form.labels.email" | translate }}
             <span class="required-indicator" aria-hidden="true">*</span>
-            <span class="visually-hidden">({{ "contact.form.requiredIndicator" | translate }})</span>
+            <span class="visually-hidden"
+              >({{ "contact.form.requiredIndicator" | translate }})</span
+            >
           </label>
           <app-input
             inputId="email"
             type="email"
             formControlName="email"
             placeholder="{{ 'contact.form.placeholders.email' | translate }}"
-            [invalid]="!!email?.invalid && !!(email?.dirty || email?.touched)"
+            [invalid]="!!email?.invalid && !!(email.dirty || email.touched)"
             [valid]="!!email?.valid"
             [showValidationIcon]="true"
             [required]="true"
-            [ariaDescribedBy]="(email?.invalid && (email?.dirty || email?.touched)) ? 'email-error' : null"
+            [ariaDescribedBy]="
+              email?.invalid && (email.dirty || email.touched)
+                ? 'email-error'
+                : null
+            "
             autocomplete="email"
           ></app-input>
           <app-field-error
@@ -68,8 +80,8 @@
               required: ['contact.form.validation.emailRequired'],
               pattern: [
                 'contact.form.validation.emailPattern',
-                'contact.form.validation.emailPatternExample'
-              ]
+                'contact.form.validation.emailPatternExample',
+              ],
             }"
           ></app-field-error>
         </div>
@@ -78,23 +90,31 @@
           <label for="message">
             {{ "contact.form.labels.message" | translate }}
             <span class="required-indicator" aria-hidden="true">*</span>
-            <span class="visually-hidden">({{ "contact.form.requiredIndicator" | translate }})</span>
+            <span class="visually-hidden"
+              >({{ "contact.form.requiredIndicator" | translate }})</span
+            >
           </label>
           <app-textarea
             inputId="message"
             formControlName="message"
             placeholder="{{ 'contact.form.placeholders.message' | translate }}"
-            [invalid]="!!message?.invalid && !!(message?.dirty || message?.touched)"
+            [invalid]="
+              !!message?.invalid && !!(message.dirty || message.touched)
+            "
             [valid]="!!message?.valid"
             [showValidationIcon]="true"
             [required]="true"
-            [ariaDescribedBy]="(message?.invalid && (message?.dirty || message?.touched)) ? 'message-error' : null"
+            [ariaDescribedBy]="
+              message?.invalid && (message.dirty || message.touched)
+                ? 'message-error'
+                : null
+            "
           ></app-textarea>
           <app-field-error
             errorId="message-error"
             [control]="message"
             [messages]="{
-              required: ['contact.form.validation.messageRequired']
+              required: ['contact.form.validation.messageRequired'],
             }"
           ></app-field-error>
         </div>
@@ -106,7 +126,11 @@
               type="checkbox"
               formControlName="privacy"
               aria-labelledby="privacy-consent-text"
-              [attr.aria-describedby]="(privacy?.invalid && (privacy?.dirty || privacy?.touched)) ? 'privacy-error' : null"
+              [attr.aria-describedby]="
+                privacy?.invalid && (privacy.dirty || privacy.touched)
+                  ? 'privacy-error'
+                  : null
+              "
             />
             <label for="checkbox"></label>
           </div>
@@ -123,7 +147,7 @@
           errorId="privacy-error"
           [control]="privacy"
           [messages]="{
-            required: ['contact.form.validation.privacyRequired']
+            required: ['contact.form.validation.privacyRequired'],
           }"
         ></app-field-error>
 
@@ -131,7 +155,11 @@
           {{ "contact.form.button" | translate }}
         </app-button>
 
-        <span [class.show]="mailSendSucess()" class="succesMsg" role="status" aria-live="polite"
+        <span
+          [class.show]="mailSendSucess()"
+          class="succesMsg"
+          role="status"
+          aria-live="polite"
           >{{ "contact.succesMsg" | translate }}!</span
         >
       </form>
@@ -144,7 +172,12 @@
       >
         <span
           class="icon-mask"
-          style="width: 39px; height: 39px; mask-image: url(assets/icons/navigation/up.png); -webkit-mask-image: url(assets/icons/navigation/up.png)"
+          style="
+            width: 39px;
+            height: 39px;
+            mask-image: url(assets/icons/navigation/up.png);
+            -webkit-mask-image: url(assets/icons/navigation/up.png);
+          "
           aria-hidden="true"
         ></span>
       </app-button>
