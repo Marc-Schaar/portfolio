@@ -98,6 +98,7 @@ export class PortfolioComponent {
         'Django REST Framework',
         'PostgreSQL',
         'Redis',
+        'ffmpeg',
         'Docker',
         'GitHub Actions',
       ],
