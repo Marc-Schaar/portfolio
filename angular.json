@@ -37,14 +37,18 @@
               "src/assets/fonts/poppins-v22-latin/poppins.scss",
               "node_modules/aos/dist/aos.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "loader": {
+              ".png": "file",
+              ".webp": "file"
+            }
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
+                  "maximumWarning": "510kb",
                   "maximumError": "1mb"
                 },
                 {

@@ -27,14 +27,11 @@
       [class.row-reverse]="i % 2 === 0"
     >
       <picture>
-        <source
-          [srcset]="'assets/img/projects/' + projcet.image + '.webp'"
-          type="image/webp"
-        />
+        <source [srcset]="projcet.imageWebp" type="image/webp" />
         <img
           appTilt
           [tiltZone]="projectRow"
-          [ngSrc]="'assets/img/projects/' + projcet.image + '.png'"
+          [ngSrc]="projcet.imagePng"
           width="620"
           height="339"
           [attr.alt]="

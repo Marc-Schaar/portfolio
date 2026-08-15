@@ -14,6 +14,18 @@ import { SectionTitleComponent } from '../../../shared/ui/section-title/section-
 import { TiltDirective } from '../../../shared/ui/tilt/tilt.directive';
 import { ReducedMotionService } from '../../../shared/three/reduced-motion.service';
 import { shouldUseStaticBackgroundFallback } from '../../../shared/three/ambient-fallback';
+import daBubblePng from '../../../../assets/img/projects/da-bubble.png';
+import daBubbleWebp from '../../../../assets/img/projects/da-bubble.webp';
+import joinPng from '../../../../assets/img/projects/join.png';
+import joinWebp from '../../../../assets/img/projects/join.webp';
+import elPolloLocoPng from '../../../../assets/img/projects/el-pollo-loco.png';
+import elPolloLocoWebp from '../../../../assets/img/projects/el-pollo-loco.webp';
+import videoflixPng from '../../../../assets/img/projects/videoflix.png';
+import videoflixWebp from '../../../../assets/img/projects/videoflix.webp';
+import coderrPng from '../../../../assets/img/projects/coderr.png';
+import coderrWebp from '../../../../assets/img/projects/coderr.webp';
+import kanmindPng from '../../../../assets/img/projects/kanmind.png';
+import kanmindWebp from '../../../../assets/img/projects/kanmind.webp';
 
 export type ProjectCategory = 'frontend' | 'backend' | 'fullstack';
 export type ProjectFilter = 'all' | ProjectCategory;
@@ -45,7 +57,8 @@ export class PortfolioComponent {
   public projects: {
     title: string;
     description: string;
-    image: string;
+    imagePng: string;
+    imageWebp: string;
     liveUrl: string;
     githubUrl: string;
     category: ProjectCategory;
@@ -54,7 +67,8 @@ export class PortfolioComponent {
     {
       title: 'DA Bubble',
       description: 'daBubbleDescription',
-      image: 'da-bubble',
+      imagePng: daBubblePng,
+      imageWebp: daBubbleWebp,
       liveUrl: 'https://da-bubble.marc-schaar.com',
       githubUrl: 'https://github.com/Marc-Schaar/da-bubble',
       category: 'frontend',
@@ -70,7 +84,8 @@ export class PortfolioComponent {
     {
       title: 'Join',
       description: 'joinDescription',
-      image: 'join',
+      imagePng: joinPng,
+      imageWebp: joinWebp,
       liveUrl: 'https://join.marc-schaar.com',
       githubUrl: 'https://github.com/Marc-Schaar/join',
       category: 'frontend',
@@ -79,7 +94,8 @@ export class PortfolioComponent {
     {
       title: 'El-Pollo-Loco',
       description: 'elPolloLocoDescription',
-      image: 'el-pollo-loco',
+      imagePng: elPolloLocoPng,
+      imageWebp: elPolloLocoWebp,
       liveUrl: 'https://el-pollo-loco.marc-schaar.com',
       githubUrl: 'https://github.com/Marc-Schaar/el-pollo-loco',
       category: 'frontend',
@@ -88,7 +104,8 @@ export class PortfolioComponent {
     {
       title: 'Videoflix',
       description: 'videoflixDescription',
-      image: 'videoflix',
+      imagePng: videoflixPng,
+      imageWebp: videoflixWebp,
       liveUrl: 'https://videoflix.marc-schaar.com',
       githubUrl: 'https://github.com/Marc-Schaar/videoflix_backend',
       category: 'backend',
@@ -106,7 +123,8 @@ export class PortfolioComponent {
     {
       title: 'Coderr',
       description: 'coderrDescription',
-      image: 'coderr',
+      imagePng: coderrPng,
+      imageWebp: coderrWebp,
       liveUrl: 'https://coderr.marc-schaar.com',
       githubUrl: 'https://github.com/Marc-Schaar/coderr_backend',
       category: 'backend',
@@ -122,7 +140,8 @@ export class PortfolioComponent {
     {
       title: 'KanMind',
       description: 'kanMindDescription',
-      image: 'kanmind',
+      imagePng: kanmindPng,
+      imageWebp: kanmindWebp,
       liveUrl: 'https://kanmind.marc-schaar.com',
       githubUrl: 'https://github.com/Marc-Schaar/kan_mind_backend',
       category: 'backend',
