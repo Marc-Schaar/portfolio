@@ -20,6 +20,7 @@
   > picture > img {
     position: relative;
     z-index: 2;
+    width: auto;
     height: 100%;
     object-position: 50% 100%;
   }
@@ -131,5 +132,6 @@
   position: absolute;
   margin-top: 146px;
   width: 100%;
+  height: auto;
   z-index: -10;
 }
