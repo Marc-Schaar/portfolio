@@ -20,31 +20,31 @@
   "aboutMe": {
     "title": "Über mich",
     "photoAlt": "Bild von Marc",
-    "description": "Hi, ich bin Marc, Fullstack-Entwickler aus Düsseldorf. Genau wie das Leben in seiner Vielfalt, begeistert mich auch die Welt der IT. Die grenzenlose Kreativität und die unzähligen Möglichkeiten motivieren mich, durchdachte Anwendungen zu entwickeln – von der Benutzeroberfläche bis zur Serverlogik –, die Menschen wirklich Freude bereiten.",
-    "subDescription1": "Für mich bedeutet Programmieren weit mehr als nur Code zu schreiben – es ist die Kunst, kreative Lösungen zu finden und immer wieder neue Ideen zu entwickeln, die zum Ziel führen. Ich liebe es, komplexe technische Herausforderungen in klare, intuitive Lösungen zu verwandeln, die nicht nur funktionieren, sondern das Leben einfacher und angenehmer machen.",
-    "subDescription2": "Ich bin flexibel und passe mich unterschiedlichen Arbeitsumgebungen mühelos an – ob vor Ort im inspirierenden Office mit Kolleg*innen oder Remote, ich arbeite stets effizient und zielorientiert.",
-    "subDescription3": "Ich empfinde eine gute Zusammenarbeit als echte Bereicherung und bin stets offen für neue Herausforderungen, um mein Wissen und meine Fähigkeiten weiterzuentwickeln. Als Teamplayer sehe ich mich als ein Teil des großen Ganzen – wie ein Puzzle, bei dem jedes Teil perfekt zusammenarbeitet, um das gemeinsame Ziel zu erreichen. Ich füge mich schnell in Teams ein, arbeite gerne mit anderen zusammen und passe mich flexibel an unterschiedliche Anforderungen an."
+    "description": "Hi, ich bin Marc, Fullstack-Entwickler aus Düsseldorf. Mich fasziniert an der IT vor allem, wie viele unterschiedliche Wege es gibt, ein Problem zu lösen. Am liebsten baue ich Anwendungen komplett durch, vom Interface bis zur Serverlogik, und achte dabei darauf, dass am Ende auch wirklich Freude an der Nutzung entsteht.",
+    "subDescription1": "Programmieren ist für mich mehr als Code schreiben. Es geht darum, für ein Problem den Weg zu finden, der am Ende auch trägt, nicht nur die erstbeste Lösung. Am meisten Spaß macht mir der Wechsel zwischen kniffligen technischen Fragen und einer möglichst klaren, einfachen Umsetzung dafür.",
+    "subDescription2": "Ob im Büro mit dem Team oder remote von zuhause aus, macht für mich kaum einen Unterschied. Ich finde mich schnell in neuen Umgebungen zurecht und behalte dabei das eigentliche Ziel im Blick.",
+    "subDescription3": "Aus meiner Erfahrung bringt gute Zusammenarbeit ein Projekt weiter als jede Einzelleistung, deshalb bin ich lieber Teil eines Teams als Einzelkämpfer. Neue Herausforderungen sehe ich als Chance, dazuzulernen, und finde mich in der Regel schnell in neue Teams und Anforderungen ein."
   },
   "skills": {
     "title": "Meine Fähigkeiten",
-    "experience": "Als Fullstack-Entwickler habe ich Erfahrung im Aufbau kompletter Projekte gesammelt – von durchdachten Frontend-Oberflächen bis zu robusten Backend-Architekturen und Design-Konzepten.",
+    "experience": "Als Fullstack-Entwickler baue ich Projekte von A bis Z: durchdachte Frontend-Oberflächen, robuste Backend-Architekturen und die Design-Entscheidungen dazwischen.",
     "lookingFor": "Auf der Suche nach",
     "additionalSkill": "weiteren Fähigkeiten",
-    "contactMessage": "Zögern Sie nicht mich zu kontaktieren. Ich freue mich darauf, mein Wissen zu erweitern und Neues zu lernen.",
+    "contactMessage": "Schreiben Sie mir gerne, ich lerne immer gerne dazu und bin für neue Themen offen.",
     "buttonText": "Kontakt aufnehmen",
     "groupFrontend": "Frontend",
     "groupBackend": "Backend"
   },
   "portfolio": {
-    "subtitle": "Entdecken Sie eine ausgewählte Sammlung meiner Projekte – Interagieren Sie mit ihnen, um meine Fähigkeiten hautnah zu erleben.",
+    "subtitle": "Eine Auswahl meiner Projekte, am besten selbst ausprobieren, um zu sehen, was dahintersteckt.",
     "projectImageAlt": "Desktop-Ansicht von {{title}}",
-    "joinDescription": "Join ist ein Kanban-Task-Manager im Stil von Trello, umgesetzt in reinem JavaScript (OOP) ohne Frontend-Framework. Aufgaben lassen sich per Drag & Drop durch die Spalten To do, In Progress, Await Feedback und Done bewegen, inklusive Kontaktverwaltung, Prioritäten und Unteraufgaben – die Daten liegen in der Firebase Realtime Database.",
-    "elPolloLocoDescription": "El Pollo Loco ist ein 2D-Jump-'n'-Run-Browserspiel, komplett in objektorientiertem Vanilla JavaScript auf dem HTML5 Canvas umgesetzt – ohne Engine oder Framework. Eigener Game-Loop, klassenbasierte Vererbung für Spielfiguren, Sprite-Animationen sowie ein Endboss-Kampf sorgen für abwechslungsreiches Gameplay, inklusive Touch-Steuerung für Mobilgeräte.",
-    "pokedexDescription": "Interaktive Pokédex-App, die Pokémon-Daten über eine öffentliche API lädt. Bietet detaillierte Informationen zu Pokémon, darunter Statuswerte, Fähigkeiten und Entwicklungsstufen.",
-    "daBubbleDescription": "DA Bubble ist ein Echtzeit-Team-Chat im Stil von Slack, entwickelt mit Angular 19 (Standalone Components, Signals) und Firebase. Neben Channels und Direktnachrichten bietet die App Threads, Emoji-Reaktionen sowie @user- und #channel-Mentions mit Navigation – inklusive Google- und Gast-Login sowie einem responsiven Layout für Desktop und Mobile.",
-    "kanMindDescription": "KanMind ist eine REST-API für ein kollaboratives Kanban-Board im Stil von Trello, entwickelt mit Django und Django REST Framework. Token-basierte Authentifizierung und rollenbasierte Berechtigungen regeln den Zugriff auf Boards, Aufgaben und Kommentare; die API-Dokumentation wird mit drf-spectacular als OpenAPI/Swagger-Schema bereitgestellt. Produktiv läuft sie hinter Gunicorn und Nginx mit PostgreSQL, abgesichert über Let's Encrypt.",
-    "coderrDescription": "Coderr ist die REST-API für einen Freelancer-Marktplatz, der Entwickler und Kunden zusammenbringt – entwickelt mit Django und Django REST Framework. Sie verwaltet Nutzerkonten, Angebote, Bestellungen und Bewertungen mit feingranularen Berechtigungen sowie Filter- und Suchfunktionen. Läuft containerisiert mit Docker und wird über zwei GitHub-Actions-Workflows automatisiert getestet und deployed.",
-    "videoflixDescription": "Videoflix ist eine Video-on-Demand-REST-API im Stil von Netflix, entwickelt mit Django und Django REST Framework. Hochgeladene Videos werden asynchron über einen Redis/RQ-Worker per ffmpeg in mehrere HLS-Auflösungen transkodiert, die Authentifizierung läuft über JWT in HttpOnly-Cookies inklusive Refresh-Token-Blacklisting. Vollständig containerisiert mit Docker Compose und über eine GitHub-Actions-CI/CD-Pipeline getestet und deployed.",
+    "joinDescription": "Join ist ein Kanban-Task-Manager im Stil von Trello, gebaut mit reinem JavaScript (OOP) und ohne Frontend-Framework. Aufgaben lassen sich per Drag & Drop durch die Spalten To do, In Progress, Await Feedback und Done schieben, dazu kommen Kontaktverwaltung, Prioritäten und Unteraufgaben. Die Daten liegen in der Firebase Realtime Database.",
+    "elPolloLocoDescription": "El Pollo Loco ist ein 2D-Jump-'n'-Run-Browserspiel auf dem HTML5 Canvas, komplett in objektorientiertem Vanilla JavaScript, ohne Engine oder Framework. Dazu gehören ein eigener Game-Loop, klassenbasierte Vererbung für die Spielfiguren, Sprite-Animationen und ein Endboss-Kampf, steuerbar per Tastatur oder Touch.",
+    "pokedexDescription": "Interaktive Pokédex-App, die Pokémon-Daten über eine öffentliche API lädt und Statuswerte, Fähigkeiten und Entwicklungsstufen im Detail anzeigt.",
+    "daBubbleDescription": "DA Bubble ist ein Echtzeit-Team-Chat im Stil von Slack, gebaut mit Angular 19 (Standalone Components, Signals) und Firebase. Neben Channels und Direktnachrichten gibt es Threads, Emoji-Reaktionen und @user-/#channel-Mentions mit Sprungnavigation, dazu Google- und Gast-Login sowie ein responsives Layout für Desktop und Mobile.",
+    "kanMindDescription": "KanMind ist eine REST-API für ein kollaboratives Kanban-Board im Stil von Trello, gebaut mit Django und Django REST Framework. Token-basierte Authentifizierung und rollenbasierte Berechtigungen regeln den Zugriff auf Boards, Aufgaben und Kommentare, die API-Doku liefert drf-spectacular als OpenAPI/Swagger-Schema. Im Produktivbetrieb läuft sie hinter Gunicorn und Nginx mit PostgreSQL, abgesichert über Let's Encrypt.",
+    "coderrDescription": "Coderr ist die REST-API für einen Freelancer-Marktplatz, der Entwickler und Kunden zusammenbringt, gebaut mit Django und Django REST Framework. Sie verwaltet Nutzerkonten, Angebote, Bestellungen und Bewertungen mit feingranularen Berechtigungen sowie Filter- und Suchfunktionen. Läuft containerisiert mit Docker, Tests und Deployment laufen über zwei GitHub-Actions-Workflows.",
+    "videoflixDescription": "Videoflix ist eine Video-on-Demand-REST-API im Stil von Netflix, gebaut mit Django und Django REST Framework. Ein Redis/RQ-Worker transkodiert hochgeladene Videos asynchron per ffmpeg in mehrere HLS-Auflösungen, die Authentifizierung läuft über JWT in HttpOnly-Cookies inklusive Refresh-Token-Blacklisting. Vollständig containerisiert mit Docker Compose, Tests und Deployment laufen über eine GitHub-Actions-CI/CD-Pipeline.",
     "liveTest": "Live-Demo",
     "github": "GitHub",
     "filters": {
@@ -73,7 +73,7 @@
   "contact": {
     "title": "Kontakt aufnehmen",
     "subtitle": "Haben Sie ein Anliegen oder eine Idee?",
-    "description": "Kontaktieren Sie mich über dieses Formular. Ich freue mich darauf, von Ihnen zu hören, Ihre Ideen zu erfahren und an Ihren Projekten mitzuwirken.",
+    "description": "Schreiben Sie mir über dieses Formular, ich bin gespannt auf Ihre Ideen und Ihr Projekt.",
     "needDeveloper": "Suchen Sie einen Fullstack-Entwickler?",
     "contactMe": "Lassen Sie uns reden!",
     "form": {

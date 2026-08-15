@@ -20,33 +20,33 @@
   "aboutMe": {
     "title": "About Me",
     "photoAlt": "Photo of Marc",
-    "description": "Hi, I’m Marc, a fullstack developer based in Düsseldorf. Just as life’s diversity fascinates me, so does the world of IT. The boundless creativity and countless possibilities motivate me to build well-rounded applications – from the user interface all the way down to the server logic – that truly bring joy to people.",
-    "subDescription1": "For me, programming is much more than just writing code – it’s the art of finding creative solutions and constantly developing new ideas that lead to success. I love transforming complex technical challenges into clear, intuitive solutions that not only work but also make life simpler and more enjoyable.",
-    "subDescription2": "I am flexible and adapt effortlessly to different work environments – whether on-site in an inspiring office with colleagues or working remotely, I always work efficiently and with focus.",
-    "subDescription3": "I see good collaboration as a true enrichment and am always open to new challenges to further develop my knowledge and skills. As a team player, I view myself as part of the bigger picture – like a puzzle where every piece works perfectly together to achieve the common goal. I quickly integrate into teams, enjoy working with others, and adapt flexibly to varying requirements."
+    "description": "Hi, I’m Marc, a fullstack developer based in Düsseldorf. What draws me to IT is how many different ways there are to solve the same problem. I like building things end to end, from the interface down to the server logic, and making sure they're genuinely enjoyable to use.",
+    "subDescription1": "Programming, to me, is more than writing code. It’s about finding the approach that actually holds up, not just the first one that works. I like switching between wrestling with a tricky technical problem and turning it into something simple and clear.",
+    "subDescription2": "Working from an office with colleagues or remote from home doesn’t make much difference to me. I settle into new environments quickly and keep the actual goal in sight.",
+    "subDescription3": "In my experience, good collaboration moves a project forward more than any individual effort, so I'd rather be part of a team than work alone. I treat new challenges as a chance to learn, and I usually find my footing quickly in new teams and requirements."
   },
   "skills": {
     "title": "My Skills",
-    "experience": "As a fullstack developer, I have experience building complete projects – from thoughtful frontend interfaces to robust backend architectures and design concepts.",
+    "experience": "As a fullstack developer, I build projects end to end: thoughtful frontend interfaces, robust backend architectures, and the design decisions in between.",
     "lookingFor": "Seeking",
     "additionalSkill": "an additional skill",
-    "contactMessage": "Don't hesitate to get in touch. I'm excited to build on my existing expertise and learn more.",
+    "contactMessage": "Feel free to reach out, I enjoy building on what I know and picking up new things.",
     "buttonText": "Get in touch",
     "groupFrontend": "Frontend",
     "groupBackend": "Backend"
   },
   "portfolio": {
-    "subtitle": "Discover a curated collection of my projects - Engage with them to experience my skills firsthand.",
+    "subtitle": "A selection of my projects, best explored hands-on to see what's behind them.",
     "projectImageAlt": "Desktop view of {{title}}",
-    "joinDescription": "Join is a Trello-style Kanban task manager built with vanilla JavaScript (OOP) and no frontend framework. Tasks move via drag and drop through To Do, In Progress, Await Feedback, and Done columns, with contact management, priorities, and subtasks — backed by the Firebase Realtime Database.",
+    "joinDescription": "Join is a Trello-style Kanban task manager built with plain JavaScript (OOP) and no frontend framework. Tasks move via drag and drop through To Do, In Progress, Await Feedback, and Done, plus contact management, priorities, and subtasks. Data lives in the Firebase Realtime Database.",
 
-    "elPolloLocoDescription": "El Pollo Loco is a 2D jump-'n'-run browser game rendered entirely on the HTML5 Canvas in object-oriented vanilla JavaScript — no engine, no framework. A custom game loop, class-based inheritance for game objects, sprite animations, and a boss fight deliver varied gameplay, with touch controls for mobile.",
+    "elPolloLocoDescription": "El Pollo Loco is a 2D jump-'n'-run browser game on the HTML5 Canvas, built entirely in object-oriented vanilla JavaScript, no engine, no framework. It has a custom game loop, class-based inheritance for the game objects, sprite animations, and a boss fight, playable with keyboard or touch controls.",
 
-    "pokedexDescription": "Interactive Pokédex app that fetches Pokémon data from a public API. Provides detailed information on each Pokémon, including stats, abilities, and evolutions.",
-    "daBubbleDescription": "DA Bubble is a real-time, Slack-style team chat built with Angular 19 (standalone components, signals) and Firebase. Beyond channels and direct messages, it supports threads, emoji reactions, and @user/#channel mentions with navigation — complete with Google and guest login and a responsive layout for desktop and mobile.",
-    "kanMindDescription": "KanMind is a REST API for a Trello-style collaborative Kanban board, built with Django and Django REST Framework. Token-based authentication and role-based permissions control access to boards, tasks, and comments, with API documentation served as an OpenAPI/Swagger schema via drf-spectacular. Runs in production behind Gunicorn and Nginx with PostgreSQL, secured via Let's Encrypt.",
-    "coderrDescription": "Coderr is the REST API for a freelance marketplace connecting developers and clients, built with Django and Django REST Framework. It manages user accounts, offers, orders, and reviews with fine-grained permissions plus filtering and search. Runs containerized with Docker and ships through two GitHub Actions workflows for automated testing and deployment.",
-    "videoflixDescription": "Videoflix is a Netflix-style video-on-demand REST API built with Django and Django REST Framework. Uploaded videos are transcoded asynchronously via a Redis/RQ worker and ffmpeg into multiple HLS resolutions, with authentication handled through JWT stored in HttpOnly cookies and refresh-token blacklisting. Fully containerized with Docker Compose and tested and deployed through a GitHub Actions CI/CD pipeline.",
+    "pokedexDescription": "Interactive Pokédex app that pulls Pokémon data from a public API and shows stats, abilities, and evolutions in detail.",
+    "daBubbleDescription": "DA Bubble is a real-time, Slack-style team chat built with Angular 19 (standalone components, signals) and Firebase. Beyond channels and direct messages, it has threads, emoji reactions, and @user/#channel mentions with jump navigation, plus Google and guest login and a responsive layout for desktop and mobile.",
+    "kanMindDescription": "KanMind is a REST API for a Trello-style collaborative Kanban board, built with Django and Django REST Framework. Token-based authentication and role-based permissions control access to boards, tasks, and comments, and drf-spectacular serves the API docs as an OpenAPI/Swagger schema. In production it runs behind Gunicorn and Nginx with PostgreSQL, secured via Let's Encrypt.",
+    "coderrDescription": "Coderr is the REST API for a freelance marketplace connecting developers and clients, built with Django and Django REST Framework. It manages user accounts, offers, orders, and reviews with fine-grained permissions plus filtering and search. It runs containerized with Docker, and testing and deployment go through two GitHub Actions workflows.",
+    "videoflixDescription": "Videoflix is a Netflix-style video-on-demand REST API built with Django and Django REST Framework. A Redis/RQ worker transcodes uploaded videos asynchronously via ffmpeg into multiple HLS resolutions, and authentication runs on JWTs stored in HttpOnly cookies with refresh-token blacklisting. Fully containerized with Docker Compose, with testing and deployment through a GitHub Actions CI/CD pipeline.",
     "liveTest": "Live Demo",
     "github": "GitHub",
     "filters": {
@@ -75,7 +75,7 @@
   "contact": {
     "title": "Get in Touch",
     "subtitle": "Have a challenge to discuss?",
-    "description": "Feel free to reach out via this form. I’m eager to hear your ideas, collaborate on your projects, and help bring them to life.",
+    "description": "Reach out through this form, I'd love to hear about your project.",
     "needDeveloper": "Looking for a Fullstack Developer?",
     "contactMe": "Let’s Connect!",
     "form": {
